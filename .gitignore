@@ -115,3 +115,6 @@ hs_err_pid*
 .idea
 *.iml
 *target
+/magasin/.idea/
+/enseigne/.idea/
+/centreCommercial/.idea/
