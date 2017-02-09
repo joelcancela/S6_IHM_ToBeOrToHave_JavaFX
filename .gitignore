@@ -112,8 +112,6 @@ local.properties
 hs_err_pid*
 
 .gitignore
-.idea/
-enseigne/target/
 *.idea
 *.iml
 *target
