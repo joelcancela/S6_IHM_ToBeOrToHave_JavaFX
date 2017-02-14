@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +29,7 @@ public class MainApp extends Application {
         scene.getStylesheets().add("/styles/styles.css");
 
         this.primaryStage.setTitle("ToBeOrToHave - Enseigne");
+        this.primaryStage.setResizable(false);
         this.primaryStage.setScene(scene);
         this.primaryStage.show();
     }
