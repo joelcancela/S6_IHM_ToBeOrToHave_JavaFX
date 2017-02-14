@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="CENTER" layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -17,7 +17,7 @@
                   <Image url="@/images/banner2.png" />
                </image>
             </ImageView>
-            <TextArea prefHeight="362.0" prefWidth="600.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut sodales ipsum. Donec non augue accumsan, lacinia diam et, feugiat mi. Etiam ut nulla sed mauris consectetur pharetra. Vestibulum dignissim sapien eget malesuada porta. Nulla cursus a risus vel pellentesque. Sed interdum finibus augue, vitae faucibus diam malesuada vel. Integer id lorem ut odio convallis fringilla. Vivamus iaculis consequat ipsum, sit amet dictum metus interdum eu. Proin dignissim mauris nec nulla lacinia ornare. Phasellus maximus ipsum sed magna venenatis fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. " wrapText="true">
+            <TextArea editable="false" prefHeight="362.0" prefWidth="600.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut sodales ipsum. Donec non augue accumsan, lacinia diam et, feugiat mi. Etiam ut nulla sed mauris consectetur pharetra. Vestibulum dignissim sapien eget malesuada porta. Nulla cursus a risus vel pellentesque. Sed interdum finibus augue, vitae faucibus diam malesuada vel. Integer id lorem ut odio convallis fringilla. Vivamus iaculis consequat ipsum, sit amet dictum metus interdum eu. Proin dignissim mauris nec nulla lacinia ornare. Phasellus maximus ipsum sed magna venenatis fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. " wrapText="true">
                <font>
                   <Font name="Lucida Sans Regular" size="13.0" />
                </font>

@@ -28,17 +28,23 @@ public class MainWindowController {
 
     @FXML
     public void initialize() {
+        initializeTab("homeWindow", this.tab0);
+        initializeTab("magasinView", this.tab1);
+        initializeTab("produitsView", this.tab2);
+    }
+
+    private void initializeTab(String fxmlName, Tab tab) {
         try {
-            String fxmlFile = "/fxml/homeWindow.fxml";
+            String fxmlFile = "/fxml/" + fxmlName + ".fxml";
             FXMLLoader loader2 = new FXMLLoader();
             Node node = loader2.load(getClass().getResourceAsStream(fxmlFile));
             AnchorPane.setTopAnchor(node,0.0);
             AnchorPane.setLeftAnchor(node,0.0);
             AnchorPane.setBottomAnchor(node,0.0);
             AnchorPane.setRightAnchor(node,0.0);
-            this.tab0.setContent(node);
+            tab.setContent(node);
         } catch (IOException ie) {
-           ie.printStackTrace();
+            ie.printStackTrace();
         }
     }
 
