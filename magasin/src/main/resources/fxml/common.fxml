@@ -2,32 +2,42 @@
 
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-
-<BorderPane fx:id="firstPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="firstPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <TabPane fx:id="homeTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-          <Tab fx:id="tab0" text="To Be or To Have/Accueil" />
-          <Tab fx:id="tab1" text="Produits" />
-            <Tab fx:id="tab2" text="Mon magasin" />
-            <Tab fx:id="tab3" text="Statistiques" />
-            <Tab fx:id="tab4" text="Catégories de magasin" />
-            <Tab fx:id="tab5" text="Infos" />
+          <Tab fx:id="tab0" text="Accueil" />
+          <Tab fx:id="tab1" text="Enseigne" />
+            <Tab fx:id="tab2" text="Produits" />
+            <Tab fx:id="tab3" text="Nous trouver" />
         </tabs>
       </TabPane>
    </center>
    <top>
       <HBox fx:id="bannerHBox" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="bannerImage" pickOnBounds="true" preserveRatio="true">
-               <image>
-               </image>
-            </ImageView>
+            <AnchorPane>
+               <children>
+                  <ImageView fx:id="bannerImage" fitHeight="100.0" fitWidth="1281.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@16731758_1918747515019931_1879003859_o.png" />
+                     </image>
+                  </ImageView>
+                  <ToggleButton layoutX="1213.0" layoutY="74.0" mnemonicParsing="false" text="FR/ENG">
+                     <font>
+                        <Font name="Lucida Sans Regular" size="13.0" />
+                     </font>
+                  </ToggleButton>
+               </children>
+            </AnchorPane>
          </children>
       </HBox>
    </top>
