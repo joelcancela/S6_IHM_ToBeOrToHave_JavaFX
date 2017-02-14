@@ -13,11 +13,14 @@ public class MainApp extends Application {
 
     private static final Logger log = LoggerFactory.getLogger(MainApp.class);
 
+    private Stage primaryStage;
+
     public static void main(String[] args) throws Exception {
         launch(args);
     }
 
     public void start(Stage stage) throws Exception {
+        this.primaryStage = stage;
 
         String fxmlFile = "/fxml/common.fxml";
         FXMLLoader loader = new FXMLLoader();
@@ -26,8 +29,12 @@ public class MainApp extends Application {
         Scene scene = new Scene(rootNode);
         scene.getStylesheets().add("/styles/styles.css");
 
-        stage.setTitle("ToBeOrToHave - Enseigne");
-        stage.setScene(scene);
-        stage.show();
+        this.primaryStage.setTitle("ToBeOrToHave - Enseigne");
+        this.primaryStage.setScene(scene);
+        this.primaryStage.show();
+    }
+
+    public Stage getPrimaryStage() {
+        return this.primaryStage;
     }
 }

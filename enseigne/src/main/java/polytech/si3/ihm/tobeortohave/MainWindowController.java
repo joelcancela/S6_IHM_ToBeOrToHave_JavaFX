@@ -1,5 +1,6 @@
 package polytech.si3.ihm.tobeortohave;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -27,4 +28,15 @@ public class MainWindowController {
 
     }
 
+    public void storeTabSelected(Event event) {
+        System.out.println("Store selected");
+    }
+
+    public void homeTabSelected(Event event) {
+        System.out.println("Home selected");
+    }
+
+    public void productTabSelected(Event event) {
+        System.out.println("Product selected");
+    }
 }
