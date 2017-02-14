@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +31,12 @@ public class MainWindowController {
         try {
             String fxmlFile = "/fxml/homeWindow.fxml";
             FXMLLoader loader2 = new FXMLLoader();
-            this.tab0.setContent(loader2.load(getClass().getResourceAsStream(fxmlFile)));
+            Node node = loader2.load(getClass().getResourceAsStream(fxmlFile));
+            AnchorPane.setTopAnchor(node,0.0);
+            AnchorPane.setLeftAnchor(node,0.0);
+            AnchorPane.setBottomAnchor(node,0.0);
+            AnchorPane.setRightAnchor(node,0.0);
+            this.tab0.setContent(node);
         } catch (IOException ie) {
            ie.printStackTrace();
         }
