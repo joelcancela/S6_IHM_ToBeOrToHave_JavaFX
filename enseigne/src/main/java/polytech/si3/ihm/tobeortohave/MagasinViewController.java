@@ -17,7 +17,9 @@ public class MagasinViewController {
 
     @FXML
     public ListView listRegion;
+    @FXML
     public ListView listVille;
+    @FXML
     public ListView listStores;
 
     @FXML
