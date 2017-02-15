@@ -13,7 +13,7 @@
    <center>
       <TabPane fx:id="homeTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-          <Tab fx:id="tab0" onSelectionChanged="#homeTabSelected" text="To Be or To Have" />
+          <Tab fx:id="tab0" onSelectionChanged="#homeTabSelected" text="Accueil" />
           <Tab fx:id="tab1" onSelectionChanged="#storeTabSelected" text="Nos magasins" />
             <Tab fx:id="tab2" onSelectionChanged="#productTabSelected" text="Nos produits" />
         </tabs>

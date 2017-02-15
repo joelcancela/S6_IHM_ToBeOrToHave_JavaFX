@@ -25,7 +25,7 @@ public class ProduitsViewController {
         System.out.println("Click click");
         for (Node node : this.productGrid.getChildren()) {
             if (node instanceof ImageView) {
-                System.out.println(node);
+                System.out.println(node + " : " + ((ImageView) node).getX() + ";" + ((ImageView) node).getY());
                 if( node.getBoundsInParent().contains(mouseEvent.getSceneX(),  mouseEvent.getSceneY())) {
                     System.out.println( "Node: " + node + " at " + GridPane.getRowIndex( node) + "/" + GridPane.getColumnIndex( node));
                 }
