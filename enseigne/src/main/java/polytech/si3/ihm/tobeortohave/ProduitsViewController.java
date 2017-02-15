@@ -14,6 +14,7 @@ import net.miginfocom.layout.Grid;
  */
 public class ProduitsViewController {
     public GridPane productGrid;
+    public GridPane bestSellerGrid;
 
     @FXML
     public void initialize() {
@@ -21,12 +22,25 @@ public class ProduitsViewController {
     }
 
     public void pictureClick(MouseEvent mouseEvent) {
+        System.out.println("Click click");
         for (Node node : this.productGrid.getChildren()) {
             if (node instanceof ImageView) {
+                System.out.println(node);
                 if( node.getBoundsInParent().contains(mouseEvent.getSceneX(),  mouseEvent.getSceneY())) {
                     System.out.println( "Node: " + node + " at " + GridPane.getRowIndex( node) + "/" + GridPane.getColumnIndex( node));
                 }
             }
+
+        }
+
+        for (Node node : this.bestSellerGrid.getChildren()) {
+            if (node instanceof ImageView) {
+                System.out.println(node);
+                if( node.getBoundsInParent().contains(mouseEvent.getSceneX(),  mouseEvent.getSceneY())) {
+                    System.out.println( "Node: " + node + " at " + GridPane.getRowIndex( node) + "/" + GridPane.getColumnIndex( node));
+                }
+            }
+
         }
     }
 }
