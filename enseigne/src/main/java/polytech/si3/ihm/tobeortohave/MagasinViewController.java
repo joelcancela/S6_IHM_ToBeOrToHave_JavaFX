@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
@@ -60,6 +61,12 @@ public class MagasinViewController {
             String ville = this.listVille.getSelectionModel().getSelectedItem().toString();
             String magasin = this.listStores.getSelectionModel().getSelectedItem().toString();
             System.out.println("Validation Clicked : " + region + " : " + ville + " : " + magasin);
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information Magasin");
+            alert.setHeaderText("Votre magasin : " + magasin);
+            alert.setContentText("00 Addresse\n06xxx " + ville + "\n" + region);
+            alert.showAndWait();
     }
 }
 
