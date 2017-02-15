@@ -13,6 +13,7 @@
         <module>centreCommercial</module>
         <module>enseigne</module>
         <module>magasin</module>
+        <module>common</module>
     </modules>
 
 </project>
