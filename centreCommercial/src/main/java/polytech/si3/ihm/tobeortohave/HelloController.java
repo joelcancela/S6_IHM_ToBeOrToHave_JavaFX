@@ -42,5 +42,4 @@ public class HelloController
             messageLabel.setText("Hello mysterious person");
         }
     }
-
 }
