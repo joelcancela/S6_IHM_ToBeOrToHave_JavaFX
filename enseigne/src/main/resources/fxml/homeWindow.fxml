@@ -17,12 +17,12 @@
                   <Image url="@/images/banner2.png" />
                </image>
             </ImageView>
-            <TextArea editable="false" prefHeight="362.0" prefWidth="600.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut sodales ipsum. Donec non augue accumsan, lacinia diam et, feugiat mi. Etiam ut nulla sed mauris consectetur pharetra. Vestibulum dignissim sapien eget malesuada porta. Nulla cursus a risus vel pellentesque. Sed interdum finibus augue, vitae faucibus diam malesuada vel. Integer id lorem ut odio convallis fringilla. Vivamus iaculis consequat ipsum, sit amet dictum metus interdum eu. Proin dignissim mauris nec nulla lacinia ornare. Phasellus maximus ipsum sed magna venenatis fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. " wrapText="true">
+            <TextArea editable="false" prefHeight="362.0" prefWidth="600.0" text="Crée en 2017, cette nouvelle enseigne vend des livres, cd, dvd, stages de développement personnel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut sodales ipsum. Donec non augue accumsan, lacinia diam et, feugiat mi. Etiam ut nulla sed mauris consectetur pharetra. Vestibulum dignissim sapien eget malesuada porta. Nulla cursus a risus vel pellentesque. Sed interdum finibus augue, vitae faucibus diam malesuada vel. Integer id lorem ut odio convallis fringilla. Vivamus iaculis consequat ipsum, sit amet dictum metus interdum eu. Proin dignissim mauris nec nulla lacinia ornare. Phasellus maximus ipsum sed magna venenatis fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. " wrapText="true">
                <font>
                   <Font name="Lucida Sans Regular" size="13.0" />
                </font>
             </TextArea>
-            <Hyperlink alignment="CENTER" contentDisplay="CENTER" text="Visit our website">
+            <Hyperlink alignment="CENTER" contentDisplay="CENTER" text="tobeortohave.com">
                <font>
                   <Font name="Lucida Sans Regular" size="28.0" />
                </font>

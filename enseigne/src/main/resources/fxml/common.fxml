@@ -20,7 +20,7 @@
    <top>
       <HBox fx:id="bannerHBox" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="bannerImage" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="bannerImage" fitHeight="100.0" fitWidth="1294.0" pickOnBounds="true">
                <image>
                   <Image url="@/images/banner.png" />
                </image>
