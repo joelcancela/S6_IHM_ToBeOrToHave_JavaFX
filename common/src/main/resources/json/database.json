@@ -1,0 +1,61 @@
+{
+    "products" :
+    [
+        {"id" : 0, "name": "ASOS Terminator", "keywords": [0], "starred": true, "discounted": true, "discountRate" : 0.0 , "price": 999.99, "picture" : "images/dummy.png"},
+        {"id" : 1, "name": "Thierry Pattor & la cave des mystères", "keywords": [5], "starred": true, "discounted": true, "discountRate" : 0.0"price": 8.50, "picture" : "images/dummy.png"},
+        {"id" : 2, "name": "JOL - L'ouvany", "keywords": [4], "starred": true, "discounted": true, "discountRate" : 0.0, "price": 0.10, "picture" : "images/dummy.png"}
+        {"id" : 3, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 4, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 5, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 6, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 7, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 8, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 9, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 10, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 11, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 12, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 13, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 14, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 15, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+    ],
+    "fields" :
+    [
+      {"id" : 0, "label" : "Sport"},
+      {"id" : 1, "label" : "High-tech"},
+      {"id" : 2, "label" : "Bijoux"},
+      {"id" : 3, "label" : "Livres"},
+      {"id" : 4, "label" : "Bricolage"},
+      {"id" : 5, "label" : "Vêtements"}
+    ],
+    "keywords" :
+    [
+      {"id" : 0, "field" : 1, "label" : "Ordinateur"},
+      {"id" : 1, "field" : 1, "label" : "Tablette"},
+      {"id" : 2, "field" : 1, "label" : "Télévision"},
+      {"id" : 3, "field" : 1, "label" : "GPS"},
+      {"id" : 4, "field" : 1, "label" : "Cédérom"},
+      {"id" : 5, "field" : 3, "label" : "Romance"},
+      {"id" : 6, "field" : 3, "label" : "Fantaisie"},
+      {"id" : 7, "field" : 3, "label" : "Biologie"},
+      {"id" : 8, "field" : 3, "label" : "Autobiographie"},
+    ]
+    ,
+    "brands" :
+    [
+        {"id" : 0, "name" : "K&N", "fields" : [5]},
+        {"id" : 1, "name" : "Costaromo", "fields" : [4]},
+        {"id" : 2, "name" : "RingStore", "fields" : [2]},
+        {"id" : 3, "name" : "ToBeOrToHave", "fields" : [1,3]},
+        {"id" : 3, "name" : "Yottathlon", "fields" : [0]}
+    ],
+
+    "stores" :
+    [
+        {"id" : 0, "brand" : 0, "stock": []},
+        {"id" : 1, "brand" : 1, "stock": []},
+        {"id" : 2, "brand" : 2, "stock": []},
+        {"id" : 3, "brand" : 3, "stock": []},
+        {"id" : 4, "brand" : 4, "stock": []},
+        {"id" : 5, "brand" : 5, "stock": []},
+    ]
+}
