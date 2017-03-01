@@ -12,25 +12,26 @@ public class MainApp extends Application {
 
     private static final Logger log = LoggerFactory.getLogger(MainApp.class);
 
+    private Stage primaryStage;
+
     public static void main(String[] args) throws Exception {
         launch(args);
     }
 
     public void start(Stage stage) throws Exception {
 
-        log.info("Starting Hello JavaFX and Maven demonstration application");
+        this.primaryStage = stage;
 
-        String fxmlFile = "/fxml/hello.fxml";
-        log.debug("Loading FXML for main view from: {}", fxmlFile);
+        String fxmlFile = "/fxml/common.fxml";
         FXMLLoader loader = new FXMLLoader();
         Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
 
-        log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode, 400, 200);
+        Scene scene = new Scene(rootNode);
         scene.getStylesheets().add("/styles/styles.css");
 
-        stage.setTitle("Hello JavaFX and Maven");
-        stage.setScene(scene);
-        stage.show();
+        this.primaryStage.setTitle("ToBeOrToHave - Magasin");
+        this.primaryStage.setResizable(false);
+        this.primaryStage.setScene(scene);
+        this.primaryStage.show();
     }
 }
