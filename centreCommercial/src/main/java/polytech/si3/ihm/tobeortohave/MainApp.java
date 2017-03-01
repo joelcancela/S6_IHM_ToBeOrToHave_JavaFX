@@ -1,9 +1,11 @@
 package polytech.si3.ihm.tobeortohave;
 
+import com.guigarage.flatterfx.FlatterFX;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +30,7 @@ public class MainApp extends Application {
         log.debug("Showing JFX scene");
         Scene scene = new Scene(rootNode);
         scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
+
 
         stage.setTitle("Centre commercial");
         stage.setScene(scene);
