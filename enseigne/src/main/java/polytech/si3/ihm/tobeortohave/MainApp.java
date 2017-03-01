@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import polytech.si3.ihm.tobeortohave.model.JSONReader;
 
 public class MainApp extends Application {
 
@@ -32,6 +33,7 @@ public class MainApp extends Application {
         this.primaryStage.setResizable(false);
         this.primaryStage.setScene(scene);
         this.primaryStage.show();
+        JSONReader jsonReader = new JSONReader();
     }
 
     public Stage getPrimaryStage() {
