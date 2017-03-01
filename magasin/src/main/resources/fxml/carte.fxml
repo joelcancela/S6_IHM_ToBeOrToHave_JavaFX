@@ -57,7 +57,7 @@
    <center>
       <ImageView fitHeight="621.0" fitWidth="1015.0" pickOnBounds="true" BorderPane.alignment="CENTER">
          <image>
-            <Image url="@16652712_1915759838652032_286677799_n.png" />
+            <Image url="@../images/map.png" />
          </image>
       </ImageView>
    </center>
