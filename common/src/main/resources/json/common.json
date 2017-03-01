@@ -1,0 +1,20 @@
+{
+  "products": [
+    {"name":"ASUS Predator", "keywords":["Informatique","Gaming"], "starred":true},
+    {"name":"Deck de Cartes Yu-gi-oh","keywords":["Jouets"],"starred":false},
+    {"name":"Table basse Blugudug","keywords":["Meubles"],"starred":false},
+    {"name":"Harry Potter & l'enfant maudit","keywords":["Livres"],"starred":true},
+    {"name":"JUL - L'ovni","keywords":["CD","Troll"],"starred":true}
+  ],
+  "stores":[
+    {"name":"Fnac", "stock":["ASUS Predator", "Harry Potter & l'enfant maudit","JUL - L'ovni"]},
+    {"name":"JouetClub", "stock":["Deck de Cartes Yu-gi-oh"]},
+    {"name":"Conforama", "stock":["ASUS Predator","Table basse Blugudug"]},
+    {"name":"ToBeOrToHave", "stock":["ASUS Predator", "Harry Potter & l'enfant maudit"]}
+  ],
+  "centers":[
+    {"name" : "TNL", "stores": ["Fnac", "ToBeOrToHave"]},
+    {"name" : "NiceEtoile", "stores": ["ToBeOrToHave", "JouetClub"]},
+    {"name": "Cap3000", "stores":["Conforama","Fnac"]}
+  ]
+}
