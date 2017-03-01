@@ -34,6 +34,7 @@ public class MainApp extends Application {
         this.primaryStage.setScene(scene);
         this.primaryStage.show();
         JSONReader jsonReader = new JSONReader();
+        jsonReader.parse();
     }
 
     public Stage getPrimaryStage() {
