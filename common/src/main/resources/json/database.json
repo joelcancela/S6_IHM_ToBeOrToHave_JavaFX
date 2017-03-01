@@ -1,22 +1,22 @@
 {
     "products" :
     [
-        {"id" : 0, "name": "ASOS Terminator", "keywords": [0], "starred": true, "discounted": true, "discountRate" : 0.0 , "price": 999.99, "picture" : "images/dummy.png"},
-        {"id" : 1, "name": "Thierry Pattor & la cave des mystères", "keywords": [5], "starred": true, "discounted": true, "discountRate" : 0.0"price": 8.50, "picture" : "images/dummy.png"},
-        {"id" : 2, "name": "JOL - L'ouvany", "keywords": [4], "starred": true, "discounted": true, "discountRate" : 0.0, "price": 0.10, "picture" : "images/dummy.png"}
-        {"id" : 3, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 4, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 5, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 6, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 7, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 8, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 9, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 10, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 11, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 12, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 13, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 14, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
-        {"id" : 15, "name": "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 0, "name" : "ASOS Terminator", "keywords": [0], "starred": true, "discounted": true, "discountRate" : 0.0 , "price": 999.99, "picture" : "images/dummy.png"},
+        {"id" : 1, "name" : "Thierry Pattor & la cave des mystères", "keywords": [5], "starred": true, "discounted": true, "discountRate" : 0.0"price": 8.50, "picture" : "images/dummy.png"},
+        {"id" : 2, "name" : "JOL - L'ouvany", "keywords": [4], "starred": true, "discounted": true, "discountRate" : 0.0, "price": 0.10, "picture" : "images/dummy.png"}
+        {"id" : 3, "name" : "Pear - Upad", "keywords": [1], "starred": false, "discounted": false, "discountRate" : 600.0, "price": 670, "picture" : "images/dummy.png"},
+        {"id" : 4, "name" : "Ocar - G520", "keywords": [0], "starred": false, "discounted": false, "discountRate" : 0.0, "price": 105, "picture" : "images/dummy.png"},
+        {"id" : 5, "name" : "MSU - Spoctre", "keywords": [0], "starred": false, "discounted": false, "discountRate" : 0.0, "price": 822, "picture" : "images/dummy.png"},
+        {"id" : 6, "name" : "Sumzumg - tob 4", "keywords": [1], "starred": false, "discounted": false, "discountRate" : 0.0, "price": 560, "picture" : "images/dummy.png"},
+        {"id" : 7, "name" : "LJ - Plasma 5", "keywords": [2], "starred": false, "discounted": false, "discountRate" : 0.0, "price": 2500.0 , "picture" : "images/dummy.png"},
+        {"id" : 8, "name" : "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 9, "name" : "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 10, "name" : "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 11, "name" : "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 12, "name" : "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 13, "name" : "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 14, "name" : "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
+        {"id" : 15, "name" : "", "keywords": [], "starred": false, "discounted": false, "discountRate" : 0.0, "price": , "picture" : "images/dummy.png"},
     ],
     "fields" :
     [
