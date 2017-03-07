@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.controller.ProductScrollingController">
    <right>
       <AnchorPane prefHeight="300.0" prefWidth="36.0" BorderPane.alignment="CENTER">
          <children>
-            <Button contentDisplay="CENTER" layoutX="1.0" layoutY="78.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&gt;" wrapText="true" AnchorPane.rightAnchor="5.0">
+            <Button fx:id="rightButton" contentDisplay="CENTER" layoutX="1.0" layoutY="78.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&gt;" wrapText="true" AnchorPane.rightAnchor="5.0">
                <font>
                   <Font size="18.0" />
                </font></Button>
@@ -24,7 +24,7 @@
    <left>
       <AnchorPane prefHeight="334.0" prefWidth="36.0" BorderPane.alignment="CENTER">
          <children>
-            <Button contentDisplay="CENTER" layoutX="7.0" layoutY="78.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&lt;" wrapText="true" AnchorPane.leftAnchor="5.0">
+            <Button fx:id="leftButton" contentDisplay="CENTER" layoutX="7.0" layoutY="78.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&lt;" wrapText="true" AnchorPane.leftAnchor="5.0">
                <font>
                   <Font size="18.0" />
                </font></Button>
@@ -34,7 +34,7 @@
    <bottom>
       <AnchorPane prefHeight="25.0" prefWidth="832.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="193.0" layoutY="4.0">
+            <HBox fx:id="radioButtonHBox" layoutX="193.0" layoutY="4.0">
                <children>
                   <RadioButton mnemonicParsing="false" selected="true">
                      <toggleGroup>
@@ -49,7 +49,7 @@
       </AnchorPane>
    </bottom>
    <center>
-      <ImageView cache="true" fitHeight="255.0" fitWidth="255.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+      <ImageView fx:id="productImage" cache="true" fitHeight="255.0" fitWidth="255.0" pickOnBounds="true" BorderPane.alignment="CENTER">
          <image>
             <Image url="/images/Produits.png" />
          </image>
