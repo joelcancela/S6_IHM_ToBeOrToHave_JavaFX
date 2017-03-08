@@ -10,8 +10,8 @@
         </layout>
     </appender>
 
-    <logger name="polytech.ihm.comCenter">
-        <level value="DEBUG"/>
+    <logger name="polytech.si3.ihm.tobeortohave">
+        <level value="INFO"/>
     </logger>
 
     <root>
