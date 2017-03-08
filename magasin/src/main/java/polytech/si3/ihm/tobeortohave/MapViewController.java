@@ -2,23 +2,19 @@ package polytech.si3.ihm.tobeortohave;
 
 import com.lynden.gmapsfx.GoogleMapView;
 import com.lynden.gmapsfx.MapComponentInitializedListener;
-import com.lynden.gmapsfx.javascript.object.GoogleMap;
-import com.lynden.gmapsfx.javascript.object.LatLong;
-import com.lynden.gmapsfx.javascript.object.MapOptions;
 import com.lynden.gmapsfx.javascript.object.*;
-import com.lynden.gmapsfx.javascript.object.Marker;
-import com.lynden.gmapsfx.javascript.object.MarkerOptions;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
 public class MapViewController implements Initializable, MapComponentInitializedListener {
 
 	@FXML
-	private Button button;
+	private VBox vbox;
 
 	@FXML
 	private GoogleMapView mapView;
@@ -32,11 +28,7 @@ public class MapViewController implements Initializable, MapComponentInitialized
 
 
 	public void mapInitialized() {
-		LatLong joeSmithLocation = new LatLong(47.6197, -122.3231);
-		LatLong joshAndersonLocation = new LatLong(47.6297, -122.3431);
-		LatLong bobUnderwoodLocation = new LatLong(47.6397, -122.3031);
-		LatLong tomChoiceLocation = new LatLong(47.6497, -122.3325);
-		LatLong fredWilkieLocation = new LatLong(47.6597, -122.3357);
+		LatLong myShopLocation = new LatLong(43.2916976, 5.4766483);
 
 
 		//Set the initial properties of the map.
@@ -58,38 +50,30 @@ public class MapViewController implements Initializable, MapComponentInitialized
 
 		//Add markers to the map
 		MarkerOptions markerOptions1 = new MarkerOptions();
-		markerOptions1.position(joeSmithLocation);
+		markerOptions1.position(myShopLocation);
 
-		MarkerOptions markerOptions2 = new MarkerOptions();
-		markerOptions2.position(joshAndersonLocation);
 
-		MarkerOptions markerOptions3 = new MarkerOptions();
-		markerOptions3.position(bobUnderwoodLocation);
+		Marker myShopMarker = new Marker(markerOptions1);
 
-		MarkerOptions markerOptions4 = new MarkerOptions();
-		markerOptions4.position(tomChoiceLocation);
 
-		MarkerOptions markerOptions5 = new MarkerOptions();
-		markerOptions5.position(fredWilkieLocation);
+		map.addMarker(myShopMarker);
 
-		Marker joeSmithMarker = new Marker(markerOptions1);
-		Marker joshAndersonMarker = new Marker(markerOptions2);
-		Marker bobUnderwoodMarker = new Marker(markerOptions3);
-		Marker tomChoiceMarker = new Marker(markerOptions4);
-		Marker fredWilkieMarker = new Marker(markerOptions5);
 
-		/*map.addMarker(joeSmithMarker);
-		map.addMarker(joshAndersonMarker);
-		map.addMarker(bobUnderwoodMarker);
-		map.addMarker(tomChoiceMarker);
-		map.addMarker(fredWilkieMarker);*/
 
-		/*InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
-		infoWindowOptions.content("<h2>Fred Wilkie</h2>"
-				+ "Current Location: Safeway<br>"
-				+ "ETA: 45 minutes");
+		InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
+		infoWindowOptions.content("<h2>ToBeOrToHave</h2>"
+				+ "Telephone: 0442345678<br>"
+				+ "Web: www.ToBeOrToHave.fr");
 
 		InfoWindow fredWilkeInfoWindow = new InfoWindow(infoWindowOptions);
-		fredWilkeInfoWindow.open(map, fredWilkieMarker);*/
+		fredWilkeInfoWindow.open(map, myShopMarker);
+
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		map.setCenter(new LatLong(40.2916159, 15.4768394));
 	}
 }

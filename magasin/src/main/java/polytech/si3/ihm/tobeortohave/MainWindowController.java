@@ -29,6 +29,7 @@ public class MainWindowController {
         initializeTab("accueil", this.tab0);
         initializeTab("produits", this.tab1);
         initializeTab("carte", this.tab2);
+        initializeTab("statistiques", this.tab3);
     }
 
     private void initializeTab(String fxmlName, Tab tab) {
@@ -46,8 +47,8 @@ public class MainWindowController {
         }
     }
 
-    public void storeTabSelected(Event event) {
-        System.out.println("Store selected");
+    public void statistiquesTabSelected(Event event) {
+        System.out.println("Statistiques selected");
     }
 
     public void homeTabSelected(Event event) {

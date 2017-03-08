@@ -9,9 +9,36 @@ import java.util.List;
  */
 public class Produit {
     private String name;
-    private String description;
-    private String linkToPicture;
-    private double price;
-    private boolean starred;
     private List<String> keywords;
+    private boolean starred;
+    private boolean discounted;
+    private double discountRate;
+    private double price;
+    private String picture;
+    private int salesNumber;
+
+    public Produit(String name, List<String> keywords, boolean starred, boolean discounted, double discountRate, double price, String picture, int salesNumber) {
+        this.name = name;
+        this.keywords = keywords;
+        this.starred = starred;
+        this.discounted = discounted;
+        this.discountRate = discountRate;
+        this.price = price;
+        this.picture = picture;
+        this.salesNumber = salesNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Produit{" +
+                "name='" + name + '\'' +
+                ", keywords=" + keywords +
+                ", starred=" + starred +
+                ", discounted=" + discounted +
+                ", discountRate=" + discountRate +
+                ", price=" + price +
+                ", picture='" + picture + '\'' +
+                ", salesNumber=" + salesNumber +
+                '}';
+    }
 }
