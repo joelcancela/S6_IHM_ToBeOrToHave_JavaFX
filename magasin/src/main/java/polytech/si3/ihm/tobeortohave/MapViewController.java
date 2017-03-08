@@ -6,6 +6,8 @@ import com.lynden.gmapsfx.javascript.object.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.VBox;
+import jdk.nashorn.internal.parser.JSONParser;
+import polytech.si3.ihm.tobeortohave.model.JSONReader;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,8 +23,11 @@ public class MapViewController implements Initializable, MapComponentInitialized
 
 	private GoogleMap map;
 
+	private JSONReader jsonReader;
 
 	public void initialize(URL url, ResourceBundle rb) {
+		 jsonReader = new JSONReader();
+		 jsonReader.parse();
 		mapView.addMapInializedListener(this);
 	}
 
