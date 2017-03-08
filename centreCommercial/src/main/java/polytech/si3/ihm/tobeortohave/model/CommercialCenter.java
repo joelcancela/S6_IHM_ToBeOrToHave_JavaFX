@@ -17,6 +17,7 @@ public class CommercialCenter {
     public CommercialCenter(String name, String description, String mapPath) {
         shopList = new ArrayList<Shop>();
         highlightedshopList = new ArrayList<Shop>();
+        events = new ArrayList<String>();
         this.name = name;
         this.description = description;
         this.mapPath = mapPath;
