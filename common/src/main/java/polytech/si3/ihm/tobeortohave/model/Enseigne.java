@@ -1,6 +1,8 @@
 package polytech.si3.ihm.tobeortohave.model;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Class x
@@ -52,5 +54,9 @@ public class Enseigne {
 
     public String getWebAddress() {
         return webAddress;
+    }
+
+    public static List<Magasin> findMagasinByBrand(List<Magasin> magasins, final String brandName){
+        return magasins.stream().filter(m -> m.getEnseigne().getName().equals(brandName)).collect(Collectors.toList());
     }
 }
