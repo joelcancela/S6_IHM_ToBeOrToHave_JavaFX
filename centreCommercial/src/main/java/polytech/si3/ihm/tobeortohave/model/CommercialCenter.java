@@ -12,13 +12,18 @@ public class CommercialCenter {
     private String mapPath;
     private List<Shop> shopList;
     private List<Shop> highlightedshopList;
+    private List<String> events;
 
     public CommercialCenter(String name, String description, String mapPath) {
         shopList = new ArrayList<Shop>();
         highlightedshopList = new ArrayList<Shop>();
+        events = new ArrayList<String>();
         this.name = name;
         this.description = description;
         this.mapPath = mapPath;
+    }
+    public void addEvents(String event){
+        events.add(event);
     }
 
     public void addHighlightedShop(Shop shop){
@@ -47,5 +52,9 @@ public class CommercialCenter {
 
     public List<Shop> getHighlightedshopList() {
         return highlightedshopList;
+    }
+
+    public List<String> getEvents() {
+        return events;
     }
 }

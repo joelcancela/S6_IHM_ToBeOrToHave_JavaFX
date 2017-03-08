@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 
+import java.util.List;
+
 /**
  * Created by MARC-PC on 07/03/2017.
  */
@@ -21,4 +23,9 @@ public class ProductScrollingController {
 
     @FXML
     public ImageView productImage;
+
+    @FXML
+    private void initialize(){}
+
+    public void initProducts(List<String> productsPaths){}
 }
