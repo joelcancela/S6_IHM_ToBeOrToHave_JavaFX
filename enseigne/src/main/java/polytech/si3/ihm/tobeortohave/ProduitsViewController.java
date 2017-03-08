@@ -25,7 +25,6 @@ public class ProduitsViewController {
     public void initialize() {
         jsonReader = new JSONReader();
         jsonReader.parse();
-
     }
 
     public void pictureClick(MouseEvent mouseEvent) {
