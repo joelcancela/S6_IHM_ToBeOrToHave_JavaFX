@@ -20,25 +20,25 @@
     ],
     "fields" :
     [
-      {"id" : 0, "label" : "Sport"},
-      {"id" : 1, "label" : "High-tech"},
-      {"id" : 2, "label" : "Bijoux"},
-      {"id" : 3, "label" : "Livres"},
-      {"id" : 4, "label" : "Bricolage"},
-      {"id" : 5, "label" : "Vêtements"}
+      {"id" : 0, "label" : "Sport", "keywords":[]},
+      {"id" : 1, "label" : "High-tech", "keywords":[0,1,2,3,4,9]},
+      {"id" : 2, "label" : "Bijoux","keywords":[]},
+      {"id" : 3, "label" : "Livres","keywords":[5,6,7,8]},
+      {"id" : 4, "label" : "Bricolage","keywords":[]},
+      {"id" : 5, "label" : "Vêtements","keywords":[]}
     ],
     "keywords" :
     [
-      {"id" : 0, "field" : 1, "label" : "Ordinateur"},
-      {"id" : 1, "field" : 1, "label" : "Tablette"},
-      {"id" : 2, "field" : 1, "label" : "Télévision"},
-      {"id" : 3, "field" : 1, "label" : "GPS"},
-      {"id" : 4, "field" : 1, "label" : "Cédérom"},
-      {"id" : 5, "field" : 3, "label" : "Romance"},
-      {"id" : 6, "field" : 3, "label" : "Fantaisie"},
-      {"id" : 7, "field" : 3, "label" : "Biologie"},
-      {"id" : 8, "field" : 3, "label" : "Autobiographie"},
-      {"id" : 9, "field" : 1, "label" : "Smartphone"}
+      {"id" : 0,  "label" : "Ordinateur"},
+      {"id" : 1,  "label" : "Tablette"},
+      {"id" : 2,  "label" : "Télévision"},
+      {"id" : 3,  "label" : "GPS"},
+      {"id" : 4,  "label" : "Cédérom"},
+      {"id" : 5,  "label" : "Romance"},
+      {"id" : 6,  "label" : "Fantaisie"},
+      {"id" : 7, "label" : "Biologie"},
+      {"id" : 8,  "label" : "Autobiographie"},
+      {"id" : 9,  "label" : "Smartphone"}
     ]
     ,
     "brands" :
@@ -57,6 +57,6 @@
         {"id" : 2, "brand" : 2, "description" : "", "adress" : "FREJUS", "latitude" : 43.43315200000001, "longitude" : 6.737033999999994,"stock": []},
         {"id" : 3, "brand" : 3, "description" : "", "adress" : "AIX-EN-PROVENCE", "latitude" : 43.529742, "longitude" : 5.4474270000000615,"stock": []},
         {"id" : 4, "brand" : 4, "description" : "", "adress" : "MARSEILLE", "latitude" : 43.31385900000001, "longitude" : 5.382301699999971,"stock": []},
-        {"id" : 5, "brand" : 5, "description" : "", "adress" : "MONTPELLIER", "latitude" : 43.610769, "longitude" : 3.8767159999999876,"stock": []},
+        {"id" : 5, "brand" : 5, "description" : "", "adress" : "MONTPELLIER", "latitude" : 43.610769, "longitude" : 3.8767159999999876,"stock": []}
     ]
 }
