@@ -8,9 +8,10 @@ import java.util.List;
  * @author Joël CANCELA VAZ
  */
 public class Magasin {
-    private String name;
     private String description;
     private Enseigne enseigne;
     private String address;
+    private Double latitude;
+    private Double longitude;
     private List<Produit> stock;
 }

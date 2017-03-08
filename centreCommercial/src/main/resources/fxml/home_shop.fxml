@@ -7,11 +7,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.controller.HighlightedShopController">
    <children>
       <Pane prefHeight="100.0" prefWidth="100.0">
          <children>
-            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="brandImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="/images/logoMenu.png" />
                </image>
@@ -20,17 +20,17 @@
       </Pane>
       <Pane layoutX="110.0" prefHeight="100.0" prefWidth="290.0">
          <children>
-            <Label layoutY="1.0" text="Nom du magasin">
+            <Label fx:id="shopName" layoutY="1.0" text="Nom du magasin">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutY="28.0" prefHeight="67.0" prefWidth="199.0" text="Description" textOverrun="CLIP" wrapText="true">
+            <Label fx:id="shopDescription" layoutY="28.0" prefHeight="67.0" prefWidth="199.0" text="Description" textOverrun="CLIP" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="201.0" layoutY="74.0" mnemonicParsing="false" text="En savoir plus" />
+            <Button fx:id="moreButton" layoutX="201.0" layoutY="74.0" mnemonicParsing="false" text="En savoir plus" />
          </children>
       </Pane>
       <Separator layoutX="100.0" orientation="VERTICAL" prefHeight="100.0" prefWidth="10.0" />
