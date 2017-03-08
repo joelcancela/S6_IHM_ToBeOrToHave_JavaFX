@@ -2,90 +2,90 @@
     "products" :
     [
         {"id" : 0, "name" : "ASOS Terminator", "keywords": [0],
-          "starred": true, "discounted": true, "discountRate" : 0.0,
+          "starred": true, "discounted": true, "discountRate" : 0.0,  "salesNumber":777,
           "price": 999.99, "picture" : "asos.png"},
 
         {"id" : 1, "name" : "Thierry Pattor & la cave des mystères", "keywords": [5],
-          "starred": true, "discounted": true, "discountRate" : 0.0,
+          "starred": true, "discounted": true, "discountRate" : 0.0, "salesNumber":777,
           "price": 8.50, "picture" : "thierrypattor.png"},
 
         {"id" : 2, "name" : "JOL - L'ouvany", "keywords": [4],
-          "starred": true, "discounted": true, "discountRate" : 0.0,
+          "starred": true, "discounted": true, "discountRate" : 0.0, "salesNumber":777,
           "price": 0.10, "picture" : "ovni.png"},
 
         {"id" : 3, "name" : "Pear - Upad", "keywords": [1],
-          "starred": false, "discounted": false, "discountRate" : 600.0,
+          "starred": false, "discounted": false, "discountRate" : 600.0, "salesNumber":777,
           "price": 670, "picture" : "upad.png"},
 
         {"id" : 4, "name" : "Ocar - G520", "keywords": [0],
-          "starred": false, "discounted": false, "discountRate" : 0.0,
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
           "price": 105, "picture" : "ocar.png"},
 
         {"id" : 5, "name" : "MSU - Spoctre", "keywords": [0],
-          "starred": false, "discounted": false, "discountRate" : 0.0,
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
           "price": 822, "picture" : "msu.png"},
 
         {"id" : 6, "name" : "Sumzumg - tob 4", "keywords": [1],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "price": 560,
-          "picture" : "tab4.png"},
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
+          "price": 560, "picture" : "tab4.png"},
 
         {"id" : 7, "name" : "LJ - Plasma 5", "keywords": [2],
-          "starred": false, "discounted": false, "discountRate" : 0.0,
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
           "price": 2500.0 , "picture" : "lg.png"},
 
         {"id" : 8, "name" : "Vionney - Je reviens", "keywords": [4],
-          "starred": false, "discounted": false, "discountRate" : 0.0,
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
           "price": 3.0, "picture" : "vionney.png"},
 
         {"id" : 9, "name" : "Rog'n'tree - Droïde", "keywords": [4],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "price": 9.90,
-          "picture" : "ragnbone.png"},
+          "starred": false, "discounted": false, "discountRate" : 0.0,  "salesNumber":777,
+          "price": 9.90, "picture" : "ragnbone.png"},
       
-        {"id" : 10, "name" : "Woki - PhoneDaube", "keywords": [9], "starred": false, "discounted": false, "discountRate" : 0.0, "price": 2.5, "picture" : "images/dummy.png"},
-        {"id" : 11, "name" : "Nokota - Optimization for oyster farmer", "keywords": [8], "starred": false, "discounted": false, "discountRate" : 0.0, "price": 21.35 , "picture" : "images/dummy.png"},
-        {"id" : 12, "name" : "Girman - Lost404", "keywords": [3], "starred": false, "discounted": false, "discountRate" : 0.0, "price": 15.0, "picture" : "images/dummy.png"},
-        {"id" : 13, "name" : "Jojo - Fifty shades of Jojo", "keywords": [5], "starred": false, "discounted": false, "discountRate" : 0.0, "price": 565.0, "picture" : "images/dummy.png"},
-        {"id" : 14, "name" : "Logotach - Tab 200", "keywords": [1], "starred": false, "discounted": false, "discountRate" : 0.0, "price": 321.5, "picture" : "images/dummy.png"}
+        {"id" : 10, "name" : "Woki - PhoneDaube", "keywords": [9], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 2.5, "picture" : "images/dummy.png"},
+        {"id" : 11, "name" : "Nokota - Optimization for oyster farmer", "keywords": [8], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 21.35 , "picture" : "images/dummy.png"},
+        {"id" : 12, "name" : "Girman - Lost404", "keywords": [3], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 15.0, "picture" : "images/dummy.png"},
+        {"id" : 13, "name" : "Jojo - Fifty shades of Jojo", "keywords": [5], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 565.0, "picture" : "images/dummy.png"},
+        {"id" : 14, "name" : "Logotach - Tab 200", "keywords": [1], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 321.5, "picture" : "images/dummy.png"}
     ],
     "fields" :
     [
-      {"id" : 0, "label" : "Sport", "keywords":[]},
-      {"id" : 1, "label" : "High-tech", "keywords":[0,1,2,3,4,9]},
-      {"id" : 2, "label" : "Bijoux","keywords":[]},
-      {"id" : 3, "label" : "Livres","keywords":[5,6,7,8]},
-      {"id" : 4, "label" : "Bricolage","keywords":[]},
-      {"id" : 5, "label" : "Vêtements","keywords":[]}
+      {"id" : 0, "name" : "Sport", "keywords":[]},
+      {"id" : 1, "name" : "High-tech", "keywords":[0,1,2,3,4,9]},
+      {"id" : 2, "name" : "Bijoux","keywords":[]},
+      {"id" : 3, "name" : "Livres","keywords":[5,6,7,8]},
+      {"id" : 4, "name" : "Bricolage","keywords":[]},
+      {"id" : 5, "name" : "Vêtements","keywords":[]}
     ],
     "keywords" :
     [
-      {"id" : 0,  "label" : "Ordinateur"},
-      {"id" : 1,  "label" : "Tablette"},
-      {"id" : 2,  "label" : "Télévision"},
-      {"id" : 3,  "label" : "GPS"},
-      {"id" : 4,  "label" : "Cédérom"},
-      {"id" : 5,  "label" : "Romance"},
-      {"id" : 6,  "label" : "Fantaisie"},
-      {"id" : 7, "label" : "Biologie"},
-      {"id" : 8,  "label" : "Autobiographie"},
-      {"id" : 9,  "label" : "Smartphone"}
+      {"id" : 0,  "name" : "Ordinateur"},
+      {"id" : 1,  "name" : "Tablette"},
+      {"id" : 2,  "name" : "Télévision"},
+      {"id" : 3,  "name" : "GPS"},
+      {"id" : 4,  "name" : "Cédérom"},
+      {"id" : 5,  "name" : "Romance"},
+      {"id" : 6,  "name" : "Fantaisie"},
+      {"id" : 7,  "name" : "Biologie"},
+      {"id" : 8,  "name" : "Autobiographie"},
+      {"id" : 9,  "name" : "Smartphone"}
     ]
     ,
     "brands" :
     [
-        {"id" : 0, "name" : "K&N", "fields" : [5]},
-        {"id" : 1, "name" : "Costaromo", "fields" : [4]},
-        {"id" : 2, "name" : "RingStore", "fields" : [2]},
-        {"id" : 3, "name" : "ToBeOrToHave", "fields" : [1,3]},
-        {"id" : 3, "name" : "Yottathlon", "fields" : [0]}
+        {"id" : 0, "name" : "K&N","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [5]},
+        {"id" : 1, "name" : "Costaromo","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [4]},
+        {"id" : 2, "name" : "RingStore","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [2]},
+        {"id" : 3, "name" : "ToBeOrToHave","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [1,3]},
+        {"id" : 4, "name" : "Yottathlon","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [0]}
     ],
 
     "stores" :
     [
-        {"id" : 0, "brand" : 0, "description" : "", "adress" : "NICE", "latitude" : 43.700000, "longitude" :  7.250000,"stock": []},
-        {"id" : 1, "brand" : 1, "description" : "", "adress" : "TOULON", "latitude" : 43.124228, "longitude" : 5.927999999999997,"stock": []},
-        {"id" : 2, "brand" : 2, "description" : "", "adress" : "FREJUS", "latitude" : 43.43315200000001, "longitude" : 6.737033999999994,"stock": []},
-        {"id" : 3, "brand" : 3, "description" : "", "adress" : "AIX-EN-PROVENCE", "latitude" : 43.529742, "longitude" : 5.4474270000000615,"stock": []},
-        {"id" : 4, "brand" : 4, "description" : "", "adress" : "MARSEILLE", "latitude" : 43.31385900000001, "longitude" : 5.382301699999971,"stock": []},
-        {"id" : 5, "brand" : 5, "description" : "", "adress" : "MONTPELLIER", "latitude" : 43.610769, "longitude" : 3.8767159999999876,"stock": []}
+        {"id" : 0, "brand" : 3, "description" : "", "address" : "NICE", "phone":"01 21 45 78 98", "webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.700000, "longitude" :  7.250000,"stock": []},
+        {"id" : 1, "brand" : 3, "description" : "", "address" : "TOULON", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.124228, "longitude" : 5.927999999999997,"stock": []},
+        {"id" : 2, "brand" : 3, "description" : "", "address" : "FREJUS", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.43315200000001, "longitude" : 6.737033999999994,"stock": []},
+        {"id" : 3, "brand" : 3, "description" : "", "address" : "AIX-EN-PROVENCE", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2],"latitude" : 43.529742, "longitude" : 5.4474270000000615,"stock": [7]},
+        {"id" : 4, "brand" : 3, "description" : "", "address" : "MARSEILLE", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.31385900000001, "longitude" : 5.382301699999971,"stock": []},
+        {"id" : 5, "brand" : 3, "description" : "", "address" : "MONTPELLIER", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.610769, "longitude" : 3.8767159999999876,"stock": []}
     ]
 }
