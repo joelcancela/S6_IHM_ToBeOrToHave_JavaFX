@@ -27,6 +27,6 @@ public class HighlightedShopController {
     public void initHighlightedShop(Shop shop){
         brandImage.setImage(new Image(shop.getLogoPath()));
         shopName.setText(shop.getName());
-        shopDescription.setText(shop.getDescription());
+        shopDescription.setText(shop.getSmallDescription());
     }
 }

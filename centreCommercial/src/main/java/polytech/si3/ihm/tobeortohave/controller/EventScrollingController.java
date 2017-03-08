@@ -29,7 +29,9 @@ public class EventScrollingController {
     public HBox radioButtonHBoxEvent;
 
     @FXML
-    private void initialize(){}
+    private void initialize(){
+
+    }
 
     public void initEvents(List<String> eventsPaths){}
 }
