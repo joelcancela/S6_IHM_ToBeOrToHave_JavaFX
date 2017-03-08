@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Shop {
     private String logoPath;
-    private List<String> productsOnTopPath;
+    private List<String> highlightedProductsPath;
     private String smallDescription;
     private String description;
     private int idShop;
@@ -18,7 +18,7 @@ public class Shop {
     private Point positionMap;
 
     public Shop(String logoPath, String smallDescription, String description, int idShop, String name, List<String> productsType) {
-        productsOnTopPath = new ArrayList<String>();
+        highlightedProductsPath = new ArrayList<String>();
         positionMap = new Point();
         this.logoPath = logoPath;
         this.smallDescription = smallDescription;
@@ -31,7 +31,7 @@ public class Shop {
     public Shop(String logoPath, String smallDescription, String description, int idShop, String name) {
         positionMap = new Point();
         productsType = new ArrayList<String>();
-        productsOnTopPath = new ArrayList<String>();
+        highlightedProductsPath = new ArrayList<String>();
         this.logoPath = logoPath;
         this.smallDescription = smallDescription;
         this.description = description;
@@ -39,8 +39,8 @@ public class Shop {
         this.name = name;
     }
 
-    public void addProductOnTopPath(String productOnTopPath) {
-        productsOnTopPath.add(productOnTopPath);
+    public void addHighlightedProductPath(String highlightedProductPath) {
+        highlightedProductsPath.add(highlightedProductPath);
     }
 
     public void addProductType(String productType) {
@@ -59,8 +59,8 @@ public class Shop {
         return logoPath;
     }
 
-    public List<String> getProductsOnTopPath() {
-        return productsOnTopPath;
+    public List<String> getHighlightedProductsPath() {
+        return highlightedProductsPath;
     }
 
     public String getSmallDescription() {

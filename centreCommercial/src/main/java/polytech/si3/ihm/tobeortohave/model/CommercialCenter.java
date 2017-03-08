@@ -11,12 +11,18 @@ public class CommercialCenter {
     private String description;
     private String mapPath;
     private List<Shop> shopList;
+    private List<Shop> highlightedshopList;
 
     public CommercialCenter(String name, String description, String mapPath) {
         shopList = new ArrayList<Shop>();
+        highlightedshopList = new ArrayList<Shop>();
         this.name = name;
         this.description = description;
         this.mapPath = mapPath;
+    }
+
+    public void addHighlightedShop(Shop shop){
+        highlightedshopList.add(shop);
     }
 
     public void addShop(Shop shop){
@@ -37,5 +43,9 @@ public class CommercialCenter {
 
     public List<Shop> getShopList() {
         return shopList;
+    }
+
+    public List<Shop> getHighlightedshopList() {
+        return highlightedshopList;
     }
 }
