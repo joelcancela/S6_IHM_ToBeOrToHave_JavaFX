@@ -34,6 +34,7 @@ public class MainApp extends Application {
 
         stage.setTitle("Centre commercial");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 }

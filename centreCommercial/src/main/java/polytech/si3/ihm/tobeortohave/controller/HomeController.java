@@ -46,42 +46,18 @@ public class HomeController {
     public void initGridPane(List<Shop> highlightedShops) {
         int size = highlightedShops.size();
         for (int i = 0; i <= highlightedShops.size() / 3; i++) {
-            for (int j = 0; j < 3 && size > 0 ; j++, size--) {
-                log.info("Pass. i = "+i+" j = "+j);
+            for (int j = 0; j < 3 && size > 0; j++, size--) {
+                log.info("Pass. i = " + i + " j = " + j);
                 String fxmlFile = "/fxml/home_shop.fxml";
                 FXMLLoader loader = new FXMLLoader();
                 try {
                     Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
-                    ((HighlightedShopController) loader.getController()).initHighlightedShop(highlightedShops.get(i* 3 + j));
+                    ((HighlightedShopController) loader.getController()).initHighlightedShop(highlightedShops.get(i * 3 + j));
                     gridPaneHome.add(rootNode, j, i);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-        }
-    }
-
-    public void initEventPane(List<String> eventsPaths){
-        String fxmlFile = "/fxml/scroll.fxml";
-        FXMLLoader loader = new FXMLLoader();
-        try {
-            Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
-            ((EventScrollingController) loader.getController()).initEvents(eventsPaths);
-            eventPane.getChildren().add(rootNode);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void initProductPane(List<String> productImagePaths){
-        String fxmlFile = "/fxml/scroll_product_highlight.fxml";
-        FXMLLoader loader = new FXMLLoader();
-        try {
-            Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
-            ((ProductScrollingController) loader.getController()).initProducts(productImagePaths);
-            highlightPane.getChildren().add(rootNode);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }
