@@ -5,8 +5,8 @@ import com.lynden.gmapsfx.MapComponentInitializedListener;
 import com.lynden.gmapsfx.javascript.object.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
-import jdk.nashorn.internal.parser.JSONParser;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
 
 import java.net.URL;
@@ -16,7 +16,10 @@ import java.util.ResourceBundle;
 public class MapViewController implements Initializable, MapComponentInitializedListener {
 
 	@FXML
-	private VBox vbox;
+	private Button button;
+
+    @FXML
+    private VBox vbox;
 
 	@FXML
 	private GoogleMapView mapView;
