@@ -41,4 +41,36 @@ public class Produit {
                 ", salesNumber=" + salesNumber +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<String> getKeywords() {
+        return keywords;
+    }
+
+    public boolean isStarred() {
+        return starred;
+    }
+
+    public boolean isDiscounted() {
+        return discounted;
+    }
+
+    public double getDiscountRate() {
+        return discountRate;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public int getSalesNumber() {
+        return salesNumber;
+    }
 }
