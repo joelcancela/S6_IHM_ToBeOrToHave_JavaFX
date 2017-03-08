@@ -9,6 +9,7 @@ import polytech.si3.ihm.tobeortohave.model.Shop;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -27,12 +28,16 @@ public class HomeController {
 
     @FXML
     public void initialize() {
-        //initGridPane(new ArrayList<Shop>());
+        initGridPane(Arrays.asList(
+                new Shop("/images/logoShop.png","I'm a small description", "I'm a long description",
+                        0, "Name of the shop")
+        ));
     }
 
     public void initGridPane(List<Shop> highlightedShops) {
         for (int i = 0; i <= highlightedShops.size() / 3; i++) {
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < 3 && (i*3 + j) < highlightedShops.size() ; j++) {
+
                 String fxmlFile = "/fxml/home_shop.fxml";
                 FXMLLoader loader = new FXMLLoader();
                 try {
