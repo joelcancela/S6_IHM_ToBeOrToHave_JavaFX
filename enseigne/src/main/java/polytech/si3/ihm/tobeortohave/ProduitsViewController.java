@@ -5,7 +5,10 @@ import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import jdk.nashorn.internal.parser.JSONParser;
 import net.miginfocom.layout.Grid;
+import org.json.JSONObject;
+import polytech.si3.ihm.tobeortohave.model.JSONReader;
 
 /**
  * Class x
@@ -15,9 +18,13 @@ import net.miginfocom.layout.Grid;
 public class ProduitsViewController {
     public GridPane productGrid;
     public GridPane bestSellerGrid;
+    private JSONReader jsonReader;
+
 
     @FXML
     public void initialize() {
+        jsonReader = new JSONReader();
+        jsonReader.parse();
 
     }
 
