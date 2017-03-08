@@ -34,15 +34,15 @@
    <bottom>
       <AnchorPane prefHeight="25.0" prefWidth="832.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox fx:id="radioButtonHBox" layoutX="193.0" layoutY="4.0">
+            <HBox layoutX="193.0" layoutY="4.0">
                <children>
-                  <RadioButton mnemonicParsing="false" selected="true">
+                  <RadioButton fx:id="radio1" mnemonicParsing="false" selected="true">
                      <toggleGroup>
                         <ToggleGroup fx:id="group" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" toggleGroup="$group" />
-                  <RadioButton mnemonicParsing="false" toggleGroup="$group" />
+                  <RadioButton fx:id="radio2" mnemonicParsing="false" toggleGroup="$group" />
+                  <RadioButton fx:id="radio3" mnemonicParsing="false" toggleGroup="$group" />
                </children>
             </HBox>
          </children>
@@ -50,9 +50,6 @@
    </bottom>
    <center>
       <ImageView fx:id="productImage" cache="true" fitHeight="255.0" fitWidth="255.0" pickOnBounds="true" BorderPane.alignment="CENTER">
-         <image>
-            <Image url="/images/Produits.png" />
-         </image>
       </ImageView>
    </center>
 </BorderPane>
