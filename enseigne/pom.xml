@@ -16,7 +16,10 @@
     </organization>
 
     <properties>
-        <slf4j.version>1.6.1</slf4j.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <compiler.source>1.8</compiler.source>
+            <compiler.target>1.8</compiler.target>
+            <slf4j.version>1.6.1</slf4j.version>
     </properties>
 
     <build>
