@@ -41,11 +41,25 @@
           "starred": false, "discounted": false, "discountRate" : 0.0,  "salesNumber":777,
           "price": 9.90, "picture" : "ragnbone.png"},
       
-        {"id" : 10, "name" : "Woki - PhoneDaube", "keywords": [9], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 2.5, "picture" : "images/dummy.png"},
-        {"id" : 11, "name" : "Nokota - Optimization for oyster farmer", "keywords": [8], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 21.35 , "picture" : "images/dummy.png"},
-        {"id" : 12, "name" : "Girman - Lost404", "keywords": [3], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 15.0, "picture" : "images/dummy.png"},
-        {"id" : 13, "name" : "Jojo - Fifty shades of Jojo", "keywords": [5], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 565.0, "picture" : "images/dummy.png"},
-        {"id" : 14, "name" : "Logotach - Tab 200", "keywords": [1], "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777, "price": 321.5, "picture" : "images/dummy.png"}
+        {"id" : 10, "name" : "Woki - PhoneDaube", "keywords": [9],
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
+          "price": 2.5, "picture" : "wiko-tommy.png"},
+
+        {"id" : 11, "name" : "Nokota - Optimization for oyster farmer", "keywords": [8],
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
+          "price": 21.35 , "picture" : "nokota.png"},
+
+        {"id" : 12, "name" : "Girman - Lost404", "keywords": [3],
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
+          "price": 15.0, "picture" : "girman.png"},
+
+        {"id" : 13, "name" : "Jojo - Fifty shades of Jojo", "keywords": [5],
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
+          "price": 565.0, "picture" : "jojo.png"},
+
+        {"id" : 14, "name" : "Logotach - Tab 200", "keywords": [1],
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
+          "price": 321.5, "picture" : "Logotach.png"}
     ],
     "fields" :
     [
