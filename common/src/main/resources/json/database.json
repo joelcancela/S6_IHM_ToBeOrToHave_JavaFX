@@ -6,7 +6,7 @@
           "price": 999.99, "picture" : "asos.png"},
 
         {"id" : 1, "name" : "Thierry Pattor & la cave des mystères", "keywords": [5],
-          "starred": true, "discounted": true, "discountRate" : 0.0, "salesNumber":777,
+          "starred": true, "discounted": true, "discountRate" : 0.0, "salesNumber":95,
           "price": 8.50, "picture" : "thierrypattor.png"},
 
         {"id" : 2, "name" : "JOL - L'ouvany", "keywords": [4],
@@ -22,7 +22,7 @@
           "price": 105, "picture" : "ocar.png"},
 
         {"id" : 5, "name" : "MSU - Spoctre", "keywords": [0],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":177,
           "price": 822, "picture" : "msu.png"},
 
         {"id" : 6, "name" : "Sumzumg - tob 4", "keywords": [1],
@@ -30,7 +30,7 @@
           "price": 560, "picture" : "tab4.png"},
 
         {"id" : 7, "name" : "LJ - Plasma 5", "keywords": [2],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
+          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":25,
           "price": 2500.0 , "picture" : "lg.png"},
 
         {"id" : 8, "name" : "Vionney - Je reviens", "keywords": [4],
@@ -38,7 +38,7 @@
           "price": 3.0, "picture" : "vionney.png"},
 
         {"id" : 9, "name" : "Rog'n'tree - Droïde", "keywords": [4],
-          "starred": false, "discounted": false, "discountRate" : 0.0,  "salesNumber":777,
+          "starred": false, "discounted": false, "discountRate" : 0.0,  "salesNumber":123,
           "price": 9.90, "picture" : "ragnbone.png"},
       
         {"id" : 10, "name" : "Woki - PhoneDaube", "keywords": [9],
@@ -95,7 +95,7 @@
 
     "stores" :
     [
-        {"id" : 0, "brand" : 3, "description" : "", "address" : "NICE", "phone":"01 21 45 78 98", "webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.700000, "longitude" :  7.250000,"stock": []},
+        {"id" : 0, "brand" : 3, "description" : "", "address" : "NICE", "phone":"01 21 45 78 98", "webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.700000, "longitude" :  7.250000,"stock": [7,5,9,1]},
         {"id" : 1, "brand" : 3, "description" : "", "address" : "TOULON", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.124228, "longitude" : 5.927999999999997,"stock": []},
         {"id" : 2, "brand" : 3, "description" : "", "address" : "FREJUS", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.43315200000001, "longitude" : 6.737033999999994,"stock": []},
         {"id" : 3, "brand" : 3, "description" : "", "address" : "AIX-EN-PROVENCE", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2],"latitude" : 43.529742, "longitude" : 5.4474270000000615,"stock": [7]},
