@@ -1,2 +1,3 @@
-# S6_IHM_ToBeOrToHave
-S6 IHM Project with JavaFX
+# ToBeOrToHave
+
+Polytech'Nice SI3_S6 IHM Project with JavaFX
