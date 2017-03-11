@@ -66,34 +66,31 @@ public class MapViewController implements Initializable, MapComponentInitialized
 			Button button = new Button(magasin.getAddress());
 			button.setStyle("-fx-font-size: 20px;");
 			button.addEventHandler(MouseEvent.MOUSE_CLICKED,
-					new EventHandler<MouseEvent>() {
-						@Override
-						public void handle(MouseEvent e) {
-							map.clearMarkers();
-							LatLong latLong = new LatLong(magasin.getLatitude(),magasin.getLongitude());
-							//Add markers to the map
-							MarkerOptions markerOptions1 = new MarkerOptions();
-							markerOptions1.position(latLong);
+					e -> {
+                        map.clearMarkers();
+                        LatLong latLong = new LatLong(magasin.getLatitude(),magasin.getLongitude());
+                        //Add markers to the map
+                        MarkerOptions markerOptions1 = new MarkerOptions();
+                        markerOptions1.position(latLong);
 
 
-							Marker myShopMarker = new Marker(markerOptions1);
+                        Marker myShopMarker = new Marker(markerOptions1);
 
 
-							map.addMarker(myShopMarker);
+                        map.addMarker(myShopMarker);
 
 
 
-							InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
-							infoWindowOptions.content("<h2>ToBeOrToHave</h2>"
-									+ "Telephone: " + magasin.getPhoneNumber() + "<br>"
-									+ "Web: " + magasin.getWebAddress());
+                        InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
+                        infoWindowOptions.content("<h2>ToBeOrToHave</h2>"
+                                + "Telephone: " + magasin.getPhoneNumber() + "<br>"
+                                + "Web: " + magasin.getWebAddress());
 
-							InfoWindow fredWilkeInfoWindow = new InfoWindow(infoWindowOptions);
-							fredWilkeInfoWindow.open(map, myShopMarker);
+                        InfoWindow InfoWindow = new InfoWindow(infoWindowOptions);
+                        InfoWindow.open(map, myShopMarker);
 
-							map.setCenter(latLong);
-						}
-					});
+                        map.setCenter(latLong);
+                    });
 			vbox.getChildren().add(button);
 		}
 
@@ -114,8 +111,8 @@ public class MapViewController implements Initializable, MapComponentInitialized
 				+ "Telephone: 0442345678<br>"
 				+ "Web: www.ToBeOrToHave.fr");
 
-		InfoWindow fredWilkeInfoWindow = new InfoWindow(infoWindowOptions);
-		fredWilkeInfoWindow.open(map, myShopMarker);
+		InfoWindow InfoWindow = new InfoWindow(infoWindowOptions);
+		InfoWindow.open(map, myShopMarker);
 
 
 	}
