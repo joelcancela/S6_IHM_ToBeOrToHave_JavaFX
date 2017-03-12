@@ -1,45 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <AnchorPane prefHeight="76.0" prefWidth="600.0">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1295.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.controller.InfosSupController">
+   <left>
+      <HBox BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="74.0" layoutY="19.0" text="Localisation :">
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Où nous trouver :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ImageView fx:id="map" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Nos visiteurs :">
                <font>
-                  <Font size="26.0" />
+                  <Font size="20.0" />
                </font>
-            </Label>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin></Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <LineChart title="Nombre de visiteurs annuels">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <PieChart fx:id="profil" title="Profil de nos visiteurs en 2016" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <BarChart fx:id="age" title="Age de nos visiteurs en 2016">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </HBox>
          </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="254.0" prefWidth="600.0">
-         <children>
-            <ImageView fitHeight="254.0" fitWidth="469.0" layoutX="109.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/images/Map.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="65.0" prefWidth="800.0">
-         <children>
-            <Label layoutX="81.0" layoutY="14.0" text="Descriptif :">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <Label layoutX="96.0" prefHeight="117.0" prefWidth="747.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere libero sit amet nulla fringilla gravida. Cras augue sapien, rutrum quis magna ut, iaculis ultrices urna. Aenean quis tincidunt erat. Nunc varius orci ante, sed viverra libero cursus ac. Aenean tempus nibh eros, ut elementum mi dignissim dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer blandit nulla quam, in blandit sem pretium eu. Vestibulum iaculis luctus vestibulum. Integer porta vulputate enim eu egestas. Ut sollicitudin laoreet tristique." wrapText="true" />
-         </children>
-      </AnchorPane>
-   </children>
-</VBox>
+      </VBox>
+   </center>
+</BorderPane>
