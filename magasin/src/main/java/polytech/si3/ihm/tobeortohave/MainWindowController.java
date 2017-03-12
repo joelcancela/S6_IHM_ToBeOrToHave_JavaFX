@@ -62,4 +62,7 @@ public class MainWindowController {
     public void mapTabSelected(Event event) {
         System.out.println("Map selected");
     }
+
+	public void storeTabSelected(Event event) {
+	}
 }
