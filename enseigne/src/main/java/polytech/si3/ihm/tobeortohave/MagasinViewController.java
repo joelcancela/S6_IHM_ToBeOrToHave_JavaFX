@@ -38,9 +38,8 @@ public class MagasinViewController implements Initializable, MapComponentInitial
 
 
 	public void mapInitialized() {
-		List<Magasin> magasinList = jsonReader.getStores();
-		List<Magasin> magasinsTboth = Enseigne.findMagasinByBrand(magasinList, "ToBeOrToHave");
-		Magasin magasinDefault = magasinList.get(0);
+		List<Magasin> magasinsTboth = Enseigne.findMagasinByBrand(jsonReader.getStores(), "ToBeOrToHave");
+		Magasin magasinDefault = magasinsTboth.get(0);
 		LatLong defaultShopLocation = new LatLong(magasinDefault.getLatitude(), magasinDefault.getLongitude());
 
 
@@ -64,8 +63,8 @@ public class MagasinViewController implements Initializable, MapComponentInitial
 
 
 		vbox.setSpacing(10.0);
-		for (int i = 0; i < magasinList.size(); i++) {
-			Magasin magasin = magasinList.get(i);
+		for (int i = 0; i < magasinsTboth.size(); i++) {
+			Magasin magasin = magasinsTboth.get(i);
 			Button button = new Button(magasin.getAddress());
 			button.setStyle("-fx-font-size: 20px;");
 			button.addEventHandler(MouseEvent.MOUSE_CLICKED,
