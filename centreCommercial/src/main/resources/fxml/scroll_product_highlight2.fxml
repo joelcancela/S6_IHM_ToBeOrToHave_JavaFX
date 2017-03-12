@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.controller.ProductScrollingController">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&lt;" />
-            <ImageView fitHeight="255.0" fitWidth="255.0" pickOnBounds="true" preserveRatio="true" />
-            <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&gt;" />
+            <Button fx:id="leftButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&lt;" />
+            <ImageView fx:id="productImage" fitHeight="255.0" fitWidth="255.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="rightButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&gt;" />
          </children>
          <padding>
             <Insets top="10.0" />
@@ -23,13 +23,13 @@
       </HBox>
       <HBox fx:id="radioButtonHBox1" alignment="BOTTOM_CENTER">
          <children>
-            <RadioButton mnemonicParsing="false" selected="true">
+            <RadioButton fx:id="radio1" mnemonicParsing="false" selected="true">
                <toggleGroup>
                   <ToggleGroup fx:id="group1" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" toggleGroup="$group1" />
-            <RadioButton mnemonicParsing="false" toggleGroup="$group1" />
+            <RadioButton fx:id="radio2" mnemonicParsing="false" toggleGroup="$group1" />
+            <RadioButton fx:id="radio3" mnemonicParsing="false" toggleGroup="$group1" />
          </children>
          <VBox.margin>
             <Insets />
