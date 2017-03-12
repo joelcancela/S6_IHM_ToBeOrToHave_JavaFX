@@ -1,0 +1,76 @@
+{
+  "visitorsPerYear": [
+    {
+      "visitors": 4.7,
+      "year": "2010"
+    },
+    {
+      "visitors": 5.8,
+      "year": "2011"
+    },
+    {
+      "visitors": 5.2,
+      "year": "2012"
+    },
+    {
+      "visitors": 6.5,
+      "year": "2013"
+    },
+    {
+      "visitors": 6.8,
+      "year": "2014"
+    },
+    {
+      "visitors": 8.4,
+      "year": "2015"
+    },
+    {
+      "visitors": 9.2,
+      "year": "2016"
+    }
+  ],
+  "visitorsProfile": [
+    {
+      "percentage": 43,
+      "label": "Famille"
+    },
+    {
+      "percentage": 9,
+      "label": "Retraités"
+    },
+    {
+      "percentage": 20,
+      "label": "Etudiants"
+    },
+    {
+      "percentage": 28,
+      "label": "Adultes"
+    }
+  ],
+  "visitorsAge": [
+    {
+      "percentage": 5,
+      "label": "0-8"
+    },
+    {
+      "percentage": 13,
+      "label": "09-16"
+    },
+    {
+      "percentage": 20,
+      "label": "16-25"
+    },
+    {
+      "percentage": 31,
+      "label": "25-40"
+    },
+    {
+      "percentage": 21,
+      "label": "40-60"
+    },
+    {
+      "percentage": 10,
+      "label": "60 et +"
+    }
+  ]
+}
