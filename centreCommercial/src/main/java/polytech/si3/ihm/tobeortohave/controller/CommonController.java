@@ -35,7 +35,7 @@ public class CommonController {
         try {
             Parent node = loader.load(getClass().getResourceAsStream(shoplist));
             ((ShopListController)loader.getController()).initCommonController(this);
-            ((ShopListController)loader.getController()).initLabel(category);
+            ((ShopListController)loader.getController()).initList(category);
             tab1.setContent(node);
         } catch (IOException e) {
             e.printStackTrace();

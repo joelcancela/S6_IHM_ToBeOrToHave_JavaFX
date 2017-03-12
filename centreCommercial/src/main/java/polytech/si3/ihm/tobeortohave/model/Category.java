@@ -6,9 +6,9 @@ package polytech.si3.ihm.tobeortohave.model;
 public enum Category {
     ALL("Tous les magasins"),
     SPORT("Sport"),
-    LITERATURE("Littérature"),
-    IT("Informatique & Technologie"),
-    JEWEL("Bijoux & Montres"),
+    LITERATURE("Livres"),
+    IT("High-tech"),
+    JEWEL("Bijoux"),
     CRAFT("Bricolage"),
     CLOTHES("Vêtements");
 

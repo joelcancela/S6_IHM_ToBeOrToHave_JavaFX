@@ -121,6 +121,7 @@ public class JSONReader {
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
             String name = jsonObject.getString("name");
+            String logo = jsonObject.getString("logo");
             List<Field> fieldList = new ArrayList<>();
             JSONArray fieldsArray = jsonArray.getJSONObject(i).getJSONArray("fields");
             for (int j = 0; j < fieldsArray.length(); j++) {
@@ -129,7 +130,7 @@ public class JSONReader {
             String description = jsonObject.getString("description");
             String phone = jsonObject.getString("phone");
             String webAddress = jsonObject.getString("webAddress");
-            brands.add(new Enseigne(name, fieldList, description, phone, webAddress));
+            brands.add(new Enseigne(name, logo, fieldList, description, phone, webAddress));
         }
 
 

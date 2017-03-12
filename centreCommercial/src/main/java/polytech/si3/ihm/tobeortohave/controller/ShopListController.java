@@ -1,15 +1,20 @@
 package polytech.si3.ihm.tobeortohave.controller;
 
-import javafx.event.EventHandler;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import polytech.si3.ihm.tobeortohave.model.Category;
+import javafx.util.Callback;
+import polytech.si3.ihm.tobeortohave.model.*;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Marc on 08/03/2017.
@@ -25,20 +30,72 @@ public class ShopListController {
     public Button returnButton;
 
     @FXML
-    public ListView listViewShopList;
+    public ListView<Shop> listViewShopList;
 
     @FXML
     public void initialize(){
         returnButton.setOnAction(e -> commonController.reset());
     }
 
+    private JSONReader jsonReader = new JSONReader();
+
 
     public void initCommonController(CommonController commonController){
         this.commonController = commonController;
     }
 
-    public void initLabel(Category category){
+    public void initList(Category category){
+        jsonReader.parse();
+        List<Magasin> magasins = jsonReader.getStores();
+        List<Shop> magasinsToDisplay = new ArrayList<>();
+        Shop shop;
+        for(Magasin m : magasins){
+            if(category.equals(Category.ALL) && m.getAddress().equals("NICE")){
+                shop = new Shop(m.getEnseigne().getLogo(), m.getDescription(), m.getDescription(),0, m.getEnseigne().getName());
+                magasinsToDisplay.add(shop);
+                continue;
+            }
+            if(categoryMatch(m, category)&& m.getAddress().equals("NICE")){
+                shop = new Shop(m.getEnseigne().getLogo(), m.getDescription(), m.getDescription(),0, m.getEnseigne().getName());
+                magasinsToDisplay.add(shop);
+            }
+        }
         label.setText(category.getDisplay());
+        this.listViewShopList.setItems(FXCollections.observableArrayList(magasinsToDisplay));
+        this.listViewShopList.setCellFactory(
+                new Callback<ListView<Shop>, ListCell<Shop>>() {
+                    @Override
+                    public ListCell<Shop> call(ListView<Shop> listView) {
+                        // Cette cellule personalisée pourrait (devrait) être placée dans une classe à part
+                        return new ListCell<Shop>() {
+                            @Override
+                            protected void updateItem(Shop item, boolean empty) {
+                                super.updateItem(item, empty);
+
+                                if (item != null) {
+                                    // Load fxml file for this internship
+                                    try {
+                                        String fxmlFile = "/fxml/shop.fxml";
+                                        FXMLLoader loader = new FXMLLoader();
+                                        Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
+                                        ((ShopController) loader.getController()).initShopController(item);
+                                        // Display content of the fxml file
+                                        this.setGraphic(listElement);
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                        };
+                    }
+                });
     }
 
+    public boolean categoryMatch(Magasin m, Category category){
+        List<String> field = new ArrayList<>();
+        for(Field f : m.getEnseigne().getFieldList()){
+            field.add(f.getName());
+        }
+        return field.contains(category.getDisplay());
+    }
 }

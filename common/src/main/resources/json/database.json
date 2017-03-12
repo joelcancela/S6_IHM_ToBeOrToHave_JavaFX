@@ -1,105 +1,593 @@
 {
-    "products" :
-    [
-        {"id" : 0, "name" : "ASOS Terminator", "keywords": [0],
-          "starred": true, "discounted": true, "discountRate" : 0.0,  "salesNumber":777,
-          "price": 999.99, "picture" : "asos.png"},
-
-        {"id" : 1, "name" : "Thierry Pattor & la cave des mystères", "keywords": [5],
-          "starred": true, "discounted": true, "discountRate" : 0.0, "salesNumber":95,
-          "price": 8.50, "picture" : "thierrypattor.png"},
-
-        {"id" : 2, "name" : "JOL - L'ouvany", "keywords": [4],
-          "starred": true, "discounted": true, "discountRate" : 0.0, "salesNumber":777,
-          "price": 0.10, "picture" : "ovni.png"},
-
-        {"id" : 3, "name" : "Pear - Upad", "keywords": [1],
-          "starred": false, "discounted": false, "discountRate" : 600.0, "salesNumber":777,
-          "price": 670, "picture" : "upad.png"},
-
-        {"id" : 4, "name" : "Ocar - G520", "keywords": [0],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 105, "picture" : "ocar.png"},
-
-        {"id" : 5, "name" : "MSU - Spoctre", "keywords": [0],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":177,
-          "price": 822, "picture" : "msu.png"},
-
-        {"id" : 6, "name" : "Sumzumg - tob 4", "keywords": [1],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 560, "picture" : "tab4.png"},
-
-        {"id" : 7, "name" : "LJ - Plasma 5", "keywords": [2],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":25,
-          "price": 2500.0 , "picture" : "lg.png"},
-
-        {"id" : 8, "name" : "Vionney - Je reviens", "keywords": [4],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 3.0, "picture" : "vionney.jpg"},
-
-        {"id" : 9, "name" : "Rog'n'tree - Droïde", "keywords": [4],
-          "starred": false, "discounted": false, "discountRate" : 0.0,  "salesNumber":123,
-          "price": 9.90, "picture" : "ragnbone.png"},
-      
-        {"id" : 10, "name" : "Woki - PhoneDaube", "keywords": [9],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 2.5, "picture" : "wiko-tommy.png"},
-
-        {"id" : 11, "name" : "Nokota - Optimization for oyster farmer", "keywords": [8],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 21.35 , "picture" : "nokota.png"},
-
-        {"id" : 12, "name" : "Girman - Lost404", "keywords": [3],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 15.0, "picture" : "girman.png"},
-
-        {"id" : 13, "name" : "Jojo - Fifty shades of Jojo", "keywords": [5],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 565.0, "picture" : "jojo.jpg"},
-
-        {"id" : 14, "name" : "Logotach - Tab 200", "keywords": [1],
-          "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 321.5, "picture" : "Logotach.png"}
-    ],
-    "fields" :
-    [
-      {"id" : 0, "name" : "Sport", "keywords":[]},
-      {"id" : 1, "name" : "High-tech", "keywords":[0,1,2,3,4,9]},
-      {"id" : 2, "name" : "Bijoux","keywords":[]},
-      {"id" : 3, "name" : "Livres","keywords":[5,6,7,8]},
-      {"id" : 4, "name" : "Bricolage","keywords":[]},
-      {"id" : 5, "name" : "Vêtements","keywords":[]}
-    ],
-    "keywords" :
-    [
-      {"id" : 0,  "name" : "Ordinateur"},
-      {"id" : 1,  "name" : "Tablette"},
-      {"id" : 2,  "name" : "Télévision"},
-      {"id" : 3,  "name" : "GPS"},
-      {"id" : 4,  "name" : "Cédérom"},
-      {"id" : 5,  "name" : "Romance"},
-      {"id" : 6,  "name" : "Fantaisie"},
-      {"id" : 7,  "name" : "Biologie"},
-      {"id" : 8,  "name" : "Autobiographie"},
-      {"id" : 9,  "name" : "Smartphone"}
-    ]
-    ,
-    "brands" :
-    [
-        {"id" : 0, "name" : "K&N","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [5]},
-        {"id" : 1, "name" : "Costaromo","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [4]},
-        {"id" : 2, "name" : "RingStore","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [2]},
-        {"id" : 3, "name" : "ToBeOrToHave","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [1,3]},
-        {"id" : 4, "name" : "Yottathlon","description" : "", "phone":"01 21 45 78 98", "webAddress":"wow.com", "fields" : [0]}
-    ],
-
-    "stores" :
-    [
-        {"id" : 0, "brand" : 3, "description" : "", "address" : "NICE", "phone":"0 826 25 25 25", "webAddress":"www.tobeortohave.com/nice", "CA":[1.3,5.1,7.2], "latitude" : 43.700000, "longitude" :  7.250000,"stock": [7,5,9,1]},
-        {"id" : 1, "brand" : 3, "description" : "", "address" : "TOULON", "phone":"04 94 13 52 80","webAddress":"www.tobeortohave.com/toulon", "CA":[1.3,5.1,7.2], "latitude" : 43.124228, "longitude" : 5.927999999999997,"stock": []},
-        {"id" : 2, "brand" : 3, "description" : "", "address" : "FREJUS", "phone":"0 826 252 525","webAddress":"www.tobeortohave.com/frejus", "CA":[1.3,5.1,7.2], "latitude" : 43.43315200000001, "longitude" : 6.737033999999994,"stock": []},
-        {"id" : 3, "brand" : 3, "description" : "", "address" : "AIX-EN-PROVENCE", "phone":"01 21 45 78 98","webAddress":"www.tobeortohave.com/aix-en-provence", "CA":[1.3,5.1,7.2],"latitude" : 43.529742, "longitude" : 5.4474270000000615,"stock": [7]},
-        {"id" : 4, "brand" : 3, "description" : "", "address" : "MARSEILLE", "phone":"01 21 45 78 98","webAddress":"www.tobeortohave.com/marseille", "CA":[1.3,5.1,7.2], "latitude" : 43.31385900000001, "longitude" : 5.382301699999971,"stock": []},
-        {"id" : 5, "brand" : 3, "description" : "", "address" : "MONTPELLIER", "phone":"0 825 02 00 20","webAddress":"www.tobeortohave.com/montpellier", "CA":[1.3,5.1,7.2], "latitude" : 43.610769, "longitude" : 3.8767159999999876,"stock": []}
-    ]
+  "products": [
+    {
+      "id": 0,
+      "name": "ASOS Terminator",
+      "keywords": [
+        0
+      ],
+      "starred": true,
+      "discounted": true,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 999.99,
+      "picture": "asos.png"
+    },
+    {
+      "id": 1,
+      "name": "Thierry Pattor & la cave des mystères",
+      "keywords": [
+        5
+      ],
+      "starred": true,
+      "discounted": true,
+      "discountRate": 0,
+      "salesNumber": 95,
+      "price": 8.5,
+      "picture": "thierrypattor.png"
+    },
+    {
+      "id": 2,
+      "name": "JOL - L'ouvany",
+      "keywords": [
+        4
+      ],
+      "starred": true,
+      "discounted": true,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 0.1,
+      "picture": "ovni.png"
+    },
+    {
+      "id": 3,
+      "name": "Pear - Upad",
+      "keywords": [
+        1
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 600,
+      "salesNumber": 777,
+      "price": 670,
+      "picture": "upad.png"
+    },
+    {
+      "id": 4,
+      "name": "Ocar - G520",
+      "keywords": [
+        0
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 105,
+      "picture": "ocar.png"
+    },
+    {
+      "id": 5,
+      "name": "MSU - Spoctre",
+      "keywords": [
+        0
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 177,
+      "price": 822,
+      "picture": "msu.png"
+    },
+    {
+      "id": 6,
+      "name": "Sumzumg - tob 4",
+      "keywords": [
+        1
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 560,
+      "picture": "tab4.png"
+    },
+    {
+      "id": 7,
+      "name": "LJ - Plasma 5",
+      "keywords": [
+        2
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 25,
+      "price": 2500,
+      "picture": "lg.png"
+    },
+    {
+      "id": 8,
+      "name": "Vionney - Je reviens",
+      "keywords": [
+        4
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 3,
+      "picture": "vionney.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Rog'n'tree - Droïde",
+      "keywords": [
+        4
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 123,
+      "price": 9.9,
+      "picture": "ragnbone.png"
+    },
+    {
+      "id": 10,
+      "name": "Woki - PhoneDaube",
+      "keywords": [
+        9
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 2.5,
+      "picture": "wiko-tommy.png"
+    },
+    {
+      "id": 11,
+      "name": "Nokota - Optimization for oyster farmer",
+      "keywords": [
+        8
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 21.35,
+      "picture": "nokota.png"
+    },
+    {
+      "id": 12,
+      "name": "Girman - Lost404",
+      "keywords": [
+        3
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 15,
+      "picture": "girman.png"
+    },
+    {
+      "id": 13,
+      "name": "Jojo - Fifty shades of Jojo",
+      "keywords": [
+        5
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 565,
+      "picture": "jojo.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Logotach - Tab 200",
+      "keywords": [
+        1
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 321.5,
+      "picture": "Logotach.png"
+    },
+    {
+      "id": 15,
+      "name": "Chaussures de sport Kalenjo",
+      "keywords": [
+        1
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 59.9,
+      "picture": "kalenjo.png"
+    },
+    {
+      "id": 16,
+      "name": "Meuble en kit STÅLSUND",
+      "keywords": [
+        1
+      ],
+      "starred": false,
+      "discounted": false,
+      "discountRate": 0,
+      "salesNumber": 777,
+      "price": 59.9,
+      "picture": "stalsund.png"
+    }
+  ],
+  "fields": [
+    {
+      "id": 0,
+      "name": "Sport",
+      "keywords": []
+    },
+    {
+      "id": 1,
+      "name": "High-tech",
+      "keywords": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        9
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bijoux",
+      "keywords": []
+    },
+    {
+      "id": 3,
+      "name": "Livres",
+      "keywords": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Bricolage",
+      "keywords": []
+    },
+    {
+      "id": 5,
+      "name": "Vêtements",
+      "keywords": []
+    }
+  ],
+  "keywords": [
+    {
+      "id": 0,
+      "name": "Ordinateur"
+    },
+    {
+      "id": 1,
+      "name": "Tablette"
+    },
+    {
+      "id": 2,
+      "name": "Télévision"
+    },
+    {
+      "id": 3,
+      "name": "GPS"
+    },
+    {
+      "id": 4,
+      "name": "Cédérom"
+    },
+    {
+      "id": 5,
+      "name": "Romance"
+    },
+    {
+      "id": 6,
+      "name": "Fantaisie"
+    },
+    {
+      "id": 7,
+      "name": "Biologie"
+    },
+    {
+      "id": 8,
+      "name": "Autobiographie"
+    },
+    {
+      "id": 9,
+      "name": "Smartphone"
+    }
+  ],
+  "brands": [
+    {
+      "id": 0,
+      "name": "K&N",
+      "logo": "",
+      "description": "Kelly et Nauritz, plus connu sous le nom de K&N, est une entreprise et chaîne de magasins suédoise de prêt-à-porter pour femme, enfant et homme",
+      "phone": "01 21 45 78 98",
+      "webAddress": "kn.com",
+      "fields": [
+        5
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Costaromo",
+      "logo": "",
+      "description": "Costaromo est une chaîne française de grande distribution de bricolage, de décoration et d'aménagement de la maison.",
+      "phone": "01 21 45 78 98",
+      "webAddress": "costaromo.fr",
+      "fields": [
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "name": "RingStore",
+      "logo": "",
+      "description": "",
+      "phone": "01 21 45 78 98",
+      "webAddress": "ringstore.com",
+      "fields": [
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "name": "ToBeOrToHave",
+      "logo": "",
+      "description": "ToBeOrToHave le célèbre magasin de livres et de high-tech d'où son slogan : \"C'est pas parce qu'on est high-tech qu'on sait plus lire de bon vieux livre à l'ancienne mamène\"",
+      "phone": "01 21 58 41 98",
+      "webAddress": "tobeortohave.fr",
+      "fields": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Yottathlon",
+      "logo": "",
+      "description": "Yottathlon est un groupe français de grande distribution spécialisé dans les articles de sport et de loisirs",
+      "phone": "01 21 45 78 98",
+      "webAddress": "wow.com",
+      "fields": [
+        0
+      ]
+    },
+    {
+      "id": 5,
+      "name": "ASOS",
+      "logo": "images/brandLogo/asos.png",
+      "description": "Susa est une entreprise taïwanaise qui produit des cartes mères, des cartes graphiques, des lecteurs optiques, des PDA, des ordinateurs portables, des périphériques",
+      "phone": "01 65 68 48 36",
+      "webAddress": "asos.com",
+      "fields": [
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Pear",
+      "logo": "images/brandLogo/pear.png",
+      "description": "Pear est une entreprise multinationale américaine qui conçoit et commercialise des produits électroniques grand public, des ordinateurs personnels et des logiciels informatiques.",
+      "phone": "01 65 68 48 36",
+      "webAddress": "pear.com",
+      "fields": [
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Polykéa",
+      "logo": "images/brandLogo/polykea.png",
+      "description": "Polykéa, le bricolage sympa !",
+      "phone": "01 54 85 62 98",
+      "webAddress": "polykéa.fr",
+      "fields": [
+        4
+      ]
+    }
+  ],
+  "stores": [
+    {
+      "id": 0,
+      "brand": 5,
+      "description": "Magasin Asos de Nice",
+      "address": "NICE",
+      "phone": "01 21 45 78 98",
+      "webAddress": "asos.com/shops/fr/nice",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.7,
+      "longitude": 7.25,
+      "stock": [
+        0
+      ]
+    },
+    {
+      "id": 1,
+      "brand": 3,
+      "description": "",
+      "address": "TOULON",
+      "phone": "01 21 45 78 98",
+      "webAddress": "www.tobeortohave.com/toulon",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.124228,
+      "longitude": 5.927999999999997,
+      "stock": []
+    },
+    {
+      "id": 2,
+      "brand": 3,
+      "description": "",
+      "address": "FREJUS",
+      "phone": "01 21 45 78 98",
+      "webAddress": "www.tobeortohave.com/frejus",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.43315200000001,
+      "longitude": 6.737033999999994,
+      "stock": []
+    },
+    {
+      "id": 3,
+      "brand": 3,
+      "description": "",
+      "address": "AIX-EN-PROVENCE",
+      "phone": "01 21 45 78 98",
+      "webAddress": "www.tobeortohave.com/aix-en-provence",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.529742,
+      "longitude": 5.4474270000000615,
+      "stock": [
+        7
+      ]
+    },
+    {
+      "id": 4,
+      "brand": 3,
+      "description": "",
+      "address": "MARSEILLE",
+      "phone": "01 21 45 78 98",
+      "webAddress": "www.tobeortohave.com/marseille",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.31385900000001,
+      "longitude": 5.382301699999971,
+      "stock": []
+    },
+    {
+      "id": 5,
+      "brand": 3,
+      "description": "",
+      "address": "MONTPELLIER",
+      "phone": "01 21 45 78 98",
+      "webAddress": "www.tobeortohave.com/montpellier",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.610769,
+      "longitude": 3.8767159999999876,
+      "stock": []
+    },
+    {
+      "id": 6,
+      "brand": 0,
+      "description": "Magasin K&N de Nice",
+      "address": "NICE",
+      "phone": "01 21 45 78 98",
+      "webAddress": "kn.com/nice",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.610769,
+      "longitude": 3.8767159999999876,
+      "stock": []
+    },
+    {
+      "id": 7,
+      "brand": 6,
+      "description": "Magasin Pear de Nice",
+      "address": "NICE",
+      "phone": "01 21 45 78 98",
+      "webAddress": "pear.com/nice",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.610769,
+      "longitude": 3.8767159999999876,
+      "stock": [
+        3
+      ]
+    },
+    {
+      "id": 8,
+      "brand": 3,
+      "description": "Magasin ToBeOrToHave de Nice",
+      "address": "NICE",
+      "phone": "01 57 86 48 25",
+      "webAddress": "tobeortohave.fr/nice",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.610769,
+      "longitude": 3.8767159999999876,
+      "stock": [
+        5,
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "brand": 4,
+      "description": "Magasin Yottathlon de Nice",
+      "address": "NICE",
+      "phone": "01 54 86 95 85",
+      "webAddress": "yotta.fr/nice",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.610769,
+      "longitude": 3.8767159999999876,
+      "stock": [
+        15
+      ]
+    },
+    {
+      "id": 10,
+      "brand": 7,
+      "description": "Magasin Polykéa de Nice",
+      "address": "NICE",
+      "phone": "01 54 86 95 85",
+      "webAddress": "polykea.fr/nice",
+      "CA": [
+        1.3,
+        5.1,
+        7.2
+      ],
+      "latitude": 43.610769,
+      "longitude": 3.8767159999999876,
+      "stock": [
+        16
+      ]
+    }
+  ]
 }

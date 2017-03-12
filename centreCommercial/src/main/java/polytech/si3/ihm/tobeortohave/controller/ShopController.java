@@ -24,8 +24,11 @@ public class ShopController {
     @FXML
     public Button moreButtonBig;
 
-    public void initShopController(Shop shop){
-        brandImageBig.setImage(new Image(shop.getLogoPath()));
+    public void initShopController(Shop shop) {
+        if (shop.getLogoPath().isEmpty()) {
+            brandImageBig.setImage(new Image("images/logoShop.png"));
+        } else
+            brandImageBig.setImage(new Image(shop.getLogoPath()));
         shopNameBig.setText(shop.getName());
         descriptionBig.setText(shop.getDescription());
     }

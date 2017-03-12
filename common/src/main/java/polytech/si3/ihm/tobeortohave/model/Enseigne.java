@@ -11,14 +11,16 @@ import java.util.stream.Collectors;
  */
 public class Enseigne {
     private String name;
+    private String logo;
     private List<Field> fieldList;
     private String description;
     private String phone;
     private String webAddress;
 
 
-    public Enseigne(String name, List<Field> fields, String description, String phone, String webAddress) {
+    public Enseigne(String name,String logo, List<Field> fields, String description, String phone, String webAddress) {
         this.name = name;
+        this.logo = logo;
         this.fieldList = fields;
         this.description = description;
         this.phone = phone;
@@ -39,6 +41,8 @@ public class Enseigne {
     public String getName() {
         return name;
     }
+
+    public String getLogo(){return logo;}
 
     public List<Field> getFieldList() {
         return fieldList;
