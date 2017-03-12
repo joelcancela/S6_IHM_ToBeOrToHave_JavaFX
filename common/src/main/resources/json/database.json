@@ -55,7 +55,7 @@
 
         {"id" : 13, "name" : "Jojo - Fifty shades of Jojo", "keywords": [5],
           "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 565.0, "picture" : "jojo.png"},
+          "price": 565.0, "picture" : "jojo.jpg"},
 
         {"id" : 14, "name" : "Logotach - Tab 200", "keywords": [1],
           "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,

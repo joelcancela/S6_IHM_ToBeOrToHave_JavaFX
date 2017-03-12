@@ -59,7 +59,7 @@ public class InnerHomeWindowController {
 		Image image = new Image(file.toURI().toString());
 		ImageView imageView = new ImageView(image);
 		imageView.setPreserveRatio(true);
-		imageView.setFitHeight(100.0);
+		imageView.setFitHeight(115.0);
 		vBox.getChildren().add(imageView);
 
 		//Text
