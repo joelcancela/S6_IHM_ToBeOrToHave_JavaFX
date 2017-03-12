@@ -24,8 +24,8 @@ public class MainWindowController {
 
 	@FXML
 	public void initialize() {
-		//initializeTab("homeWindow", this.tab0);
-		initializeTab("homeWindowAlt", this.tab0);
+		initializeTab("homeWindow", this.tab0);
+		//initializeTab("homeWindowAlt", this.tab0); //Extension
 		initializeTab("magasinView", this.tab1);
 		initializeTab("produitsView", this.tab2);
 	}
