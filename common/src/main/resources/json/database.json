@@ -35,7 +35,7 @@
 
         {"id" : 8, "name" : "Vionney - Je reviens", "keywords": [4],
           "starred": false, "discounted": false, "discountRate" : 0.0, "salesNumber":777,
-          "price": 3.0, "picture" : "vionney.png"},
+          "price": 3.0, "picture" : "vionney.jpg"},
 
         {"id" : 9, "name" : "Rog'n'tree - Droïde", "keywords": [4],
           "starred": false, "discounted": false, "discountRate" : 0.0,  "salesNumber":123,
