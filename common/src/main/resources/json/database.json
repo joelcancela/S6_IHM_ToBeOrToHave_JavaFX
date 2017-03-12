@@ -95,11 +95,11 @@
 
     "stores" :
     [
-        {"id" : 0, "brand" : 3, "description" : "", "address" : "NICE", "phone":"01 21 45 78 98", "webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.700000, "longitude" :  7.250000,"stock": [7,5,9,1]},
-        {"id" : 1, "brand" : 3, "description" : "", "address" : "TOULON", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.124228, "longitude" : 5.927999999999997,"stock": []},
-        {"id" : 2, "brand" : 3, "description" : "", "address" : "FREJUS", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.43315200000001, "longitude" : 6.737033999999994,"stock": []},
-        {"id" : 3, "brand" : 3, "description" : "", "address" : "AIX-EN-PROVENCE", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2],"latitude" : 43.529742, "longitude" : 5.4474270000000615,"stock": [7]},
-        {"id" : 4, "brand" : 3, "description" : "", "address" : "MARSEILLE", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.31385900000001, "longitude" : 5.382301699999971,"stock": []},
-        {"id" : 5, "brand" : 3, "description" : "", "address" : "MONTPELLIER", "phone":"01 21 45 78 98","webAddress":"wow.com", "CA":[1.3,5.1,7.2], "latitude" : 43.610769, "longitude" : 3.8767159999999876,"stock": []}
+        {"id" : 0, "brand" : 3, "description" : "", "address" : "NICE", "phone":"0 826 25 25 25", "webAddress":"www.tobeortohave.com/nice", "CA":[1.3,5.1,7.2], "latitude" : 43.700000, "longitude" :  7.250000,"stock": [7,5,9,1]},
+        {"id" : 1, "brand" : 3, "description" : "", "address" : "TOULON", "phone":"04 94 13 52 80","webAddress":"www.tobeortohave.com/toulon", "CA":[1.3,5.1,7.2], "latitude" : 43.124228, "longitude" : 5.927999999999997,"stock": []},
+        {"id" : 2, "brand" : 3, "description" : "", "address" : "FREJUS", "phone":"0 826 252 525","webAddress":"www.tobeortohave.com/frejus", "CA":[1.3,5.1,7.2], "latitude" : 43.43315200000001, "longitude" : 6.737033999999994,"stock": []},
+        {"id" : 3, "brand" : 3, "description" : "", "address" : "AIX-EN-PROVENCE", "phone":"01 21 45 78 98","webAddress":"www.tobeortohave.com/aix-en-provence", "CA":[1.3,5.1,7.2],"latitude" : 43.529742, "longitude" : 5.4474270000000615,"stock": [7]},
+        {"id" : 4, "brand" : 3, "description" : "", "address" : "MARSEILLE", "phone":"01 21 45 78 98","webAddress":"www.tobeortohave.com/marseille", "CA":[1.3,5.1,7.2], "latitude" : 43.31385900000001, "longitude" : 5.382301699999971,"stock": []},
+        {"id" : 5, "brand" : 3, "description" : "", "address" : "MONTPELLIER", "phone":"0 825 02 00 20","webAddress":"www.tobeortohave.com/montpellier", "CA":[1.3,5.1,7.2], "latitude" : 43.610769, "longitude" : 3.8767159999999876,"stock": []}
     ]
 }

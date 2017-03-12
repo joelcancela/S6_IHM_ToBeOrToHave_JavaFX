@@ -1,79 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.MagasinViewController">
-   <children>
-      <VBox>
-         <children>
-            <AnchorPane>
-               <children>
-                  <Label layoutX="346.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="124.0" prefWidth="588.0" text="Trouvez votre magasin :">
-                     <font>
-                        <Font name="Lucida Sans Regular" size="40.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="1280.0">
-              <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="0.0" prefWidth="50.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="351.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="0.0" prefWidth="0.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="350.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="0.0" prefWidth="0.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="350.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="0.0" prefWidth="0.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints maxHeight="379.0" minHeight="10.0" prefHeight="375.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <FlowPane prefHeight="200.0" prefWidth="200.0" />
-                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                     <children>
-                        <Label alignment="TOP_LEFT" text="Region" textAlignment="CENTER">
-                           <font>
-                              <Font size="29.0" />
-                           </font>
-                        </Label>
-                        <ListView fx:id="listRegion" prefHeight="200.0" prefWidth="200.0" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
-                     <children>
-                        <Label text="Ville">
-                           <font>
-                              <Font size="29.0" />
-                           </font>
-                        </Label>
-                        <ListView fx:id="listVille" prefHeight="200.0" prefWidth="200.0" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="TOP_CENTER" prefHeight="703.0" prefWidth="426.0" GridPane.columnIndex="5">
-                     <children>
-                        <Label text="Magasin">
-                           <font>
-                              <Font size="29.0" />
-                           </font>
-                        </Label>
-                        <ListView fx:id="listStores" maxHeight="200.0" minHeight="200.0" prefHeight="200.0" prefWidth="350.0" />
-                     </children>
-                  </VBox>
-               </children>
-            </GridPane>
-            <AnchorPane />
-         </children>
-      </VBox>
-      <Button fx:id="validButton" layoutX="542.0" layoutY="421.0" mnemonicParsing="false" onAction="#validButtonClicked" prefHeight="59.0" prefWidth="220.0" text="Valider" />
-   </children>
-</AnchorPane>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.MagasinViewController">
+    <left>
+        <ScrollPane BorderPane.alignment="CENTER">
+            <content>
+                <VBox prefHeight="614.0" prefWidth="268.0" fx:id="vbox" alignment="TOP_CENTER">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Magasins" textAlignment="CENTER" wrappingWidth="220.0">
+                            <font>
+                                <Font name="Lucida Sans Regular" size="31.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                            </VBox.margin>
+                        </Text>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </left>
+    <center>
+        <GoogleMapView fx:id="mapView" prefHeight="750.0" prefWidth="761.0" />
+    </center>
+</BorderPane>
