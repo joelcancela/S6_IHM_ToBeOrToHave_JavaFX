@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.ProductListViewTemplateController">
+   <children>
+      <ImageView fx:id="productView" fitHeight="160.0" fitWidth="160.0" layoutX="21.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="productName" alignment="CENTER" layoutX="3.0" layoutY="173.0" prefHeight="17.0" prefWidth="193.0" text="Product Name" textAlignment="CENTER" />
+   </children>
+</Pane>
