@@ -14,10 +14,10 @@ public class CommonController {
 
     @FXML
     public void initialize(){
-        reset();
+        initTab1();
     }
 
-    public void reset(){
+    public void initTab1(){
         String home = "/fxml/shop_category.fxml";
         FXMLLoader loader = new FXMLLoader();
         try {

@@ -128,7 +128,7 @@ public class InfosSupController implements Initializable, MapComponentInitialize
 
 
         InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
-        infoWindowOptions.content("<h2>Centre Commercial</h2>"
+        infoWindowOptions.content("<h2>Cap Sophia</h2>"
                 + "Telephone: 03 84 34 56 78<br>"
                 + "Web: www.centrecommercial.fr");
 

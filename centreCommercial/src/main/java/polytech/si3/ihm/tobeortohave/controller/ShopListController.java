@@ -34,7 +34,7 @@ public class ShopListController {
 
     @FXML
     public void initialize(){
-        returnButton.setOnAction(e -> commonController.reset());
+        returnButton.setOnAction(e -> commonController.initTab1());
     }
 
     private JSONReader jsonReader = new JSONReader();
