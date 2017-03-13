@@ -95,6 +95,7 @@ public class JSONReader {
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
             String name = jsonObject.getString("name");
+            int id = jsonObject.getInt("id");
             List<String> keywordsList = new ArrayList<>();
             JSONArray keywordsArray = jsonObject.getJSONArray("keywords");
             for (int j = 0; j < keywordsArray.length(); j++) {
@@ -107,7 +108,7 @@ public class JSONReader {
             String picturePath = jsonObject.getString("picture");
             int salesNumber = jsonObject.getInt("salesNumber");
 
-            products.add(new Produit(name, keywordsList, starred, discounted, discountRate, price, picturePath, salesNumber));
+            products.add(new Produit(id, name, keywordsList, starred, discounted, discountRate, price, picturePath, salesNumber));
         }
 
         //System.out.println("ALL PRODUCTS");
