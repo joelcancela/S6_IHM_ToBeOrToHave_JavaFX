@@ -6,13 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Tab;
 import javafx.scene.layout.AnchorPane;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
 public class MainWindowController {
-	private static final Logger log = LoggerFactory.getLogger(MainWindowController.class);
 
 	@FXML
 	public Tab tab0;
@@ -24,10 +21,10 @@ public class MainWindowController {
 
 	@FXML
 	public void initialize() {
-		initializeTab("homeWindow", this.tab0);
-		//initializeTab("homeWindowAlt", this.tab0); //Extension
-		initializeTab("magasinView", this.tab1);
-		initializeTab("produitsView", this.tab2);
+		initializeTab("homeTabView", this.tab0);
+		//initializeTab("homeTabExtensionView", this.tab0); //Extension listView autoScroll
+		initializeTab("storesView", this.tab1);
+		initializeTab("productsView", this.tab2);
 	}
 
 	private void initializeTab(String fxmlName, Tab tab) {

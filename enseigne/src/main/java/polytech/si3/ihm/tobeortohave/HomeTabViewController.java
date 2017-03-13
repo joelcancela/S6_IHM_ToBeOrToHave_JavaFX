@@ -16,14 +16,14 @@ import java.io.File;
 import java.util.List;
 
 /**
- * {@code InnerHomeWindowController} is [desc]
+ * {@code HomeTabViewController} is [desc]
  * <p>
  * [descSuite]
  *
  * @author Nassim BOUNOUAS
  * @author Joël CANCELA VAZ
  */
-public class InnerHomeWindowController {
+public class HomeTabViewController {
 	@FXML
 	private GridPane homeproducts;
 

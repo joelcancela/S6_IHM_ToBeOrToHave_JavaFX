@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 
-public class MagasinViewController implements Initializable, MapComponentInitializedListener {
+public class StoresViewController implements Initializable, MapComponentInitializedListener {
 
 	@FXML
 	private VBox vbox;
