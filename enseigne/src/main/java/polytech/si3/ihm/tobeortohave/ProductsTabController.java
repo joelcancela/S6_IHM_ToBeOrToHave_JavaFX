@@ -43,6 +43,8 @@ public class ProductsTabController {
         starredProducts = FXCollections.observableArrayList(jsonReader.getStarredProducts());
 
         listViewPromotion.setItems(discountedProducts);
+        // Can't find setOnItem from ListView
+        //listViewPromotion.setOnI
         listViewPromotion.setCellFactory(
                 new Callback<ListView<Product>, ListCell<Product>>() {
                     @Override
