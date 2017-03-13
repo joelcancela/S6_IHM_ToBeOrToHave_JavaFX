@@ -16,8 +16,10 @@ public class Produit {
     private double price;
     private String picture;
     private int salesNumber;
+    private int id;
 
-    public Produit(String name, List<String> keywords, boolean starred, boolean discounted, double discountRate, double price, String picture, int salesNumber) {
+    public Produit(int id, String name, List<String> keywords, boolean starred, boolean discounted, double discountRate, double price, String picture, int salesNumber) {
+        this.id = id;
         this.name = name;
         this.keywords = keywords;
         this.starred = starred;
@@ -72,5 +74,9 @@ public class Produit {
 
     public int getSalesNumber() {
         return salesNumber;
+    }
+
+    public int getId() {
+        return id;
     }
 }
