@@ -38,7 +38,7 @@ public class HomeTabViewController {
 	}
 
 	private void initializeProducts() {
-		List<Product> productList = jsonReader.getProducts();
+		List<Product> productList = jsonReader.getRealProducts();
 		int x=0;
 		int y=0;
 		for (Product product : productList) {

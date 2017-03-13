@@ -23,8 +23,8 @@ public class MainWindowController {
 	public void initialize() {
 		initializeTab("homeTabView", this.tab0);
 		//initializeTab("homeTabExtensionView", this.tab0); //Extension listView autoScroll
-		initializeTab("storesView", this.tab1);
-		initializeTab("productsView", this.tab2);
+		initializeTab("productsView", this.tab1);
+		initializeTab("storesView", this.tab2);
 	}
 
 	private void initializeTab(String fxmlName, Tab tab) {
