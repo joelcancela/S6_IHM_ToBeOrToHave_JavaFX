@@ -101,3 +101,7 @@
 .toggle-button:selected{
     -fx-background-color: #05668d;
 }
+
+#oldPrice .text{
+    -fx-strikethrough: true;
+}

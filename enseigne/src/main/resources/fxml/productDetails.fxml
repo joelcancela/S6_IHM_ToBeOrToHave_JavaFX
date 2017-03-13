@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.3494983277591973" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@\..\styles\styles.css">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="254.0">
+         <children>
+            <ImageView fx:id="productPicture" fitHeight="218.0" fitWidth="206.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="366.0">
+         <children>
+            <Label fx:id="productTitle" layoutX="118.0" layoutY="14.0" text="Lorem Ipsum">
+               <font>
+                  <Font name="Lucida Sans Regular" size="26.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="productDescription" layoutX="5.0" layoutY="188.0" prefHeight="206.0" prefWidth="378.0" />
+            <Label id="oldPrice" layoutX="33.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="#000000">
+               <font>
+                  <Font name="Lucida Sans Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label id="discountedPrice" layoutX="216.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="RED">
+               <font>
+                  <Font name="Lucida Sans Regular" size="23.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
