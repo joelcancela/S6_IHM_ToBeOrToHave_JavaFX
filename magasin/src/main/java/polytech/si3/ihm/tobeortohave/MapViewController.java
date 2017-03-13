@@ -60,7 +60,7 @@ public class MapViewController implements Initializable, MapComponentInitialized
 
 		map = mapView.createMap(mapOptions);
 
-
+		vbox.getChildren().clear();
 		vbox.setSpacing(10.0);
 		for (int i = 0; i < magasinsTboth.size(); i++) {
 			Store store = magasinsTboth.get(i);
