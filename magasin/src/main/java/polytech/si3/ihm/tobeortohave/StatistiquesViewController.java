@@ -9,8 +9,8 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
-import polytech.si3.ihm.tobeortohave.model.Magasin;
-import polytech.si3.ihm.tobeortohave.model.Produit;
+import polytech.si3.ihm.tobeortohave.model.Product;
+import polytech.si3.ihm.tobeortohave.model.Store;
 
 import java.net.URL;
 import java.text.DateFormatSymbols;
@@ -30,15 +30,15 @@ public class StatistiquesViewController implements Initializable{
 	public void initialize(URL url, ResourceBundle rb) {
 		jsonReader = new JSONReader();
 		jsonReader.parse();
-		Magasin magasin = jsonReader.getStoresById(8);
-		List<Produit> produits = magasin.getStock();
+		Store store = jsonReader.getStoresById(8);
+		List<Product> products = store.getStock();
 		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
-		for (int i = 0; i < produits.size(); i++) {
-			pieChartData.add(i,new PieChart.Data(produits.get(i).getName(),produits.get(i).getSalesNumber()));
+		for (int i = 0; i < products.size(); i++) {
+			pieChartData.add(i,new PieChart.Data(products.get(i).getName(), products.get(i).getSalesNumber()));
 		}
 
 		String[] mois = new DateFormatSymbols().getMonths();
-		List<Double> caList = magasin.getCA();
+		List<Double> caList = store.getCA();
 		XYChart.Series series = new XYChart.Series();
 		for (int i = 0; i < caList.size(); i++) {
 			series.getData().add(new XYChart.Data(mois[i], caList.get(i)));

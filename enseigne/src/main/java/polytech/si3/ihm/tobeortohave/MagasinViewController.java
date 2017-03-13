@@ -9,9 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
-import polytech.si3.ihm.tobeortohave.model.Enseigne;
+import polytech.si3.ihm.tobeortohave.model.Brand;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
-import polytech.si3.ihm.tobeortohave.model.Magasin;
+import polytech.si3.ihm.tobeortohave.model.Store;
 
 import java.net.URL;
 import java.util.List;
@@ -38,9 +38,9 @@ public class MagasinViewController implements Initializable, MapComponentInitial
 
 
 	public void mapInitialized() {
-		List<Magasin> magasinsTboth = Enseigne.findMagasinByBrand(jsonReader.getStores(), "ToBeOrToHave");
-		Magasin magasinDefault = magasinsTboth.get(0);
-		LatLong defaultShopLocation = new LatLong(magasinDefault.getLatitude(), magasinDefault.getLongitude());
+		List<Store> magasinsTboth = Brand.findMagasinByBrand(jsonReader.getStores(), "ToBeOrToHave");
+		Store storeDefault = magasinsTboth.get(0);
+		LatLong defaultShopLocation = new LatLong(storeDefault.getLatitude(), storeDefault.getLongitude());
 
 
 		//Set the initial properties of the map.
@@ -64,13 +64,13 @@ public class MagasinViewController implements Initializable, MapComponentInitial
 
 		vbox.setSpacing(10.0);
 		for (int i = 0; i < magasinsTboth.size(); i++) {
-			Magasin magasin = magasinsTboth.get(i);
-			Button button = new Button(magasin.getAddress());
+			Store store = magasinsTboth.get(i);
+			Button button = new Button(store.getAddress());
 			button.setStyle("-fx-font-size: 20px;");
 			button.addEventHandler(MouseEvent.MOUSE_CLICKED,
 					e -> {
 						map.clearMarkers();
-						LatLong latLong = new LatLong(magasin.getLatitude(), magasin.getLongitude());
+						LatLong latLong = new LatLong(store.getLatitude(), store.getLongitude());
 						//Add markers to the map
 						MarkerOptions markerOptions = new MarkerOptions();
 						markerOptions.position(latLong);
@@ -83,9 +83,9 @@ public class MagasinViewController implements Initializable, MapComponentInitial
 
 
 						InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
-						infoWindowOptions.content("<h2>ToBeOrToHave "+magasin.getAddress().toUpperCase()+"</h2>"
-								+ "Telephone: " + magasin.getPhoneNumber() + "<br>"
-								+ "Web: " + magasin.getWebAddress());
+						infoWindowOptions.content("<h2>ToBeOrToHave "+ store.getAddress().toUpperCase()+"</h2>"
+								+ "Telephone: " + store.getPhoneNumber() + "<br>"
+								+ "Web: " + store.getWebAddress());
 
 						InfoWindow InfoWindow = new InfoWindow(infoWindowOptions);
 						InfoWindow.open(map, myShopMarker);

@@ -7,21 +7,21 @@ import java.util.List;
  *
  * @author Joël CANCELA VAZ
  */
-public class Magasin {
+public class Store {
 
-    private Enseigne enseigne;
+    private Brand brand;
     private String description;
     private String address;
     private Double latitude;
     private Double longitude;
-    private List<Produit> stock;
+    private List<Product> stock;
     private String phoneNumber;
     private String webAddress;
     private List<Double> CA;
     private int id;
 
-    public Magasin(Enseigne enseigne, String description, String address, Double latitude, Double longitude, List<Produit> stock, String phoneNumber, String webAddress, List<Double> CA, int id) {
-        this.enseigne = enseigne;
+    public Store(Brand brand, String description, String address, Double latitude, Double longitude, List<Product> stock, String phoneNumber, String webAddress, List<Double> CA, int id) {
+        this.brand = brand;
         this.description = description;
         this.address = address;
         this.latitude = latitude;
@@ -36,7 +36,7 @@ public class Magasin {
     @Override
     public String toString() {
         return "Magasin{" +
-                "enseigne=" + enseigne +
+                "enseigne=" + brand +
                 ", description='" + description + '\'' +
                 ", address='" + address + '\'' +
                 ", latitude=" + latitude +
@@ -48,8 +48,8 @@ public class Magasin {
                 '}';
     }
 
-    public Enseigne getEnseigne() {
-        return enseigne;
+    public Brand getBrand() {
+        return brand;
     }
 
     public String getDescription() {
@@ -68,7 +68,7 @@ public class Magasin {
         return longitude;
     }
 
-    public List<Produit> getStock() {
+    public List<Product> getStock() {
         return stock;
     }
 

@@ -23,9 +23,9 @@ public class JSONReader {
 
     private List<String> keywords;
     private List<Field> fields;
-    private List<Enseigne> brands;
-    private List<Produit> products;
-    private List<Magasin> stores;
+    private List<Brand> brands;
+    private List<Product> products;
+    private List<Store> stores;
 
 
     public JSONReader() {
@@ -62,15 +62,15 @@ public class JSONReader {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
             int id = jsonObject.getInt("id");
             int brandIndex = jsonObject.getInt("brand");
-            Enseigne currentEnseigne = brands.get(brandIndex);
+            Brand currentBrand = brands.get(brandIndex);
             String description = jsonObject.getString("description");
             String address = jsonObject.getString("address");
             double latitude = jsonObject.getDouble("latitude");
             double longitude = jsonObject.getDouble("longitude");
-            List<Produit> produitList = new ArrayList<>();
+            List<Product> productList = new ArrayList<>();
             JSONArray stock = jsonObject.getJSONArray("stock");
             for (int j = 0; j < stock.length(); j++) {
-                produitList.add(products.get(stock.getInt(j)));
+                productList.add(products.get(stock.getInt(j)));
             }
             String phone = jsonObject.getString("phone");
             String webAddress = jsonObject.getString("webAddress");
@@ -80,7 +80,7 @@ public class JSONReader {
                 CA.add(CAArray.getDouble(j));
             }
 
-            stores.add(new Magasin(currentEnseigne, description, address, latitude, longitude, produitList, phone, webAddress, CA, id));
+            stores.add(new Store(currentBrand, description, address, latitude, longitude, productList, phone, webAddress, CA, id));
 
         }
 
@@ -108,7 +108,7 @@ public class JSONReader {
             String picturePath = jsonObject.getString("picture");
             int salesNumber = jsonObject.getInt("salesNumber");
 
-            products.add(new Produit(id, name, keywordsList, starred, discounted, discountRate, price, picturePath, salesNumber));
+            products.add(new Product(id, name, keywordsList, starred, discounted, discountRate, price, picturePath, salesNumber));
         }
 
         //System.out.println("ALL PRODUCTS");
@@ -132,7 +132,7 @@ public class JSONReader {
             String description = jsonObject.getString("description");
             String phone = jsonObject.getString("phone");
             String webAddress = jsonObject.getString("webAddress");
-            brands.add(new Enseigne(name, logo, fieldList, description, phone, webAddress));
+            brands.add(new Brand(name, logo, fieldList, description, phone, webAddress));
         }
 
 
@@ -184,22 +184,22 @@ public class JSONReader {
         return fields;
     }
 
-    public List<Enseigne> getBrands() {
+    public List<Brand> getBrands() {
         return brands;
     }
 
-    public List<Produit> getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
-    public List<Magasin> getStores() {
+    public List<Store> getStores() {
         return stores;
     }
 
-    public Magasin getStoresById (int id) {
-        for (Magasin magasin: stores) {
-            if (magasin.getId() == id)
-                return magasin;
+    public Store getStoresById (int id) {
+        for (Store store : stores) {
+            if (store.getId() == id)
+                return store;
         }
         return null;
     }

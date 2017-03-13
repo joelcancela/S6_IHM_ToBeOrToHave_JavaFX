@@ -1,6 +1,5 @@
 package polytech.si3.ihm.tobeortohave.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -9,7 +8,7 @@ import java.util.stream.Collectors;
  *
  * @author Joël CANCELA VAZ
  */
-public class Enseigne {
+public class Brand {
     private String name;
     private String logo;
     private List<Field> fieldList;
@@ -18,7 +17,7 @@ public class Enseigne {
     private String webAddress;
 
 
-    public Enseigne(String name,String logo, List<Field> fields, String description, String phone, String webAddress) {
+    public Brand(String name, String logo, List<Field> fields, String description, String phone, String webAddress) {
         this.name = name;
         this.logo = logo;
         this.fieldList = fields;
@@ -60,7 +59,7 @@ public class Enseigne {
         return webAddress;
     }
 
-    public static List<Magasin> findMagasinByBrand(List<Magasin> magasins, final String brandName){
-        return magasins.stream().filter(m -> m.getEnseigne().getName().equals(brandName)).collect(Collectors.toList());
+    public static List<Store> findMagasinByBrand(List<Store> stores, final String brandName){
+        return stores.stream().filter(m -> m.getBrand().getName().equals(brandName)).collect(Collectors.toList());
     }
 }
