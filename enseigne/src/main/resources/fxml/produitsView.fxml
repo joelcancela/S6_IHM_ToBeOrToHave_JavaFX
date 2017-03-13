@@ -12,12 +12,12 @@
 
 <AnchorPane prefHeight="587.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.ProduitsViewController">
    <children>
-      <Label layoutX="14.0" layoutY="28.0" text="Les promotions à ne pas rater :" AnchorPane.topAnchor="28.0">
+      <Label layoutX="14.0" layoutY="14.0" text="Les promotions à ne pas rater :" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="Lucida Sans Regular" size="21.0" />
          </font>
       </Label>
-      <ListView fx:id="listViewPromotion" layoutX="21.0" layoutY="59.0" prefHeight="200.0" prefWidth="1236.0" />
+      <ListView fx:id="listViewPromotion" layoutX="21.0" layoutY="46.0" maxHeight="230.0" minHeight="210.0" orientation="HORIZONTAL" prefHeight="223.0" prefWidth="1236.0" />
       <Label layoutX="14.0" layoutY="281.0" text="Nos meilleures ventes :" AnchorPane.topAnchor="281.0">
          <font>
             <Font name="Lucida Sans Regular" size="21.0" />

@@ -35,29 +35,22 @@ public class ProduitsViewController {
     public GridPane bestSellerGrid;
     public ListView listViewPromotion;
 
-    private ObservableList<Produit> products;
+    private ObservableList<Produit> starredProducts;
+    private ObservableList<Produit> discountedProducts;
 
     @FXML
     public void initialize() {
         jsonReader = new JSONReader();
         jsonReader.parse();
 
-        List<Produit> productToDisplay = new ArrayList();
-        for (Magasin m : jsonReader.getStores()) {
-            if (m.getEnseigne().getName().equals("ToBeOrToHave")){
-                System.out.println("Added products from : " + m.getAddress());
-                productToDisplay.addAll(m.getStock());
-            }
-        }
+        discountedProducts = FXCollections.observableArrayList(jsonReader.getDiscountedProducts());
+        starredProducts = FXCollections.observableArrayList(jsonReader.getStarredProducts());
 
-        products = FXCollections.observableArrayList(productToDisplay);
-
-        listViewPromotion.setItems(products);
+        listViewPromotion.setItems(discountedProducts);
         listViewPromotion.setCellFactory(
                 new Callback<ListView<Produit>, ListCell<Produit>>() {
                     @Override
                     public ListCell<Produit> call(ListView<Produit> param) {
-                        System.out.println("cellFactory");
                         return new ListCell<Produit>() {
                             @Override
                             protected void updateItem(Produit item, boolean empty) {

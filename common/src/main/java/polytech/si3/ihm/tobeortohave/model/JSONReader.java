@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Class x
@@ -192,8 +193,16 @@ public class JSONReader {
         return products;
     }
 
-    public List<Produit> getRealProduct() {
-        products.stream().filter(p -> p.getId() < 14);
+    public List<Produit> getRealProducts() {
+        return products.stream().filter(p -> p.getId() < 14).collect(Collectors.toList());
+    }
+
+    public List<Produit> getDiscountedProducts() {
+        return getRealProducts().stream().filter(p -> p.isDiscounted()).collect(Collectors.toList());
+    }
+
+    public List<Produit> getStarredProducts() {
+        return getRealProducts().stream().filter(p -> p.isStarred()).collect(Collectors.toList());
     }
 
     public List<Magasin> getStores() {

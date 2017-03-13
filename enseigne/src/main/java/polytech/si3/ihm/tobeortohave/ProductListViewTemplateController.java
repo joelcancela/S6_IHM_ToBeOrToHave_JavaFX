@@ -19,7 +19,7 @@ public class ProductListViewTemplateController {
 
     public void initProduct(Produit prod) {
         this.productName.setText(prod.getName());
-        File file = new File("common/src/main/resources/images/products/"+prod.getPicture());
+        File file = new File("common/src/main/resources/images/products/" + prod.getPicture());
         Image image = new javafx.scene.image.Image(file.toURI().toString());
         this.productView.setImage(image);
     }
