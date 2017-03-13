@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.*;
+import polytech.si3.ihm.tobeortohave.model.CommercialCenter;
 import polytech.si3.ihm.tobeortohave.parser.CommercialCenterParser;
 
 import java.net.URL;
@@ -42,6 +43,12 @@ public class InfosSupController implements Initializable, MapComponentInitialize
     public void initialize(URL location, ResourceBundle resources) {
         googleMap.addMapInializedListener(this);
         initializeStats();
+    }
+
+    private CommercialCenter commercialCenter;
+
+    public void initModel(CommercialCenter commercialCenter) {
+        this.commercialCenter = commercialCenter;
     }
 
     private void initializeStats(){

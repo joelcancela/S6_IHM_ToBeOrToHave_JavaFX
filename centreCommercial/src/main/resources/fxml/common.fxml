@@ -15,12 +15,10 @@
       <TabPane fx:id="homeTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
             <Tab fx:id="tab0" text="Accueil">
-                <fx:include source="/fxml/home.fxml" />
             </Tab>
             <Tab fx:id="tab1" text="Catégories de magasin">
             </Tab>
             <Tab fx:id="tab2" text="Infos et localisation">
-                <fx:include source="/fxml/infosSup.fxml" />
             </Tab>
 
         </tabs>
