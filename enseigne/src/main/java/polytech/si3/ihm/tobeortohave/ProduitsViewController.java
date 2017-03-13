@@ -1,5 +1,7 @@
 package polytech.si3.ihm.tobeortohave;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -14,9 +16,12 @@ import jdk.nashorn.internal.parser.JSONParser;
 import net.miginfocom.layout.Grid;
 import org.json.JSONObject;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
+import polytech.si3.ihm.tobeortohave.model.Magasin;
 import polytech.si3.ihm.tobeortohave.model.Produit;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -27,19 +32,32 @@ import java.io.IOException;
 public class ProduitsViewController {
     public GridPane productGrid;
     private JSONReader jsonReader;
-
     public GridPane bestSellerGrid;
     public ListView listViewPromotion;
+
+    private ObservableList<Produit> products;
 
     @FXML
     public void initialize() {
         jsonReader = new JSONReader();
         jsonReader.parse();
-        //listViewPromotion.setItems();
+
+        List<Produit> productToDisplay = new ArrayList();
+        for (Magasin m : jsonReader.getStores()) {
+            if (m.getEnseigne().getName().equals("ToBeOrToHave")){
+                System.out.println("Added products from : " + m.getAddress());
+                productToDisplay.addAll(m.getStock());
+            }
+        }
+
+        products = FXCollections.observableArrayList(productToDisplay);
+
+        listViewPromotion.setItems(products);
         listViewPromotion.setCellFactory(
                 new Callback<ListView<Produit>, ListCell<Produit>>() {
                     @Override
                     public ListCell<Produit> call(ListView<Produit> param) {
+                        System.out.println("cellFactory");
                         return new ListCell<Produit>() {
                             @Override
                             protected void updateItem(Produit item, boolean empty) {

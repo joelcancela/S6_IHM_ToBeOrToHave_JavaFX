@@ -191,6 +191,10 @@ public class JSONReader {
         return products;
     }
 
+    public List<Produit> getRealProduct() {
+        products.stream().filter(p -> p.getId() < 14);
+    }
+
     public List<Magasin> getStores() {
         return stores;
     }

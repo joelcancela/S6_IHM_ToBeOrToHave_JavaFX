@@ -535,8 +535,7 @@
       ]
     },
     {
-      "id": 8,
-      "brand": 3,
+      "id": 8, "brand": 3,
       "description": "Magasin ToBeOrToHave de Nice",
       "address": "NICE",
       "phone": "01 57 86 48 25",
