@@ -1,5 +1,7 @@
 package polytech.si3.ihm.tobeortohave;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -16,7 +18,7 @@ import polytech.si3.ihm.tobeortohave.model.JSONReader;
 import polytech.si3.ihm.tobeortohave.model.Product;
 
 import java.io.IOException;
-
+import java.util.Set;
 
 
 /**
@@ -43,8 +45,25 @@ public class ProductsTabController {
         starredProducts = FXCollections.observableArrayList(jsonReader.getStarredProducts());
 
         listViewPromotion.setItems(discountedProducts);
-        // Can't find setOnItem from ListView
-        //listViewPromotion.setOnI
+
+        listViewPromotion.getSelectionModel().selectedItemProperty().addListener(
+                new ChangeListener<Product>() {
+                    @Override
+                    public void changed(ObservableValue<?extends Product> observable, Product formerClickedProduct, Product clickedProduct) {
+                        System.out.println("Click on " + clickedProduct.getName());
+                    }
+                }
+        );
+
+        listViewStarred.getSelectionModel().selectedItemProperty().addListener(
+                new ChangeListener<Product>() {
+                    @Override
+                    public void changed(ObservableValue<?extends Product> observable, Product formerClickedProduct, Product clickedProduct) {
+                        System.out.println("Click on " + clickedProduct.getName());
+                    }
+                }
+        );
+
         listViewPromotion.setCellFactory(
                 new Callback<ListView<Product>, ListCell<Product>>() {
                     @Override
