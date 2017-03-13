@@ -1,25 +1,22 @@
 package polytech.si3.ihm.tobeortohave;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.util.Callback;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
 import polytech.si3.ihm.tobeortohave.model.Product;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
+
+import static javafx.util.Duration.seconds;
 
 /**
  * {@code HomeTabViewController} is [desc]
@@ -30,20 +27,29 @@ import java.util.List;
  * @author Joël CANCELA VAZ
  */
 public class HomeTabExtensionViewController {
-	@FXML
-	private ListView productsListView;
+    @FXML
+    private ListView productsListView;
 
-	private JSONReader jsonReader;
+    private JSONReader jsonReader;
+    private int currentIndex = 0;
 
-	@FXML
-	public void initialize() {
-		jsonReader = new JSONReader();
-		jsonReader.parse();
-		initializeProducts();
-	}
+    @FXML
+    public void initialize() {
+        jsonReader = new JSONReader();
+        jsonReader.parse();
+        initializeProducts();
+        initScrollAnimationTask();
+    }
 
-	private void initializeProducts() {
-		List<Product> productList = jsonReader.getRealProducts();
+    private void initScrollAnimationTask() {
+        Timeline fiveSecondsWonder = new Timeline(new KeyFrame(seconds(3), event -> scrollAnimation()));
+        fiveSecondsWonder.setCycleCount(Timeline.INDEFINITE);
+        fiveSecondsWonder.play();
+    }
+
+
+    private void initializeProducts() {
+        List<Product> productList = jsonReader.getRealProducts();
         ObservableList<Product> productObservableList = FXCollections.observableArrayList(productList);
         productsListView.setItems(productObservableList);
         productsListView.setCellFactory(
@@ -73,6 +79,18 @@ public class HomeTabExtensionViewController {
                     }
                 }
         );
-	}
+    }
+
+
+    private void scrollAnimation() {
+        if(currentIndex%6==0){
+            productsListView.scrollTo(currentIndex);
+        }
+        productsListView.getSelectionModel().select(currentIndex);
+        currentIndex++;
+        if (currentIndex == productsListView.getItems().size()) {
+            currentIndex = 0;
+        }
+    }
 
 }

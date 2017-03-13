@@ -21,8 +21,8 @@ public class MainWindowController {
 
 	@FXML
 	public void initialize() {
-		//initializeTab("homeTabView", this.tab0);
-		initializeTab("homeTabExtensionView", this.tab0); //Extension listView autoScroll
+		initializeTab("homeTabView", this.tab0);
+		//initializeTab("homeTabExtensionView", this.tab0); //Extension listView autoScroll
 		initializeTab("productsView", this.tab1);
 		initializeTab("storesView", this.tab2);
 	}
