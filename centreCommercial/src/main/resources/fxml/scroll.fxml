@@ -21,7 +21,7 @@
    <right>
       <AnchorPane prefHeight="368.0" prefWidth="36.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="leftButtonEvent" contentDisplay="CENTER" layoutY="78.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&gt;" wrapText="true" AnchorPane.rightAnchor="5.0">
+            <Button fx:id="rightButton" contentDisplay="CENTER" layoutY="78.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&gt;" wrapText="true" AnchorPane.rightAnchor="5.0">
                <font>
                   <Font size="18.0" />
                </font></Button>
@@ -31,7 +31,7 @@
    <left>
       <AnchorPane prefHeight="300.0" prefWidth="24.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="rightButtonEvent" contentDisplay="CENTER" layoutX="5.0" layoutY="78.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&lt;" wrapText="true" AnchorPane.leftAnchor="5.0">
+            <Button fx:id="leftButton" contentDisplay="CENTER" layoutX="5.0" layoutY="78.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="40.0" text="&lt;" wrapText="true" AnchorPane.leftAnchor="5.0">
                <font>
                   <Font size="18.0" />
                </font></Button>
@@ -43,13 +43,13 @@
          <children>
             <HBox fx:id="radioButtonHBoxEvent" layoutX="385.0" layoutY="4.0">
                <children>
-                  <RadioButton mnemonicParsing="false" selected="true">
+                  <RadioButton fx:id="radio1" mnemonicParsing="false" selected="true">
                      <toggleGroup>
                         <ToggleGroup fx:id="group" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" toggleGroup="$group" />
-                  <RadioButton mnemonicParsing="false" toggleGroup="$group" />
+                  <RadioButton fx:id="radio2" mnemonicParsing="false" toggleGroup="$group" />
+                  <RadioButton fx:id="radio3" mnemonicParsing="false" toggleGroup="$group" />
                </children>
             </HBox>
          </children>

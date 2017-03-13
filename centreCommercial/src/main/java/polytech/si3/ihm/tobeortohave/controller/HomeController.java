@@ -7,6 +7,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import polytech.si3.ihm.tobeortohave.model.CommercialCenter;
 import polytech.si3.ihm.tobeortohave.model.Shop;
 
 import java.io.IOException;
@@ -41,6 +42,12 @@ public class HomeController {
                 new Shop("/images/logoShop.png","I'm a small description", "I'm a long description",
                         3, "Name of the shop")
         ));
+    }
+
+    private CommercialCenter commercialCenter;
+
+    public void initModel(CommercialCenter commercialCenter) {
+        this.commercialCenter = commercialCenter;
     }
 
     public void initGridPane(List<Shop> highlightedShops) {

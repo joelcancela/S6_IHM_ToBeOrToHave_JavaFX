@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
@@ -8,19 +9,16 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.control.Tab?>
 
-<BorderPane fx:id="firstPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.controller.CommonController">
+<BorderPane fx:id="firstPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.controller.CommonController">
    <center>
       <TabPane fx:id="homeTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
             <Tab fx:id="tab0" text="Accueil">
-                <fx:include source="/fxml/home.fxml"/>
             </Tab>
             <Tab fx:id="tab1" text="Catégories de magasin">
             </Tab>
             <Tab fx:id="tab2" text="Infos et localisation">
-                <fx:include source="/fxml/infosSup.fxml"/>
             </Tab>
 
         </tabs>
@@ -36,12 +34,12 @@
             </ImageView>
             <HBox alignment="TOP_RIGHT" layoutX="1218.0" layoutY="14.0">
                <children>
-                  <ToggleButton mnemonicParsing="false" text="EN">
+                  <ToggleButton disable="true" mnemonicParsing="false" text="EN">
                      <toggleGroup>
                         <ToggleGroup fx:id="grouplang" />
                      </toggleGroup>
                   </ToggleButton>
-                  <ToggleButton mnemonicParsing="false" text="FR" toggleGroup="$grouplang" selected="true"/>
+                  <ToggleButton disable="true" mnemonicParsing="false" selected="true" text="FR" toggleGroup="$grouplang" />
                </children>
             </HBox>
          </children>
