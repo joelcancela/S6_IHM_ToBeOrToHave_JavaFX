@@ -22,7 +22,7 @@
                   <Font size="16.0" />
                </font>
             </TextArea>
-            <ListView fx:id="productsListView" orientation="HORIZONTAL" prefHeight="200.0" prefWidth="770.0" />
+            <ListView fx:id="productsListView" orientation="HORIZONTAL" prefHeight="230.0" prefWidth="770.0" />
             <Hyperlink alignment="CENTER" contentDisplay="CENTER" prefHeight="95.0" prefWidth="277.0" text="tobeortohave.com">
                <font>
                   <Font name="Lucida Sans Regular" size="28.0" />
