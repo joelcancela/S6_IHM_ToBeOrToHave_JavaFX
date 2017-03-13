@@ -8,15 +8,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
-import javafx.scene.layout.AnchorPane;
-import polytech.si3.ihm.tobeortohave.model.Enseigne;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
 import polytech.si3.ihm.tobeortohave.model.Magasin;
 import polytech.si3.ihm.tobeortohave.model.Produit;
 
 import java.net.URL;
 import java.text.DateFormatSymbols;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -33,9 +30,7 @@ public class StatistiquesViewController implements Initializable{
 	public void initialize(URL url, ResourceBundle rb) {
 		jsonReader = new JSONReader();
 		jsonReader.parse();
-		List<Magasin> magasinsTmp = jsonReader.getStores();
-		List<Magasin> magasins = Enseigne.findMagasinByBrand(magasinsTmp,"ToBeOrToHave");
-		Magasin magasin = magasins.get(0);
+		Magasin magasin = jsonReader.getStoresById(8);
 		List<Produit> produits = magasin.getStock();
 		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
 		for (int i = 0; i < produits.size(); i++) {

@@ -194,4 +194,12 @@ public class JSONReader {
     public List<Magasin> getStores() {
         return stores;
     }
+
+    public Magasin getStoresById (int id) {
+        for (Magasin magasin: stores) {
+            if (magasin.getId() == id)
+                return magasin;
+        }
+        return null;
+    }
 }
