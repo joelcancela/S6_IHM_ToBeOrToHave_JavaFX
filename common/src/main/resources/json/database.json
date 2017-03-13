@@ -7,7 +7,7 @@
         0
       ],
       "starred": true,
-      "discounted": true,
+      "discounted": false,
       "discountRate": 0,
       "salesNumber": 777,
       "price": 999.99,
@@ -19,8 +19,8 @@
       "keywords": [
         5
       ],
-      "starred": true,
-      "discounted": true,
+      "starred": false,
+      "discounted": false,
       "discountRate": 0,
       "salesNumber": 95,
       "price": 8.5,
@@ -32,11 +32,11 @@
       "keywords": [
         4
       ],
-      "starred": true,
+      "starred": false,
       "discounted": true,
-      "discountRate": 0,
+      "discountRate": 90,
       "salesNumber": 60,
-      "price": 0.1,
+      "price": 10,
       "picture": "ovni.png"
     },
     {
@@ -45,7 +45,7 @@
       "keywords": [
         1
       ],
-      "starred": false,
+      "starred": true,
       "discounted": false,
       "discountRate": 600,
       "salesNumber": 67,
@@ -86,7 +86,7 @@
       ],
       "starred": false,
       "discounted": false,
-      "discountRate": 0,
+      "discountRate": 20,
       "salesNumber": 777,
       "price": 560,
       "picture": "tab4.png"
@@ -97,7 +97,7 @@
       "keywords": [
         2
       ],
-      "starred": false,
+      "starred": true,
       "discounted": false,
       "discountRate": 0,
       "salesNumber": 25,
@@ -110,11 +110,11 @@
       "keywords": [
         4
       ],
-      "starred": false,
+      "starred": true,
       "discounted": false,
       "discountRate": 0,
       "salesNumber": 777,
-      "price": 3,
+      "price": 15,
       "picture": "vionney.jpg"
     },
     {
@@ -163,10 +163,10 @@
         3
       ],
       "starred": false,
-      "discounted": false,
-      "discountRate": 0,
+      "discounted": true,
+      "discountRate": 10,
       "salesNumber": 777,
-      "price": 15,
+      "price": 150,
       "picture": "girman.png"
     },
     {
@@ -175,7 +175,7 @@
       "keywords": [
         5
       ],
-      "starred": false,
+      "starred": true,
       "discounted": false,
       "discountRate": 0,
       "salesNumber": 777,
@@ -188,7 +188,7 @@
       "keywords": [
         1
       ],
-      "starred": false,
+      "starred": true,
       "discounted": false,
       "discountRate": 0,
       "salesNumber": 777,

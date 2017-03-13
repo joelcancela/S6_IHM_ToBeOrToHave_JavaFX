@@ -27,7 +27,7 @@ public class MainWindowController {
 		initializeTab("homeWindow", this.tab0);
 		//initializeTab("homeWindowAlt", this.tab0); //Extension
 		initializeTab("magasinView", this.tab1);
-		initializeTab("produitsView", this.tab2);
+		initializeTab("productsView", this.tab2);
 	}
 
 	private void initializeTab(String fxmlName, Tab tab) {
