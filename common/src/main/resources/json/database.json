@@ -35,7 +35,7 @@
       "starred": true,
       "discounted": true,
       "discountRate": 0,
-      "salesNumber": 777,
+      "salesNumber": 60,
       "price": 0.1,
       "picture": "ovni.png"
     },
@@ -48,7 +48,7 @@
       "starred": false,
       "discounted": false,
       "discountRate": 600,
-      "salesNumber": 777,
+      "salesNumber": 67,
       "price": 670,
       "picture": "upad.png"
     },
@@ -545,11 +545,13 @@
         5.1,
         7.2
       ],
-      "latitude": 43.610769,
-      "longitude": 3.8767159999999876,
+      "latitude": 43.2916976,
+      "longitude": 5.4766483,
       "stock": [
         5,
-        1
+        1,
+        2,
+        3
       ]
     },
     {
