@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="600.0" maxWidth="1280.0" minHeight="600.0" minWidth="1280.0" prefHeight="600.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.HomeTabViewController">
+<BorderPane maxHeight="600.0" maxWidth="1280.0" minHeight="600.0" minWidth="1280.0" prefHeight="600.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.HomeTabViewController">
    <center>
       <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1280.0">
          <children>
@@ -25,9 +25,9 @@
                   <Font size="16.0" />
                </font>
             </TextArea>
-            <ScrollPane>
+            <ScrollPane prefHeight="333.0" prefWidth="1226.0">
                <content>
-                  <GridPane fx:id="homeproducts" maxHeight="476.0" maxWidth="1280.0" minHeight="397.0" minWidth="1280.0" prefHeight="476.0" prefWidth="1280.0">
+                  <GridPane fx:id="homeproducts" maxHeight="476.0" maxWidth="1280.0" minHeight="397.0" minWidth="1262.0" prefHeight="476.0" prefWidth="1262.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
