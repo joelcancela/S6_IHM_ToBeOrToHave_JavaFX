@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import polytech.si3.ihm.tobeortohave.model.Brand;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
 import polytech.si3.ihm.tobeortohave.model.Store;
@@ -22,6 +23,9 @@ public class MapViewController implements Initializable, MapComponentInitialized
 
 	@FXML
 	private VBox vbox;
+
+	@FXML
+	private Text title;
 
 	@FXML
 	private GoogleMapView mapView;
@@ -61,6 +65,8 @@ public class MapViewController implements Initializable, MapComponentInitialized
 		map = mapView.createMap(mapOptions);
 
 		vbox.getChildren().clear();
+
+		vbox.getChildren().add(title);
 		vbox.setSpacing(10.0);
 		for (int i = 0; i < magasinsTboth.size(); i++) {
 			Store store = magasinsTboth.get(i);
