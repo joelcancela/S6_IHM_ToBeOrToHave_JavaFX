@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import polytech.si3.ihm.tobeortohave.model.Brand;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
 import polytech.si3.ihm.tobeortohave.model.Store;
@@ -24,6 +25,9 @@ public class StoresViewController implements Initializable, MapComponentInitiali
 	private VBox vbox;
 
 	@FXML
+	private Text title;
+
+	@FXML
 	private GoogleMapView mapView;
 
 	private GoogleMap map;
@@ -36,7 +40,6 @@ public class StoresViewController implements Initializable, MapComponentInitiali
 		mapView.addMapInializedListener(this);
 	}
 
-
 	public void mapInitialized() {
 		List<Store> magasinsTboth = Brand.findMagasinByBrand(jsonReader.getStores(), "ToBeOrToHave");
 		Store storeDefault = magasinsTboth.get(0);
@@ -45,6 +48,7 @@ public class StoresViewController implements Initializable, MapComponentInitiali
 
 		//Set the initial properties of the map.
 		MapOptions mapOptions = new MapOptions();
+
 
 		mapOptions.center(defaultShopLocation)
 				.mapType(MapTypeIdEnum.ROADMAP)
@@ -60,8 +64,9 @@ public class StoresViewController implements Initializable, MapComponentInitiali
 
 		map = mapView.createMap(mapOptions);
 
+		vbox.getChildren().clear();
 
-
+		vbox.getChildren().add(title);
 		vbox.setSpacing(10.0);
 		for (int i = 0; i < magasinsTboth.size(); i++) {
 			Store store = magasinsTboth.get(i);
