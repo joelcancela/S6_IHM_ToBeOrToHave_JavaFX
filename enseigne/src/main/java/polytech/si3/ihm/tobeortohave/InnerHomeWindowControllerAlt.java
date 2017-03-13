@@ -10,7 +10,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
-import polytech.si3.ihm.tobeortohave.model.Produit;
+import polytech.si3.ihm.tobeortohave.model.Product;
 
 import java.io.File;
 import java.util.List;
@@ -38,11 +38,11 @@ public class InnerHomeWindowControllerAlt {
 	}
 
 	private void initializeProducts() {
-		List<Produit> produitList = jsonReader.getProducts();
+		List<Product> productList = jsonReader.getProducts();
 		int x=0;
 		int y=0;
-		for (Produit produit : produitList) {
-			Node produitNode = createProductNode(produit);
+		for (Product product : productList) {
+			Node produitNode = createProductNode(product);
 			productsListView.getItems().add(produitNode);
 			if(x==6){
 				x=0;
@@ -51,7 +51,7 @@ public class InnerHomeWindowControllerAlt {
 		}
 	}
 
-	private Node createProductNode(Produit p){
+	private Node createProductNode(Product p){
 		VBox vBox = new VBox();
 
 		//Picture

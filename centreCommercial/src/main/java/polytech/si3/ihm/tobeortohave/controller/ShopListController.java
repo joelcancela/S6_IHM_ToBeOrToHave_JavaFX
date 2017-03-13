@@ -1,7 +1,6 @@
 package polytech.si3.ihm.tobeortohave.controller;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -34,7 +33,7 @@ public class ShopListController {
 
     @FXML
     public void initialize(){
-        returnButton.setOnAction(e -> commonController.reset());
+        returnButton.setOnAction(e -> commonController.initTab1());
     }
 
     private JSONReader jsonReader = new JSONReader();
@@ -46,17 +45,17 @@ public class ShopListController {
 
     public void initList(Category category){
         jsonReader.parse();
-        List<Magasin> magasins = jsonReader.getStores();
+        List<Store> stores = jsonReader.getStores();
         List<Shop> magasinsToDisplay = new ArrayList<>();
         Shop shop;
-        for(Magasin m : magasins){
+        for(Store m : stores){
             if(category.equals(Category.ALL) && m.getAddress().equals("NICE")){
-                shop = new Shop(m.getEnseigne().getLogo(), m.getDescription(), m.getDescription(),0, m.getEnseigne().getName());
+                shop = new Shop(m.getBrand().getLogo(), m.getDescription(), m.getDescription(),0, m.getBrand().getName());
                 magasinsToDisplay.add(shop);
                 continue;
             }
             if(categoryMatch(m, category)&& m.getAddress().equals("NICE")){
-                shop = new Shop(m.getEnseigne().getLogo(), m.getDescription(), m.getDescription(),0, m.getEnseigne().getName());
+                shop = new Shop(m.getBrand().getLogo(), m.getDescription(), m.getDescription(),0, m.getBrand().getName());
                 magasinsToDisplay.add(shop);
             }
         }
@@ -91,9 +90,9 @@ public class ShopListController {
                 });
     }
 
-    public boolean categoryMatch(Magasin m, Category category){
+    public boolean categoryMatch(Store m, Category category){
         List<String> field = new ArrayList<>();
-        for(Field f : m.getEnseigne().getFieldList()){
+        for(Field f : m.getBrand().getFieldList()){
             field.add(f.getName());
         }
         return field.contains(category.getDisplay());

@@ -12,16 +12,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.util.Callback;
-import jdk.nashorn.internal.parser.JSONParser;
-import net.miginfocom.layout.Grid;
-import org.json.JSONObject;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
-import polytech.si3.ihm.tobeortohave.model.Magasin;
-import polytech.si3.ihm.tobeortohave.model.Produit;
+import polytech.si3.ihm.tobeortohave.model.Product;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 /**
@@ -35,8 +30,8 @@ public class ProduitsViewController {
     public GridPane bestSellerGrid;
     public ListView listViewPromotion;
 
-    private ObservableList<Produit> starredProducts;
-    private ObservableList<Produit> discountedProducts;
+    private ObservableList<Product> starredProducts;
+    private ObservableList<Product> discountedProducts;
 
     @FXML
     public void initialize() {
@@ -48,12 +43,12 @@ public class ProduitsViewController {
 
         listViewPromotion.setItems(discountedProducts);
         listViewPromotion.setCellFactory(
-                new Callback<ListView<Produit>, ListCell<Produit>>() {
+                new Callback<ListView<Product>, ListCell<Product>>() {
                     @Override
-                    public ListCell<Produit> call(ListView<Produit> param) {
-                        return new ListCell<Produit>() {
+                    public ListCell<Product> call(ListView<Product> param) {
+                        return new ListCell<Product>() {
                             @Override
-                            protected void updateItem(Produit item, boolean empty) {
+                            protected void updateItem(Product item, boolean empty) {
                                 super.updateItem(item, empty);
 
                                 if (item != null) {

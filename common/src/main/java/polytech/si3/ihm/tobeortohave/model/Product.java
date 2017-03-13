@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author Joël CANCELA VAZ
  */
-public class Produit {
+public class Product {
     private String name;
     private List<String> keywords;
     private boolean starred;
@@ -18,7 +18,7 @@ public class Produit {
     private int salesNumber;
     private int id;
 
-    public Produit(int id, String name, List<String> keywords, boolean starred, boolean discounted, double discountRate, double price, String picture, int salesNumber) {
+    public Product(int id, String name, List<String> keywords, boolean starred, boolean discounted, double discountRate, double price, String picture, int salesNumber) {
         this.id = id;
         this.name = name;
         this.keywords = keywords;
