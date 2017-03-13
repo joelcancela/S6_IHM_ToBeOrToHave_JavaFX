@@ -32,7 +32,7 @@ public class ProduitsViewController {
 	}
 
 	private void initializeProducts() {
-		List<Product> productList = jsonReader.getProducts();
+		List<Product> productList = jsonReader.getStoresById(8).getStock();
 		int x=0;
 		int y=0;
 		for (Product product : productList) {
