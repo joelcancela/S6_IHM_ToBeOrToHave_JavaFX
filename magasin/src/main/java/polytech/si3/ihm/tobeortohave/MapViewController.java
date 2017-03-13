@@ -3,10 +3,10 @@ package polytech.si3.ihm.tobeortohave;
 import com.lynden.gmapsfx.GoogleMapView;
 import com.lynden.gmapsfx.MapComponentInitializedListener;
 import com.lynden.gmapsfx.javascript.object.*;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import polytech.si3.ihm.tobeortohave.model.Enseigne;
@@ -38,7 +38,9 @@ public class MapViewController implements Initializable, MapComponentInitialized
 
 
 	public void mapInitialized() {
-		LatLong myShopLocation = new LatLong(43.2916976, 5.4766483);
+		List<Magasin> magasinsTboth = Enseigne.findMagasinByBrand(jsonReader.getStores(), "ToBeOrToHave");
+		Magasin magasinDefault = magasinsTboth.get(0);
+		LatLong defaultShopLocation = new LatLong(magasinDefault.getLatitude(), magasinDefault.getLongitude());
 
 
 		//Set the initial properties of the map.
@@ -59,60 +61,38 @@ public class MapViewController implements Initializable, MapComponentInitialized
 		map = mapView.createMap(mapOptions);
 
 
-		List<Magasin> magasinsTmp = jsonReader.getStores();
-		List<Magasin> magasins = Enseigne.findMagasinByBrand(magasinsTmp,"ToBeOrToHave");
 		vbox.setSpacing(10.0);
-		for (Magasin magasin: magasins) {
+		for (int i = 0; i < magasinsTboth.size(); i++) {
+			Magasin magasin = magasinsTboth.get(i);
 			Button button = new Button(magasin.getAddress());
 			button.setStyle("-fx-font-size: 20px;");
 			button.addEventHandler(MouseEvent.MOUSE_CLICKED,
 					e -> {
-                        map.clearMarkers();
-                        LatLong latLong = new LatLong(magasin.getLatitude(),magasin.getLongitude());
-                        //Add markers to the map
-                        MarkerOptions markerOptions1 = new MarkerOptions();
-                        markerOptions1.position(latLong);
+						map.clearMarkers();
+						LatLong latLong = new LatLong(magasin.getLatitude(), magasin.getLongitude());
+						//Add markers to the map
+						MarkerOptions markerOptions = new MarkerOptions();
+						markerOptions.position(latLong);
 
+						Marker myShopMarker = new Marker(markerOptions);
 
-                        Marker myShopMarker = new Marker(markerOptions1);
+						map.addMarker(myShopMarker);
 
+						InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
+						infoWindowOptions.content("<h2>ToBeOrToHave "+magasin.getAddress().toUpperCase()+"</h2>"
+								+ "Telephone: " + magasin.getPhoneNumber() + "<br>"
+								+ "Web: " + magasin.getWebAddress());
 
-                        map.addMarker(myShopMarker);
+						InfoWindow InfoWindow = new InfoWindow(infoWindowOptions);
+						InfoWindow.open(map, myShopMarker);
 
-
-
-                        InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
-                        infoWindowOptions.content("<h2>ToBeOrToHave</h2>"
-                                + "Telephone: " + magasin.getPhoneNumber() + "<br>"
-                                + "Web: " + magasin.getWebAddress());
-
-                        InfoWindow InfoWindow = new InfoWindow(infoWindowOptions);
-                        InfoWindow.open(map, myShopMarker);
-
-                        map.setCenter(latLong);
-                    });
+						map.setCenter(latLong);
+					});
+			if (i == 0) {
+				button.fireEvent(new MouseEvent(MouseEvent.MOUSE_CLICKED, 1, 2, 3, 4, MouseButton.PRIMARY, 5, true, true, true, true, true, true, true, true, true, true, null));
+			}
 			vbox.getChildren().add(button);
 		}
-
-		//Add markers to the map
-		MarkerOptions markerOptions1 = new MarkerOptions();
-		markerOptions1.position(myShopLocation);
-
-
-		Marker myShopMarker = new Marker(markerOptions1);
-
-
-		map.addMarker(myShopMarker);
-
-
-
-		InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
-		infoWindowOptions.content("<h2>ToBeOrToHave</h2>"
-				+ "Telephone: 0442345678<br>"
-				+ "Web: www.ToBeOrToHave.fr");
-
-		InfoWindow InfoWindow = new InfoWindow(infoWindowOptions);
-		InfoWindow.open(map, myShopMarker);
 
 
 	}

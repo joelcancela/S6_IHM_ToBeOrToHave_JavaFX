@@ -18,8 +18,9 @@ public class Magasin {
     private String phoneNumber;
     private String webAddress;
     private List<Double> CA;
+    private int id;
 
-    public Magasin(Enseigne enseigne, String description, String address, Double latitude, Double longitude, List<Produit> stock, String phoneNumber, String webAddress, List<Double> CA) {
+    public Magasin(Enseigne enseigne, String description, String address, Double latitude, Double longitude, List<Produit> stock, String phoneNumber, String webAddress, List<Double> CA, int id) {
         this.enseigne = enseigne;
         this.description = description;
         this.address = address;
@@ -29,6 +30,7 @@ public class Magasin {
         this.phoneNumber = phoneNumber;
         this.webAddress = webAddress;
         this.CA = CA;
+        this.id = id;
     }
 
     @Override
@@ -80,5 +82,9 @@ public class Magasin {
 
     public List<Double> getCA() {
         return CA;
+    }
+
+    public int getId() {
+        return id;
     }
 }

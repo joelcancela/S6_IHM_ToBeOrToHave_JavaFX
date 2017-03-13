@@ -60,6 +60,7 @@ public class JSONReader {
 
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
+            int id = jsonObject.getInt("id");
             int brandIndex = jsonObject.getInt("brand");
             Enseigne currentEnseigne = brands.get(brandIndex);
             String description = jsonObject.getString("description");
@@ -79,7 +80,7 @@ public class JSONReader {
                 CA.add(CAArray.getDouble(j));
             }
 
-            stores.add(new Magasin(currentEnseigne, description, address, latitude, longitude, produitList, phone, webAddress, CA));
+            stores.add(new Magasin(currentEnseigne, description, address, latitude, longitude, produitList, phone, webAddress, CA, id));
 
         }
 
@@ -192,5 +193,13 @@ public class JSONReader {
 
     public List<Magasin> getStores() {
         return stores;
+    }
+
+    public Magasin getStoresById (int id) {
+        for (Magasin magasin: stores) {
+            if (magasin.getId() == id)
+                return magasin;
+        }
+        return null;
     }
 }
