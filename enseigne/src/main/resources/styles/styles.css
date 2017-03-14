@@ -114,3 +114,8 @@
 .list-cell:empty {
     visibility:hidden;
 }
+
+.text-field.error {
+    -fx-text-box-border: red ;
+    -fx-focus-color: red ;
+}

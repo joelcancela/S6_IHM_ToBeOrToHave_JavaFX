@@ -19,6 +19,10 @@ public class MainAdmin extends Application {
         FXMLLoader loader = new FXMLLoader();
         Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
 
+        LoginAdminViewController controller = (LoginAdminViewController) loader.getController();
+        controller.setStage(stage);
+
+
         Scene scene = new Scene(rootNode);
         scene.getStylesheets().add("/styles/styles.css");
 

@@ -45,5 +45,6 @@
             <Image url="@/images/AdminBanner.png" />
          </image>
       </ImageView>
+      <Label fx:id="wrongCredentialsLabel" layoutX="103.0" layoutY="204.0" text="WRONG USERNAME OR PASSWORD" textFill="RED" visible="false" />
    </children>
 </AnchorPane>
