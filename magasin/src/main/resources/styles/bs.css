@@ -1,0 +1,68 @@
+.accordion,
+.button,
+.cell,
+.check-box,
+.choice-box,
+.color-picker,
+.combo-box,
+.label,
+.list-cell,
+.text-area,
+.text-field {
+  -fx-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -fx-font-size: 14px;
+  -fx-text-fill: #333333;
+}
+
+/* LOCALE */
+
+.toggle-button {
+  -fx-border-radius: 4px;
+  -fx-background-radius: 4px;
+  -fx-padding: 6px 12px 6px 12px;
+  
+  -fx-font-family: "Helvetica Neue";
+  -fx-text-fill: #ffffff;
+  -fx-background-color: #428bca;
+  -fx-border-color: #357ebd;
+}
+
+.toggle-button:selected {
+  -fx-background-color: #5bc0de;
+  -fx-border-color: #46b8da;
+}
+
+/* TABS */
+
+.tab {
+  -fx-border-radius: 4px;
+  -fx-background-radius: 4px;
+  -fx-padding: 6px 12px 6px 12px;
+	
+  -fx-text-fill: #333333;
+  -fx-background-color: #ffffff;
+  -fx-border-color: #cccccc;
+}
+
+.tab:selected {
+  -fx-background-color: #5bc0de;
+  -fx-border-color: #46b8da;
+}
+
+.tab-label {
+	-fx-font-family: "Helvetica Neue";
+	-fx-text-fill: #333333;
+}
+
+.tab-label:selected {
+    -fx-background-color: #5bc0de;
+    -fx-text-fill: #46b8da;
+}
+
+/* BTN */
+
+.button {
+  -fx-border-radius: 4px;
+  -fx-background-radius: 4px;
+  -fx-padding: 6px 12px 6px 12px;
+}

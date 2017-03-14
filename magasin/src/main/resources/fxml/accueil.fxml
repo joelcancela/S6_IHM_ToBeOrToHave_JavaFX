@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="620.0" prefWidth="1280.0">
-        <items>
-            <BorderPane>
+      <VBox prefHeight="620.0" prefWidth="1280.0" styleClass="vbox">
+         <children>
+            <BorderPane prefHeight="310.0" prefWidth="1280.0">
                <top>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%key.about_us_title" textAlignment="CENTER" wrappingWidth="361.6708984375" BorderPane.alignment="TOP_LEFT">
                      <font>
@@ -31,7 +30,7 @@
                <right>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <ImageView fitHeight="238.0" fitWidth="441.0" layoutX="-250.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="238.0" fitWidth="441.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="/images/shop.jpg" />
                            </image>
@@ -40,7 +39,7 @@
                   </AnchorPane>
                </right>
             </BorderPane>
-            <BorderPane>
+            <BorderPane prefHeight="310.0" prefWidth="1280.0">
                <top>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%key.strength_title" textAlignment="CENTER" wrappingWidth="361.6708984375" BorderPane.alignment="TOP_LEFT">
                      <font>
@@ -61,7 +60,7 @@
                <right>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <ImageView fitHeight="250.0" fitWidth="144.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="250.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="/images/logo.jpg" />
                            </image>
@@ -70,7 +69,7 @@
                   </AnchorPane>
                </right>
             </BorderPane>
-        </items>
-      </SplitPane>
+         </children>
+      </VBox>
    </children>
 </Pane>
