@@ -36,7 +36,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(rootNode);
         scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
 
-        stage.setTitle("Cap Sophia");
+        stage.setTitle(commercialCenter.getName());
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
@@ -47,7 +47,7 @@ public class MainApp extends Application {
         CommercialCenterParser commercialCenterParser = new CommercialCenterParser();
         jsonReader.parse();
         CommercialCenter commercialCenter = new CommercialCenter("Cap Sophia");
-        commercialCenter.setShopList(jsonReader.getNiceStores());
+        commercialCenter.setStoreList(jsonReader.getNiceStores());
         commercialCenter.setEvents(commercialCenterParser.getPathEvent());
         commercialCenter.setProducts(commercialCenterParser.getPathProducts());
 

@@ -5,7 +5,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import polytech.si3.ihm.tobeortohave.model.Shop;
 import polytech.si3.ihm.tobeortohave.model.Store;
 
 /**

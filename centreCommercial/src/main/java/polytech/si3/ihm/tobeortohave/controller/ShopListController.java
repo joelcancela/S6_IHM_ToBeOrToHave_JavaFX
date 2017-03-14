@@ -55,7 +55,7 @@ public class ShopListController {
 
     public void initList(Category category){
         this.category = category;
-        List<Store> stores = commercialCenter.getShopList();
+        List<Store> stores = commercialCenter.getStoreList();
         List<Store> magasinsToDisplay = new ArrayList<>();
         for(Store m : stores){
             if(category.equals(Category.ALL) && m.getAddress().equals("NICE")){

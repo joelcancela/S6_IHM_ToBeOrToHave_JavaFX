@@ -8,12 +8,12 @@ import java.util.List;
  */
 public class CommercialCenter {
     private String name;
-    private List<Store> shopList;
+    private List<Store> storeList;
     private List<String> events;
     private List<String> products;
 
     public CommercialCenter(String name) {
-        shopList = new ArrayList<>();
+        storeList = new ArrayList<>();
         events = new ArrayList<>();
         products = new ArrayList<>();
         this.name = name;
@@ -23,23 +23,23 @@ public class CommercialCenter {
     }
     
     public void addShop(Store shop){
-        shopList.add(shop);
+        storeList.add(shop);
     }
 
     public String getName() {
         return name;
     }
 
-    public List<Store> getShopList() {
-        return shopList;
+    public List<Store> getStoreList() {
+        return storeList;
     }
 
     public List<String> getEvents() {
         return events;
     }
 
-    public void setShopList(List<Store> shopList) {
-        this.shopList = shopList;
+    public void setStoreList(List<Store> storeList) {
+        this.storeList = storeList;
     }
 
     public void setEvents(List<String> events) {
@@ -48,7 +48,7 @@ public class CommercialCenter {
 
     public List<Store> getHighlightedshopList() {
         List<Store> stores = new ArrayList<>();
-        for(Store store : shopList){
+        for(Store store : storeList){
             if(store.isHighlighted())
                 stores.add(store);
         }
