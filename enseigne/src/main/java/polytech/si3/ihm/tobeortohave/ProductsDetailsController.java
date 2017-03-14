@@ -40,14 +40,16 @@ public class ProductsDetailsController {
         productTitle.setText(product.getName());
 
         if(product.isDiscounted()){
-            oldPrice.setText(product.getPrice()+"€");
+            oldPrice.setText(String.format("%.2f€",product.getPrice()));
             double discount = product.getPrice() - (product.getPrice()*product.getDiscountRate()/100);
-            String discountedPriceValue = String.format("%.2f",discount)+"€";
-            discountedPrice.setText(discountedPriceValue);
+            discountedPrice.setText(String.format("%.2f€",discount));
         }else{
             oldPrice.setVisible(false);
             discountedPrice.setText(String.format("%.2f€",product.getPrice()));
         }
+
+        productDescription.setEditable(false);
+        productDescription.setText(product.getDescription());
     }
 
 }

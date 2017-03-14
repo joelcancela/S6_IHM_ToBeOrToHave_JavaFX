@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.3494983277591973" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.ProductsDetailsController">
+<SplitPane dividerPositions="0.33" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.ProductsDetailsController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="254.0">
          <children>
-            <ImageView fx:id="productPicture" fitHeight="218.0" fitWidth="206.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="productPicture" fitHeight="218.0" fitWidth="206.0" layoutY="90.0" pickOnBounds="true" />
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="366.0">
          <children>
@@ -20,8 +20,7 @@
                   <Font name="Lucida Sans Regular" size="26.0" />
                </font>
             </Label>
-            <TextArea fx:id="productDescription" layoutX="5.0" layoutY="188.0" prefHeight="206.0" prefWidth="378.0" />
-            <Label fx:id="oldPrice" layoutX="33.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="#000000">
+            <Label fx:id="oldPrice" layoutX="66.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="#000000">
                <font>
                   <Font name="Lucida Sans Regular" size="23.0" />
                </font>
@@ -31,6 +30,7 @@
                   <Font name="Lucida Sans Regular" size="23.0" />
                </font>
             </Label>
+             <TextArea fx:id="productDescription" layoutX="5.0" layoutY="188.0" prefHeight="206.0" prefWidth="378.0" />
          </children></AnchorPane>
   </items>
 </SplitPane>
