@@ -86,5 +86,19 @@
       "id": 3,
       "path": "/images/Evenements3.png"
     }
+  ],
+  "highlightedProducts":[
+    {
+      "id": 1,
+      "path": "/images/Produits.png"
+    },
+    {
+      "id": 2,
+      "path": "/images/Produits2.png"
+    },
+    {
+      "id": 3,
+      "path": "/images/Produits3.png"
+    }
   ]
 }

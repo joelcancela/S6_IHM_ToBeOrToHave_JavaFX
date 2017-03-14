@@ -23,12 +23,14 @@ public class CommercialCenterParser {
     Map<String, Integer> visitorsProfile;
     Map<String, Integer> visitorsAge;
     Map<String, Integer> pathEvent;
+    Map<String, Integer> pathProduct;
 
     public CommercialCenterParser() {
         visitorsPerYear = new TreeMap<>();
         visitorsProfile = new TreeMap<>();
         visitorsAge = new TreeMap<>();
         pathEvent = new TreeMap<>();
+        pathProduct = new TreeMap<>();
         parse();
     }
 
@@ -50,6 +52,7 @@ public class CommercialCenterParser {
         parseVisitorsProfile();
         parseVisitorsAge();
         parsePathEvent();
+        parseProducts();
     }
 
     private void parsePathEvent() {
@@ -60,6 +63,17 @@ public class CommercialCenterParser {
             String year = visitorsProfiles.getString("path");
             Integer visitors = visitorsProfiles.getInt("id");
             this.pathEvent.put(year, visitors);
+        }
+    }
+
+    private void parseProducts(){
+        JSONArray jsonArray = jsonObject.getJSONArray("highlightedProducts");
+
+        for (int i = 0; i < jsonArray.length(); i++) {
+            JSONObject visitorsProfiles = jsonArray.getJSONObject(i);
+            String year = visitorsProfiles.getString("path");
+            Integer visitors = visitorsProfiles.getInt("id");
+            this.pathProduct.put(year, visitors);
         }
     }
 
@@ -114,6 +128,10 @@ public class CommercialCenterParser {
     }
 
     public List<String> getPathEvent() { return new ArrayList<>(pathEvent.keySet()); }
+
+    public List<String> getPathProducts(){
+        return new ArrayList<>(pathProduct.keySet());
+    }
 }
 
 

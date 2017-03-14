@@ -31,6 +31,11 @@
                <font>
                   <Font size="24.0" />
                </font></Button>
+            <Button fx:id="refreshButton" layoutX="1102.0" layoutY="492.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="164.0" text="Rafraichir">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </content>

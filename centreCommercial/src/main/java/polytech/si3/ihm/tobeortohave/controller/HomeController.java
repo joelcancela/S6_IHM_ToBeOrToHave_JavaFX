@@ -11,6 +11,7 @@ import polytech.si3.ihm.tobeortohave.model.CommercialCenter;
 import polytech.si3.ihm.tobeortohave.model.Shop;
 import polytech.si3.ihm.tobeortohave.model.Store;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,7 +34,6 @@ public class HomeController {
 
     @FXML
     private void initialize() {
-
     }
 
     private CommercialCenter commercialCenter;
@@ -57,6 +57,30 @@ public class HomeController {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+
+    public void initEventPane(){
+        String scroll = "/fxml/scroll.fxml";
+        FXMLLoader loader = new FXMLLoader();
+        try {
+            Parent rootNode = loader.load(getClass().getResourceAsStream(scroll));
+            ((EventScrollingController) loader.getController()).init(commercialCenter.getEvents());
+            eventPane.getChildren().add(rootNode);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void initProductPane(){
+        String scroll = "/fxml/scroll_product_highlight.fxml";
+        FXMLLoader loader = new FXMLLoader();
+        try {
+            Parent rootNode = loader.load(getClass().getResourceAsStream(scroll));
+            ((ProductScrollingController) loader.getController()).init(commercialCenter.getProducts());
+            highlightPane.getChildren().add(rootNode);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

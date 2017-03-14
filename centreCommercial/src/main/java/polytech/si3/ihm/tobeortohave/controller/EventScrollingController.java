@@ -40,14 +40,16 @@ public class EventScrollingController {
 
     @FXML
     private void initialize(){
+
+    }
+
+    public void init(List<String> paths){
         eventsImage = new ArrayList<>();
         radioButtons = new ArrayList<>();
         radioButtons.add(radio1);
         radioButtons.add(radio2);
         radioButtons.add(radio3);
-        List<String> productsPaths = Arrays.asList("/images/Evenements.png"
-                ,"/images/Evenements2.png","/images/Evenements3.png");
-        for(String product : productsPaths){
+        for(String product : paths){
             System.out.println(product);
             eventsImage.add(new Image(product));
         }
@@ -60,6 +62,8 @@ public class EventScrollingController {
         radioButtons.get(0).setSelected(true);
         indexImg = 0;
     }
+
+
 
     private void right(){
         if(indexImg == eventsImage.size() - 1){

@@ -16,11 +16,11 @@
             <HBox prefHeight="310.0" prefWidth="200.0">
                <children>
                   <Pane fx:id="eventPane" prefHeight="310.0" prefWidth="832.0">
-                      <fx:include source="/fxml/scroll.fxml" />
+
                   </Pane>
                   <Separator orientation="VERTICAL" prefHeight="200.0" />
                   <Pane fx:id="highlightPane" prefHeight="310.0" prefWidth="448.0">
-                      <fx:include source="/fxml/scroll_product_highlight.fxml" />
+
                   </Pane>
                </children>
             </HBox>

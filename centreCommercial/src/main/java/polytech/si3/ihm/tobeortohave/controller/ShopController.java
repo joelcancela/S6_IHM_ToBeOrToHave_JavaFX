@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import polytech.si3.ihm.tobeortohave.model.Shop;
+import polytech.si3.ihm.tobeortohave.model.Store;
 
 /**
  * Created by MARC-PC on 07/03/2017.
@@ -24,12 +25,12 @@ public class ShopController {
     @FXML
     public Button moreButtonBig;
 
-    public void initShopController(Shop shop) {
-        if (shop.getLogoPath().isEmpty()) {
+    public void initShopController(Store store) {
+        if (store.getBrand().getLogo().isEmpty()) {
             brandImageBig.setImage(new Image("images/logoShop.png"));
         } else
-            brandImageBig.setImage(new Image(shop.getLogoPath()));
-        shopNameBig.setText(shop.getName());
-        descriptionBig.setText(shop.getDescription());
+            brandImageBig.setImage(new Image(store.getBrand().getLogo()));
+        shopNameBig.setText(store.getBrand().getName());
+        descriptionBig.setText(store.getDescription());
     }
 }

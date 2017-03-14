@@ -1,6 +1,7 @@
 package polytech.si3.ihm.tobeortohave.controller;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,9 +16,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Marc on 08/03/2017.
- */
 public class ShopListController {
 
     @FXML
@@ -25,15 +23,21 @@ public class ShopListController {
 
     private CommonController commonController;
 
+    private Category category = Category.ALL;
+
+    @FXML
+    public Button refreshButton;
+
     @FXML
     public Button returnButton;
 
     @FXML
-    public ListView<Shop> listViewShopList;
+    public ListView<Store> listViewShopList;
 
     @FXML
     public void initialize(){
         returnButton.setOnAction(e -> commonController.initTab1());
+        refreshButton.setOnAction(e -> initList(category));
     }
 
     private JSONReader jsonReader = new JSONReader();
@@ -43,32 +47,36 @@ public class ShopListController {
         this.commonController = commonController;
     }
 
+    private CommercialCenter commercialCenter;
+
+    public void initModel(CommercialCenter commercialCenter){
+        this.commercialCenter = commercialCenter;
+    }
+
     public void initList(Category category){
-        jsonReader.parse();
-        List<Store> stores = jsonReader.getStores();
-        List<Shop> magasinsToDisplay = new ArrayList<>();
-        Shop shop;
+        this.category = category;
+        List<Store> stores = commercialCenter.getShopList();
+        List<Store> magasinsToDisplay = new ArrayList<>();
         for(Store m : stores){
             if(category.equals(Category.ALL) && m.getAddress().equals("NICE")){
-                shop = new Shop(m.getBrand().getLogo(), m.getDescription(), m.getDescription(), m.getBrand().getName());
-                magasinsToDisplay.add(shop);
+                magasinsToDisplay.add(m);
                 continue;
             }
             if(categoryMatch(m, category)&& m.getAddress().equals("NICE")){
-                shop = new Shop(m.getBrand().getLogo(), m.getDescription(), m.getDescription(), m.getBrand().getName());
-                magasinsToDisplay.add(shop);
+                magasinsToDisplay.add(m);
             }
         }
+        ObservableList<Store> observableList = FXCollections.observableArrayList(magasinsToDisplay);
         label.setText(category.getDisplay());
-        this.listViewShopList.setItems(FXCollections.observableArrayList(magasinsToDisplay));
+        this.listViewShopList.setItems(observableList);
         this.listViewShopList.setCellFactory(
-                new Callback<ListView<Shop>, ListCell<Shop>>() {
+                new Callback<ListView<Store>, ListCell<Store>>() {
                     @Override
-                    public ListCell<Shop> call(ListView<Shop> listView) {
+                    public ListCell<Store> call(ListView<Store> listView) {
                         // Cette cellule personalisée pourrait (devrait) être placée dans une classe à part
-                        return new ListCell<Shop>() {
+                        return new ListCell<Store>() {
                             @Override
-                            protected void updateItem(Shop item, boolean empty) {
+                            protected void updateItem(Store item, boolean empty) {
                                 super.updateItem(item, empty);
 
                                 if (item != null) {

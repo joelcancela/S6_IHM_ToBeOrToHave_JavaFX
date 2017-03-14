@@ -51,6 +51,7 @@ public class MainApp extends Application {
         CommercialCenter commercialCenter = new CommercialCenter("Cap Sophia");
         commercialCenter.setShopList(jsonReader.getNiceStores());
         commercialCenter.setEvents(commercialCenterParser.getPathEvent());
+        commercialCenter.setProducts(commercialCenterParser.getPathProducts());
 
         return commercialCenter;
     }

@@ -39,24 +39,7 @@ public class ProductScrollingController {
 
     @FXML
     private void initialize(){
-        productsImage = new ArrayList<>();
-        radioButtons = new ArrayList<>();
-        radioButtons.add(radio1);
-        radioButtons.add(radio2);
-        radioButtons.add(radio3);
-        List<String> productsPaths = Arrays.asList("/images/Produits.png","/images/Produits2.png","/images/Produits3.png");
-        for(String product : productsPaths){
-            System.out.println(product);
-            productsImage.add(new Image(product));
-        }
-        rightButton.setOnAction((ActionEvent event) -> right());
-        leftButton.setOnAction((ActionEvent event) -> left());
-        radio1.setOnAction((ActionEvent event) -> setRadioButtons(0));
-        radio2.setOnAction((ActionEvent event) -> setRadioButtons(1));
-        radio3.setOnAction((ActionEvent event) -> setRadioButtons(2));
-        productImage.setImage(productsImage.get(0));
-        radioButtons.get(0).setSelected(true);
-        indexImg = 0;
+
     }
 
     private void right(){
@@ -84,5 +67,25 @@ public class ProductScrollingController {
         indexImg = selected;
         radioButtons.get(indexImg).setSelected(true);
         productImage.setImage(productsImage.get(indexImg));
+    }
+
+    public void init(List<String> products) {
+        productsImage = new ArrayList<>();
+        radioButtons = new ArrayList<>();
+        radioButtons.add(radio1);
+        radioButtons.add(radio2);
+        radioButtons.add(radio3);
+        for(String product : products){
+            System.out.println(product);
+            productsImage.add(new Image(product));
+        }
+        rightButton.setOnAction((ActionEvent event) -> right());
+        leftButton.setOnAction((ActionEvent event) -> left());
+        radio1.setOnAction((ActionEvent event) -> setRadioButtons(0));
+        radio2.setOnAction((ActionEvent event) -> setRadioButtons(1));
+        radio3.setOnAction((ActionEvent event) -> setRadioButtons(2));
+        productImage.setImage(productsImage.get(0));
+        radioButtons.get(0).setSelected(true);
+        indexImg = 0;
     }
 }

@@ -10,10 +10,12 @@ public class CommercialCenter {
     private String name;
     private List<Store> shopList;
     private List<String> events;
+    private List<String> products;
 
     public CommercialCenter(String name) {
         shopList = new ArrayList<>();
         events = new ArrayList<>();
+        products = new ArrayList<>();
         this.name = name;
     }
     public void addEvents(String event){
@@ -51,5 +53,13 @@ public class CommercialCenter {
                 stores.add(store);
         }
         return stores;
+    }
+
+    public List<String> getProducts(){
+        return products;
+    }
+
+    public void setProducts(List<String> products) {
+        this.products = products;
     }
 }

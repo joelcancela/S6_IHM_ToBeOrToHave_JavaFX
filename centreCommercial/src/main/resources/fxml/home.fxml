@@ -13,10 +13,10 @@
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1280.0">
           <children>
               <Pane fx:id="eventPane" prefHeight="310.0" prefWidth="832.0">
-                  <fx:include source="/fxml/scroll.fxml"/>
+
               </Pane>
               <Pane fx:id="highlightPane" layoutX="829.0" prefHeight="310.0" prefWidth="448.0">
-                  <fx:include source="/fxml/scroll_product_highlight.fxml"/>
+
               </Pane>
             <Separator layoutY="309.0" prefWidth="1280.0" />
             <Pane layoutY="310.0" prefWidth="1280.0">

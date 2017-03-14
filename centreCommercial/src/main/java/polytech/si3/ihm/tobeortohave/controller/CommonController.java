@@ -54,6 +54,7 @@ public class CommonController {
         try {
             Parent node = loader.load(getClass().getResourceAsStream(shoplist));
             ((ShopListController) loader.getController()).initCommonController(this);
+            ((ShopListController) loader.getController()).initModel(commercialCenter);
             ((ShopListController) loader.getController()).initList(category);
             tab1.setContent(node);
         } catch (IOException e) {
@@ -68,6 +69,8 @@ public class CommonController {
             Parent category = loader.load(getClass().getResourceAsStream(home));
             ((HomeController)loader.getController()).initModel(commercialCenter);
             ((HomeController)loader.getController()).initGridPane(commercialCenter.getHighlightedshopList());
+            ((HomeController)loader.getController()).initEventPane();
+            ((HomeController)loader.getController()).initProductPane();
             tab0.setContent(category);
         } catch (IOException e) {
             e.printStackTrace();
