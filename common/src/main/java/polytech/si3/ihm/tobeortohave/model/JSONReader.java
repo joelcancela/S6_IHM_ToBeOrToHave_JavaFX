@@ -219,4 +219,13 @@ public class JSONReader {
         }
         return null;
     }
+
+    public List<Store> getNiceStores() {
+        List<Store> niceStores = new ArrayList<>();
+        for(Store store : stores){
+            if(store.getAddress().equals("NICE"))
+                niceStores.add(store);
+        }
+        return niceStores;
+    }
 }

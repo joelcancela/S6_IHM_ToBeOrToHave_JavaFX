@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import polytech.si3.ihm.tobeortohave.model.CommercialCenter;
 import polytech.si3.ihm.tobeortohave.model.Shop;
+import polytech.si3.ihm.tobeortohave.model.Store;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,17 +32,8 @@ public class HomeController {
     public GridPane gridPaneHome;
 
     @FXML
-    public void initialize() {
-        initGridPane(Arrays.asList(
-                new Shop("/images/logoShop.png","I'm a small description", "I'm a long description",
-                        "Name of the shop"),
-                new Shop("/images/logoShop.png","I'm a smallest description", "I'm a longest description",
-                        "Name of the shop"),
-                new Shop("/images/logoShop.png","I'm a small description", "I'm a long description",
-                         "Name of the shop"),
-                new Shop("/images/logoShop.png","I'm a small description", "I'm a long description",
-                        "Name of the shop")
-        ));
+    private void initialize() {
+
     }
 
     private CommercialCenter commercialCenter;
@@ -50,7 +42,7 @@ public class HomeController {
         this.commercialCenter = commercialCenter;
     }
 
-    public void initGridPane(List<Shop> highlightedShops) {
+    public void initGridPane(List<Store> highlightedShops) {
         int size = highlightedShops.size();
         for (int i = 0; i <= highlightedShops.size() / 3; i++) {
             for (int j = 0; j < 3 && size > 0; j++, size--) {
