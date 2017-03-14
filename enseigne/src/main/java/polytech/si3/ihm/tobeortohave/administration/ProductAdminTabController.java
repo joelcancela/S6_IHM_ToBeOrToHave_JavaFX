@@ -6,23 +6,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.layout.BorderPane;
 import javafx.util.Callback;
-import polytech.si3.ihm.tobeortohave.ProductsDetailsController;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
 import polytech.si3.ihm.tobeortohave.model.Product;
 
 import java.io.IOException;
 
 /**
- * Created by Galih on 14/03/2017.
+ * Created by Nassim on 14/03/2017.
  */
 public class ProductAdminTabController {
 
@@ -30,6 +25,12 @@ public class ProductAdminTabController {
 
     @FXML
     public ListView listViewProducts;
+
+    @FXML
+    public Button addProductButton;
+
+    @FXML
+    public Button removeProductButton;
 
     private ObservableList<Product> products;
 
@@ -77,5 +78,16 @@ public class ProductAdminTabController {
                     }
                 }
         );
+    }
+
+    public void addProductAction(){
+        System.out.println("Ajout d'un produit");
+        //Product p = new Product();
+        //products.add(p);
+    }
+
+    public void removeProductAction(){
+        System.out.println("Remove d'un produit");
+        products.remove(listViewProducts.getSelectionModel().getSelectedItem());
     }
 }

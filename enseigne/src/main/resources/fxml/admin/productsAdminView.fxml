@@ -23,8 +23,8 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="220.0" text="Ajouter un produit" />
-                  <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="220.0" text="Supprimer" GridPane.columnIndex="1" />
+                  <Button fx:id="addProductButton" mnemonicParsing="false" onAction="#addProductAction" prefHeight="105.0" prefWidth="220.0" text="Ajouter un produit" />
+                  <Button fx:id="removeProductButton" mnemonicParsing="false" onAction="#removeProductAction" prefHeight="105.0" prefWidth="220.0" text="Supprimer" GridPane.columnIndex="1" />
                </children>
                <VBox.margin>
                   <Insets top="5.0" />
