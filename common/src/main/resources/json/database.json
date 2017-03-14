@@ -329,7 +329,7 @@
     {
       "id": 0,
       "name": "K&N",
-      "logo": "",
+      "logo": "images/brandLogo/kn.png",
       "description": "Kelly et Nauritz, plus connu sous le nom de K&N, est une entreprise et chaîne de magasins suédoise de prêt-à-porter pour femme, enfant et homme",
       "phone": "01 21 45 78 98",
       "webAddress": "kn.com",
@@ -340,7 +340,7 @@
     {
       "id": 1,
       "name": "Costaromo",
-      "logo": "",
+      "logo": "costorama.png",
       "description": "Costaromo est une chaîne française de grande distribution de bricolage, de décoration et d'aménagement de la maison.",
       "phone": "01 21 45 78 98",
       "webAddress": "costaromo.fr",
@@ -362,7 +362,7 @@
     {
       "id": 3,
       "name": "ToBeOrToHave",
-      "logo": "",
+      "logo": "images/brandLogo/tobeortohave.png",
       "description": "ToBeOrToHave le célèbre magasin de livres et de high-tech d'où son slogan : \"C'est pas parce qu'on est high-tech qu'on sait plus lire de bon vieux livre à l'ancienne mamène\"",
       "phone": "01 21 58 41 98",
       "webAddress": "tobeortohave.fr",
@@ -374,7 +374,7 @@
     {
       "id": 4,
       "name": "Yottathlon",
-      "logo": "",
+      "logo": "images/brandLogo/yotta.png",
       "description": "Yottathlon est un groupe français de grande distribution spécialisé dans les articles de sport et de loisirs",
       "phone": "01 21 45 78 98",
       "webAddress": "wow.com",

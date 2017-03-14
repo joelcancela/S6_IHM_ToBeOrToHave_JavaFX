@@ -76,29 +76,29 @@
   "actualEvents":[
     {
       "id": 1,
-      "path": "/images/Evenements.png"
+      "path": "/images/events/noel.png"
     },
     {
       "id": 2,
-      "path": "/images/Evenements2.png"
+      "path": "/images/events/ouf.png"
     },
     {
       "id": 3,
-      "path": "/images/Evenements3.png"
+      "path": "/images/events/Wifi.png"
     }
   ],
   "highlightedProducts":[
     {
       "id": 1,
-      "path": "/images/Produits.png"
+      "path": "/images/productOfTheWeek/asos.png"
     },
     {
       "id": 2,
-      "path": "/images/Produits2.png"
+      "path": "/images/productOfTheWeek/stalsund.png"
     },
     {
       "id": 3,
-      "path": "/images/Produits3.png"
+      "path": "/images/productOfTheWeek/upad.png"
     }
   ]
 }
