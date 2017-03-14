@@ -11,9 +11,9 @@
             <content>
                 <VBox prefHeight="614.0" prefWidth="268.0" fx:id="vbox" alignment="TOP_CENTER">
                     <children>
-                        <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Magasins" textAlignment="CENTER" wrappingWidth="220.0">
+                        <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Nos magasins en France" textAlignment="CENTER" wrappingWidth="220.0">
                             <font>
-                                <Font name="Lucida Sans Regular" size="31.0" />
+                                <Font name="Lucida Sans Regular" size="26.0" />
                             </font>
                             <VBox.margin>
                                 <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />

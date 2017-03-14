@@ -45,6 +45,12 @@ public class StoresViewController implements Initializable, MapComponentInitiali
 		Store storeDefault = magasinsTboth.get(0);
 		LatLong defaultShopLocation = new LatLong(storeDefault.getLatitude(), storeDefault.getLongitude());
 
+		MarkerOptions defaultShopMarkerOptions = new MarkerOptions();
+		defaultShopMarkerOptions.position(defaultShopLocation);
+
+
+		Marker defaultShopMarker = new Marker(defaultShopMarkerOptions);
+
 
 		//Set the initial properties of the map.
 		MapOptions mapOptions = new MapOptions();
@@ -63,6 +69,7 @@ public class StoresViewController implements Initializable, MapComponentInitiali
 				.styleString("[{featureType: \"poi\",stylers: [{ visibility: \"off\" }]}]");
 
 		map = mapView.createMap(mapOptions);
+        map.addMarker(defaultShopMarker);
 
 		vbox.getChildren().clear();
 

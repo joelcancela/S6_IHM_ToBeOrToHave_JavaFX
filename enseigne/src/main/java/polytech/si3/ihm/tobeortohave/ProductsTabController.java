@@ -8,10 +8,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.util.Callback;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
@@ -30,7 +35,9 @@ public class ProductsTabController {
     public GridPane productGrid;
     private JSONReader jsonReader;
     public GridPane bestSellerGrid;
+    @FXML
     public ListView listViewPromotion;
+    @FXML
     public ListView listViewStarred;
 
     private ObservableList<Product> starredProducts;
@@ -51,6 +58,22 @@ public class ProductsTabController {
                     @Override
                     public void changed(ObservableValue<?extends Product> observable, Product formerClickedProduct, Product clickedProduct) {
                         System.out.println("Click on " + clickedProduct.getName());
+                        String fxmlFile = "/fxml/productDetails.fxml";
+                        FXMLLoader loader = new FXMLLoader();
+                        try {
+                            Scene scene = listViewPromotion.getScene();
+                            BorderPane firstPane = (BorderPane) scene.getRoot();
+                            Tab currentTab = ((TabPane)firstPane.getChildren().get(0)).getTabs().get(1);
+                            Node saveContent = currentTab.getContent();
+                            Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
+                            ((ProductsDetailsController)loader.getController()).initialize(clickedProduct,currentTab, saveContent);
+                            currentTab.setContent(rootNode);
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        listViewPromotion.getSelectionModel().clearSelection();
+
                     }
                 }
         );
@@ -60,6 +83,21 @@ public class ProductsTabController {
                     @Override
                     public void changed(ObservableValue<?extends Product> observable, Product formerClickedProduct, Product clickedProduct) {
                         System.out.println("Click on " + clickedProduct.getName());
+                        String fxmlFile = "/fxml/productDetails.fxml";
+                        FXMLLoader loader = new FXMLLoader();
+                        try {
+                            Scene scene = listViewPromotion.getScene();
+                            BorderPane firstPane = (BorderPane) scene.getRoot();
+                            Tab currentTab = ((TabPane)firstPane.getChildren().get(0)).getTabs().get(1);
+                            Node saveContent = currentTab.getContent();
+                            Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
+                            ((ProductsDetailsController)loader.getController()).initialize(clickedProduct,currentTab, saveContent);
+                            currentTab.setContent(rootNode);
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        listViewStarred.getSelectionModel().clearSelection();
                     }
                 }
         );

@@ -8,6 +8,7 @@ import java.util.List;
  * @author Joël CANCELA VAZ
  */
 public class Product {
+    private String description;
     private String name;
     private List<String> keywords;
     private boolean starred;
@@ -18,7 +19,7 @@ public class Product {
     private int salesNumber;
     private int id;
 
-    public Product(int id, String name, List<String> keywords, boolean starred, boolean discounted, double discountRate, double price, String picture, int salesNumber) {
+    public Product(int id, String name, List<String> keywords, boolean starred, boolean discounted, double discountRate, double price, String picture, int salesNumber, String description) {
         this.id = id;
         this.name = name;
         this.keywords = keywords;
@@ -28,6 +29,7 @@ public class Product {
         this.price = price;
         this.picture = picture;
         this.salesNumber = salesNumber;
+        this.description = description;
     }
 
     @Override
@@ -78,5 +80,9 @@ public class Product {
 
     public int getId() {
         return id;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

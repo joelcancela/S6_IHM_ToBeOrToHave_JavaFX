@@ -108,8 +108,9 @@ public class JSONReader {
             double price = jsonObject.getDouble("price");
             String picturePath = jsonObject.getString("picture");
             int salesNumber = jsonObject.getInt("salesNumber");
+            String description = jsonObject.getString("description");
 
-            products.add(new Product(id, name, keywordsList, starred, discounted, discountRate, price, picturePath, salesNumber));
+            products.add(new Product(id, name, keywordsList, starred, discounted, discountRate, price, picturePath, salesNumber,description));
         }
 
         //System.out.println("ALL PRODUCTS");
