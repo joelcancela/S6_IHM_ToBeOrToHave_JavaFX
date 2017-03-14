@@ -13,8 +13,6 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.util.Callback;
@@ -52,31 +50,6 @@ public class ProductsViewController {
 
 
 
-	}
-
-
-
-	public void pictureClick(MouseEvent mouseEvent) {
-		System.out.println("Click click");
-		for (Node node : this.productGrid.getChildren()) {
-			if (node instanceof ImageView) {
-				System.out.println(node + " : " + ((ImageView) node).getX() + ";" + ((ImageView) node).getY());
-				if( node.getBoundsInParent().contains(mouseEvent.getSceneX(),  mouseEvent.getSceneY())) {
-					System.out.println( "Node: " + node + " at " + GridPane.getRowIndex( node) + "/" + GridPane.getColumnIndex( node));
-				}
-			}
-
-		}
-
-		for (Node node : this.bestSellerGrid.getChildren()) {
-			if (node instanceof ImageView) {
-				System.out.println(node);
-				if( node.getBoundsInParent().contains(mouseEvent.getSceneX(),  mouseEvent.getSceneY())) {
-					System.out.println( "Node: " + node + " at " + GridPane.getRowIndex( node) + "/" + GridPane.getColumnIndex( node));
-				}
-			}
-
-		}
 	}
 
 	private void addDetailsListenerOnListView (ListView listView) {
