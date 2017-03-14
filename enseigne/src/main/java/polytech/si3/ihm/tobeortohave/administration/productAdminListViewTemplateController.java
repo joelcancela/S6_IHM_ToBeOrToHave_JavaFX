@@ -36,7 +36,12 @@ public class ProductAdminListViewTemplateController {
 
     public void initProduct(Product prod) {
         this.productName.setText(prod.getName());
-        File file = new File("common/src/main/resources/images/products/" + prod.getPicture());
+        File file = new File("somewhere");
+        if (prod.isOverwrite()) {
+            file = new File(prod.getPicture());
+        } else {
+            file = new File("common/src/main/resources/images/products/" + prod.getPicture());
+        }
         Image image = new javafx.scene.image.Image(file.toURI().toString());
         this.productView.setImage(image);
         this.productName.setText(prod.getName());

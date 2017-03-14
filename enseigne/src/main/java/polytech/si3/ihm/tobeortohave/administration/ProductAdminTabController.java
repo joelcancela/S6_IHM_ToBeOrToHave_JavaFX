@@ -6,10 +6,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
 import polytech.si3.ihm.tobeortohave.model.Product;
@@ -80,9 +84,27 @@ public class ProductAdminTabController {
     }
 
     public void addProductAction(){
-        System.out.println("Ajout d'un produit");
-        //Product p = new Product();
-        //products.add(p);
+        try {
+
+            Stage stage = new Stage();
+            String fxmlFile = "/fxml/admin/addProductAdminListViewTemplate.fxml";
+            FXMLLoader loader = new FXMLLoader();
+            Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
+
+            AddProductAdminListViewTemplateController controller = (AddProductAdminListViewTemplateController) loader.getController();
+            controller.init(products,stage);
+
+
+            Scene scene = new Scene(rootNode);
+            scene.getStylesheets().add("/styles/styles.css");
+
+            stage.setTitle("ToBeOrToHave - Enseigne Administration");
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
     }
 
     public void removeProductAction(){

@@ -18,8 +18,9 @@ public class Product {
     private String picture;
     private int salesNumber;
     private int id;
+    private boolean overwrite;
 
-    public Product(int id, String name, List<String> keywords, boolean starred, boolean discounted, double discountRate, double price, String picture, int salesNumber, String description) {
+    public Product(int id, String name, List<String> keywords, boolean starred, boolean discounted, double discountRate, double price, String picture, int salesNumber, String description, boolean overw) {
         this.id = id;
         this.name = name;
         this.keywords = keywords;
@@ -30,6 +31,11 @@ public class Product {
         this.picture = picture;
         this.salesNumber = salesNumber;
         this.description = description;
+        this.overwrite = overw;
+    }
+
+    public boolean isOverwrite(){
+        return overwrite;
     }
 
     @Override

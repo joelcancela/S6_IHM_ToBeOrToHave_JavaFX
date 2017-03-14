@@ -110,7 +110,7 @@ public class JSONReader {
             int salesNumber = jsonObject.getInt("salesNumber");
             String description = jsonObject.getString("description");
 
-            products.add(new Product(id, name, keywordsList, starred, discounted, discountRate, price, picturePath, salesNumber,description));
+            products.add(new Product(id, name, keywordsList, starred, discounted, discountRate, price, picturePath, salesNumber,description, false));
         }
 
         //System.out.println("ALL PRODUCTS");
