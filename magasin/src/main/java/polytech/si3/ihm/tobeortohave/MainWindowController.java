@@ -41,12 +41,12 @@ public class MainWindowController {
         loadTab("carte",        this.tab2);
         loadTab("statistiques", this.tab3);
 
-        localeBtn.setText(i18n.getDisplayLanguage());
+        localeBtn.setText(new Locale("en", "EN").getDisplayLanguage());
     }
 
     private void loadTab(String fxmlFileName, Tab tab) {
-        try {
 
+        try {
             // FXML Path
             String fxmlFile = "/fxml/" + fxmlFileName + ".fxml";
 
@@ -74,7 +74,7 @@ public class MainWindowController {
     // Change locale on click
     public void onI18nClick(Event event) {
 
-        System.out.print("Changing locale : ");
+        System.out.print("Changing locale...");
 
         if (i18n.equals(new Locale("fr", "FR"))) {
 
@@ -93,9 +93,6 @@ public class MainWindowController {
             this.tab2.setText("Nous trouver");
             this.tab3.setText("Statistiques");
         }
-
-        System.out.println(i18n.getDisplayLanguage());
-        localeBtn.setText(i18n.getDisplayLanguage());
 
         // notify views
         loadTab("accueil",      this.tab0);
