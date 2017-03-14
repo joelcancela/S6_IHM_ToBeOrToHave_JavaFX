@@ -26,7 +26,7 @@
       "salesNumber": 95,
       "price": 8.5,
       "picture": "thierrypattor.png",
-      "description":"Le dernière tome de la saga du jeune chevrier"
+      "description":"Le dernier tome de la saga du jeune chevrier"
     },
     {
       "id": 2,
@@ -68,7 +68,7 @@
       "salesNumber": 777,
       "price": 105,
       "picture": "ocar.png",
-      "description":""
+      "description":"L'ordinateur portable, par excellence."
     },
     {
       "id": 5,

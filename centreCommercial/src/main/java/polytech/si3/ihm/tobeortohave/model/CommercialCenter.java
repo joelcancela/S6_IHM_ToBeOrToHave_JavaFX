@@ -43,4 +43,13 @@ public class CommercialCenter {
     public void setEvents(List<String> events) {
         this.events = events;
     }
+
+    public List<Store> getHighlightedshopList() {
+        List<Store> stores = new ArrayList<>();
+        for(Store store : shopList){
+            if(store.isHighlighted())
+                stores.add(store);
+        }
+        return stores;
+    }
 }

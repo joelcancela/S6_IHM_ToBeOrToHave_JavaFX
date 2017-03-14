@@ -21,15 +21,19 @@ public class CommonController {
 
     @FXML
     public void initialize() {
-        initTab1();
-        initTab0();
-        initTab2();
+
     }
 
     private CommercialCenter commercialCenter;
 
     public void initModel(CommercialCenter commercialCenter) {
         this.commercialCenter = commercialCenter;
+    }
+
+    public void initTab(){
+        initTab1();
+        initTab0();
+        initTab2();
     }
 
     public void initTab1() {
@@ -58,11 +62,12 @@ public class CommonController {
     }
 
     public void initTab0(){
-        String home = "/fxml/home.fxml";
+        String home = "/fxml/home2.fxml";
         FXMLLoader loader = new FXMLLoader();
         try {
             Parent category = loader.load(getClass().getResourceAsStream(home));
             ((HomeController)loader.getController()).initModel(commercialCenter);
+            ((HomeController)loader.getController()).initGridPane(commercialCenter.getHighlightedshopList());
             tab0.setContent(category);
         } catch (IOException e) {
             e.printStackTrace();

@@ -204,6 +204,10 @@ public class JSONReader {
         return getRealProducts().stream().filter(p -> p.isDiscounted()).collect(Collectors.toList());
     }
 
+    public List<Product> getDiscountedProductsForAStore(int i) {
+        return getStoresById(8).getStock().stream().filter(p -> p.isDiscounted()).collect(Collectors.toList());
+    }
+
     public List<Product> getStarredProducts() {
         return getRealProducts().stream().filter(p -> p.isStarred()).collect(Collectors.toList());
     }
@@ -218,5 +222,14 @@ public class JSONReader {
                 return store;
         }
         return null;
+    }
+
+    public List<Store> getNiceStores() {
+        List<Store> niceStores = new ArrayList<>();
+        for(Store store : stores){
+            if(store.getAddress().equals("NICE"))
+                niceStores.add(store);
+        }
+        return niceStores;
     }
 }
