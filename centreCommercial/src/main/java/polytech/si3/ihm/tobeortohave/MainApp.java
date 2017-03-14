@@ -8,11 +8,9 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import polytech.si3.ihm.tobeortohave.controller.CommonController;
-import polytech.si3.ihm.tobeortohave.model.*;
+import polytech.si3.ihm.tobeortohave.model.CommercialCenter;
+import polytech.si3.ihm.tobeortohave.model.JSONReader;
 import polytech.si3.ihm.tobeortohave.parser.CommercialCenterParser;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainApp extends Application {
 
@@ -38,7 +36,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(rootNode);
         scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
 
-        stage.setTitle("Centre commercial");
+        stage.setTitle("Cap Sophia");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();

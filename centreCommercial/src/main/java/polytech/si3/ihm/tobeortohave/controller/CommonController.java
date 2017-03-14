@@ -20,6 +20,9 @@ public class CommonController {
     public Tab tab2;
 
     @FXML
+    public Tab tab3;
+
+    @FXML
     public void initialize() {
 
     }
@@ -34,6 +37,20 @@ public class CommonController {
         initTab1();
         initTab0();
         initTab2();
+        initTab3();
+    }
+
+    private void initTab3() {
+        String shopCategory = "/fxml/administration.fxml";
+        FXMLLoader loader = new FXMLLoader();
+        try {
+            Parent category = loader.load(getClass().getResourceAsStream(shopCategory));
+            ((AdminController) loader.getController()).initModel(commercialCenter);
+            ((AdminController) loader.getController()).initContent();
+            tab3.setContent(category);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void initTab1() {
