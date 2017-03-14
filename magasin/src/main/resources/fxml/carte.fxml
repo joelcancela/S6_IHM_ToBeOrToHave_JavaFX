@@ -14,7 +14,7 @@
             <content>
                 <VBox prefHeight="614.0" prefWidth="268.0" fx:id="vbox" alignment="TOP_CENTER">
                     <children>
-                        <Text fx:id="title"  strokeType="OUTSIDE" strokeWidth="0.0" text="Magasins" textAlignment="CENTER" wrappingWidth="220.0">
+                        <Text fx:id="title"  strokeType="OUTSIDE" strokeWidth="0.0" text="%key.shops" textAlignment="CENTER" wrappingWidth="220.0">
                             <font>
                                 <Font name="Lucida Sans Regular" size="31.0" />
                             </font>

@@ -12,14 +12,14 @@
         <items>
             <BorderPane>
                <top>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A propos de nous" textAlignment="CENTER" wrappingWidth="361.6708984375" BorderPane.alignment="TOP_LEFT">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%key.about_us_title" textAlignment="CENTER" wrappingWidth="361.6708984375" BorderPane.alignment="TOP_LEFT">
                      <font>
                         <Font name="Lucida Sans Regular" size="35.0" />
                      </font>
                   </Text>
                </top>
                <center>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum porta ipsum, sed convallis felis interdum et. Aenean sit amet ante eget nulla pellentesque venenatis. Nunc elementum erat vitae est laoreet fringilla. Morbi vel vehicula felis. In fringilla ante eu finibus facilisis. Cras bibendum neque risus, nec mollis dui semper vitae. Mauris eleifend orci vitae urna faucibus, in dignissim mi porttitor. Suspendisse magna sapien, rutrum ut ligula vestibulum, sagittis scelerisque quam. &#10;" textAlignment="JUSTIFY" wrappingWidth="780.6189117431641" BorderPane.alignment="TOP_LEFT">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%key.about_us_text" textAlignment="JUSTIFY" wrappingWidth="780.6189117431641" BorderPane.alignment="TOP_LEFT">
                      <font>
                         <Font name="Lucida Sans Regular" size="25.0" />
                      </font>
@@ -42,14 +42,14 @@
             </BorderPane>
             <BorderPane>
                <top>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nos points forts" textAlignment="CENTER" wrappingWidth="361.6708984375" BorderPane.alignment="TOP_LEFT">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%key.strength_title" textAlignment="CENTER" wrappingWidth="361.6708984375" BorderPane.alignment="TOP_LEFT">
                      <font>
                         <Font name="Lucida Sans Regular" size="35.0" />
                      </font>
                   </Text>
                </top>
                <center>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nam interdum porta ipsum, sed convallis felis interdum :&#10;&#10; - Nunc elementum erat vitae est laoreet fringilla.&#10; - Morbi vel vehicula felis. &#10; - In fringilla ante eu finibus facilisis.&#10; -Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="JUSTIFY" wrappingWidth="780.7052612304688" BorderPane.alignment="TOP_LEFT">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%key.strength_text" textAlignment="JUSTIFY" wrappingWidth="780.7052612304688" BorderPane.alignment="TOP_LEFT">
                      <font>
                         <Font name="Lucida Sans Regular" size="25.0" />
                      </font>

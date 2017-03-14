@@ -40,7 +40,6 @@ public class MapViewController implements Initializable, MapComponentInitialized
 		mapView.addMapInializedListener(this);
 	}
 
-
 	public void mapInitialized() {
 		List<Store> magasinsTboth = Brand.findMagasinByBrand(jsonReader.getStores(), "ToBeOrToHave");
 		Store storeDefault = magasinsTboth.get(0);
@@ -50,7 +49,7 @@ public class MapViewController implements Initializable, MapComponentInitialized
 		//Set the initial properties of the map.
 		MapOptions mapOptions = new MapOptions();
 
-		mapOptions.center(new LatLong(43.2916159, 5.4768394))
+		mapOptions.center(defaultShopLocation)
 				.mapType(MapTypeIdEnum.ROADMAP)
 				.overviewMapControl(false)
 				.panControl(false)
@@ -86,7 +85,7 @@ public class MapViewController implements Initializable, MapComponentInitialized
 
 						InfoWindowOptions infoWindowOptions = new InfoWindowOptions();
 						infoWindowOptions.content("<h2>ToBeOrToHave "+ store.getAddress().toUpperCase()+"</h2>"
-								+ "Telephone: " + store.getPhoneNumber() + "<br>"
+								+ "Tel: " + store.getPhoneNumber() + "<br>"
 								+ "Web: " + store.getWebAddress());
 
 						InfoWindow InfoWindow = new InfoWindow(infoWindowOptions);
