@@ -1,5 +1,6 @@
 package polytech.si3.ihm.tobeortohave.administration;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -53,5 +54,7 @@ public class ProductAdminListViewTemplateController {
         }
         this.discountRate.setText(Double.toString(prod.getDiscountRate()));
         this.price.setText(Double.toString(prod.getPrice()));
+        this.descriptionField.setText(prod.getDescription());
+        this.keywordsListView.setItems(FXCollections.observableArrayList(prod.getKeywords()));
     }
 }

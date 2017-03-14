@@ -74,7 +74,6 @@ public class ProductAdminTabController {
                 new ChangeListener<Product>() {
                     @Override
                     public void changed(ObservableValue<?extends Product> observable, Product formerClickedProduct, Product clickedProduct) {
-                        System.out.println("Click on " + clickedProduct.getName());
                     }
                 }
         );
@@ -87,7 +86,6 @@ public class ProductAdminTabController {
     }
 
     public void removeProductAction(){
-        System.out.println("Remove d'un produit");
         products.remove(listViewProducts.getSelectionModel().getSelectedItem());
     }
 }
