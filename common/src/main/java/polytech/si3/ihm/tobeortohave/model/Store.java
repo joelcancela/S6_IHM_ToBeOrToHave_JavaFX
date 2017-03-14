@@ -1,6 +1,7 @@
 package polytech.si3.ihm.tobeortohave.model;
 
-import java.awt.*;
+import javafx.scene.image.Image;
+
 import java.util.List;
 import java.util.Random;
 
@@ -39,6 +40,10 @@ public class Store {
         this.webAddress = webAddress;
         this.CA = CA;
         this.id = id;
+        if (brand.getLogo().isEmpty())
+            logo = new Image("images/logoShop.png");
+        else
+            logo = new Image(brand.getLogo());
     }
 
     /**

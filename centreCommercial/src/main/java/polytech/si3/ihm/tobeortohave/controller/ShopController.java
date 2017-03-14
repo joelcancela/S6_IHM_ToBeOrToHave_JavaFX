@@ -25,10 +25,7 @@ public class ShopController {
     public Button moreButtonBig;
 
     public void initShopController(Store store) {
-        if (store.getBrand().getLogo().isEmpty()) {
-            brandImageBig.setImage(new Image("images/logoShop.png"));
-        } else
-            brandImageBig.setImage(new Image(store.getBrand().getLogo()));
+        brandImageBig.setImage(store.getLogo());
         shopNameBig.setText(store.getBrand().getName());
         descriptionBig.setText(store.getDescription());
     }
