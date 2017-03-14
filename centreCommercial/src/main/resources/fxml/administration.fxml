@@ -37,11 +37,19 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </TextField>
-                  <Button fx:id="chooseLogo" mnemonicParsing="false" text="Choisir un logo">
+                  <HBox>
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
-                  </Button>
+                     <children>
+                        <Button fx:id="chooseLogo" mnemonicParsing="false" text="Choisir un logo" />
+                        <Label fx:id="fileUploaded" text="Fichier upload" visible="false">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
                   <Label text="Type de produits vendu par le magasin">
                      <VBox.margin>
                         <Insets left="5.0" right="5.0" top="5.0" />
@@ -49,10 +57,10 @@
                   </Label>
                   <ChoiceBox fx:id="chooseType" prefWidth="150.0">
                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
                      </VBox.margin>
                   </ChoiceBox>
-                  <TextArea prefHeight="100.0" prefWidth="200.0" promptText="Description du magasin">
+                  <TextArea fx:id="descriptionText" prefHeight="100.0" prefWidth="200.0" promptText="Description du magasin">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
@@ -76,6 +84,14 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
+                  <Label fx:id="confirmCreateLabel" text="Le magasin a bien été créé dans l'application" textFill="#04ab0a" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
                </children>
                <HBox.margin>
                   <Insets left="20.0" />
@@ -111,7 +127,25 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </Button>
+            <Label fx:id="confirmDeleteLabel" text="Le magasin a bien été supprimé de l'application" textFill="#cd1919" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
          </children>
       </VBox>
    </left>
+   <bottom>
+      <Button fx:id="changeInApp" mnemonicParsing="false" text="Appliquer les changements dans l'application" visible="false" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="25.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </bottom>
 </BorderPane>

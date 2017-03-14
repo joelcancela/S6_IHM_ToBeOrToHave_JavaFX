@@ -26,9 +26,6 @@ public class ShopListController {
     private Category category = Category.ALL;
 
     @FXML
-    public Button refreshButton;
-
-    @FXML
     public Button returnButton;
 
     @FXML
@@ -37,11 +34,7 @@ public class ShopListController {
     @FXML
     public void initialize(){
         returnButton.setOnAction(e -> commonController.initTab1());
-        refreshButton.setOnAction(e -> initList(category));
     }
-
-    private JSONReader jsonReader = new JSONReader();
-
 
     public void initCommonController(CommonController commonController){
         this.commonController = commonController;
@@ -97,8 +90,13 @@ public class ShopListController {
 
     public boolean categoryMatch(Store m, Category category){
         List<String> field = new ArrayList<>();
-        for(Field f : m.getBrand().getFieldList()){
-            field.add(f.getName());
+        if(m.getBrand() != null) {
+            for (Field f : m.getBrand().getFieldList()) {
+                field.add(f.getName());
+            }
+        }
+        else{
+            field.add(m.getCategory().getDisplay());
         }
         return field.contains(category.getDisplay());
     }

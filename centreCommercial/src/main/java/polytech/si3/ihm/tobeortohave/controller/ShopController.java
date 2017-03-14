@@ -3,7 +3,6 @@ package polytech.si3.ihm.tobeortohave.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import polytech.si3.ihm.tobeortohave.model.Store;
 
@@ -26,7 +25,7 @@ public class ShopController {
 
     public void initShopController(Store store) {
         brandImageBig.setImage(store.getLogo());
-        shopNameBig.setText(store.getBrand().getName());
+        shopNameBig.setText(store.getName());
         descriptionBig.setText(store.getDescription());
     }
 }

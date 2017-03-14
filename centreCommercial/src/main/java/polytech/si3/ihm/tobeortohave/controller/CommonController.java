@@ -45,6 +45,7 @@ public class CommonController {
         FXMLLoader loader = new FXMLLoader();
         try {
             Parent category = loader.load(getClass().getResourceAsStream(shopCategory));
+            ((AdminController) loader.getController()).initCommonController(this);
             ((AdminController) loader.getController()).initModel(commercialCenter);
             ((AdminController) loader.getController()).initContent();
             tab3.setContent(category);

@@ -44,6 +44,7 @@ public class Store {
             logo = new Image("images/logoShop.png");
         else
             logo = new Image(brand.getLogo());
+        this.name = brand.getName();
     }
 
     /**
@@ -57,6 +58,7 @@ public class Store {
         this.category = category;
         this.name = name;
         this.logo = logo;
+        this.address = "NICE";
     }
 
     @Override

@@ -18,6 +18,13 @@ public enum Category {
         this.display = display;
     }
 
+    public static Category getCategory(String category){
+        for(Category category1 : Category.values()){
+            if(category1.getDisplay().equals(category)) return category1;
+        }
+        return null;
+    }
+
     public String getDisplay() {
         return display;
     }
