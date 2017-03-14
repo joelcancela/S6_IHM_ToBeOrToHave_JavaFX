@@ -50,7 +50,7 @@ public class MapViewController implements Initializable, MapComponentInitialized
 		//Set the initial properties of the map.
 		MapOptions mapOptions = new MapOptions();
 
-		mapOptions.center(new LatLong(43.2916159, 5.4768394))
+		mapOptions.center(defaultShopLocation)
 				.mapType(MapTypeIdEnum.ROADMAP)
 				.overviewMapControl(false)
 				.panControl(false)

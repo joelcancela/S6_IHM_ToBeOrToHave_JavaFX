@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="600.0" maxWidth="1280.0" minHeight="600.0" minWidth="1280.0" prefHeight="600.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.ProduitsViewController">
-   <center>
-      <ScrollPane>
-         <content>
-            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1280.0">
-               <children>
-                  <GridPane fx:id="homeproducts" maxHeight="476.0" maxWidth="1280.0" minHeight="397.0" minWidth="1280.0" prefHeight="476.0" prefWidth="1280.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-               </children>
-            </VBox>
-         </content>
-      </ScrollPane>
-   </center>
-</BorderPane>
+<AnchorPane prefHeight="587.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.ProductsViewController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Les promotions à ne pas rater :" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Lucida Sans Regular" size="21.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listViewPromotion" layoutX="21.0" layoutY="46.0" maxHeight="230.0" minHeight="210.0" orientation="HORIZONTAL" prefHeight="223.0" prefWidth="1236.0" />
+      <Label layoutX="14.0" layoutY="281.0" text="Tous nos produits :" AnchorPane.topAnchor="281.0">
+         <font>
+            <Font name="Lucida Sans Regular" size="21.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listViewAllProducts" layoutX="21.0" layoutY="317.0" maxHeight="230.0" minHeight="210.0" orientation="HORIZONTAL" prefHeight="223.0" prefWidth="1236.0" />
+   </children>
+</AnchorPane>

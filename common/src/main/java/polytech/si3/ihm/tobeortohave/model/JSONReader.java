@@ -204,6 +204,10 @@ public class JSONReader {
         return getRealProducts().stream().filter(p -> p.isDiscounted()).collect(Collectors.toList());
     }
 
+    public List<Product> getDiscountedProductsForAStore(int i) {
+        return getStoresById(8).getStock().stream().filter(p -> p.isDiscounted()).collect(Collectors.toList());
+    }
+
     public List<Product> getStarredProducts() {
         return getRealProducts().stream().filter(p -> p.isStarred()).collect(Collectors.toList());
     }
