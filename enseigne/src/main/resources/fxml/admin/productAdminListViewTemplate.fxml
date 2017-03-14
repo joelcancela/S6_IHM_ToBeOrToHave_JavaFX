@@ -10,14 +10,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="1270.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="1210.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.administration.ProductAdminListViewTemplateController">
    <children>
-      <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
-      <GridPane layoutX="247.0" layoutY="18.0" prefHeight="170.0" prefWidth="266.0">
+      <ImageView fx:id="productView" fitHeight="170.0" fitWidth="170.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+      <GridPane layoutX="247.0" layoutY="18.0" prefHeight="170.0" prefWidth="355.0">
         <columnConstraints>
-          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="173.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="67.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="113.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="242.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -29,64 +28,64 @@
          <children>
             <Label text="Nom :">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
             <Label text="Produit phare :" GridPane.rowIndex="1">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
             <Label text="En promotion :" GridPane.rowIndex="2">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="1">
+            <Label fx:id="productName" text="Label" GridPane.columnIndex="1">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label fx:id="starred" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Label fx:id="discount" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label fx:id="discountRate" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
             <Label text="Prix :" GridPane.rowIndex="4">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Label fx:id="price" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
             <Label text="Réduction :" GridPane.rowIndex="3">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
          </children>
       </GridPane>
-      <ListView layoutX="513.0" layoutY="48.0" prefHeight="135.0" prefWidth="166.0" />
-      <Label layoutX="544.0" layoutY="14.0" text="Catégories :">
+      <ListView fx:id="keywordsListView" layoutX="628.0" layoutY="48.0" prefHeight="135.0" prefWidth="166.0" />
+      <Label layoutX="669.0" layoutY="16.0" text="Catégories :">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </Label>
-      <TextArea layoutX="721.0" layoutY="48.0" prefHeight="135.0" prefWidth="534.0" />
-      <Label layoutX="933.0" layoutY="14.0" text="Description :">
+      <TextArea fx:id="descriptionField" layoutX="837.0" layoutY="48.0" prefHeight="135.0" prefWidth="355.0" />
+      <Label layoutX="959.0" layoutY="13.0" text="Description :">
          <font>
             <Font size="20.0" />
          </font>

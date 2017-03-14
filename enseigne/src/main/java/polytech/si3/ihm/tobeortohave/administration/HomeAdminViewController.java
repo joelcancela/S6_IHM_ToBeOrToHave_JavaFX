@@ -31,6 +31,7 @@ public class HomeAdminViewController {
         try {
             String fxmlFile = "/fxml/admin/" + fxmlName + ".fxml";
             FXMLLoader loader2 = new FXMLLoader();
+            System.out.println("ICI : " + fxmlFile);
             Node node = loader2.load(getClass().getResourceAsStream(fxmlFile));
             AnchorPane.setTopAnchor(node, 0.0);
             AnchorPane.setLeftAnchor(node, 0.0);
