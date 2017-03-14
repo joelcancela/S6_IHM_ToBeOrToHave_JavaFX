@@ -104,11 +104,15 @@
 
 #oldPrice .text{
     -fx-strikethrough: true;
+    -fx-font-family: "Arial" ;
+    -fx-font-size: 23;
 }
 
 
 #discountedPrice .text{
     -fx-font-weight: bold;
+    -fx-font-family: "Arial" ;
+    -fx-font-size: 23;
 }
 
 .list-cell:empty {
