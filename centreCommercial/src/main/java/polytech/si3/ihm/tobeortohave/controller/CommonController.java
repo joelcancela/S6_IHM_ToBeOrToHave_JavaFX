@@ -62,7 +62,7 @@ public class CommonController {
     }
 
     public void initTab0(){
-        String home = "/fxml/home.fxml";
+        String home = "/fxml/home2.fxml";
         FXMLLoader loader = new FXMLLoader();
         try {
             Parent category = loader.load(getClass().getResourceAsStream(home));
