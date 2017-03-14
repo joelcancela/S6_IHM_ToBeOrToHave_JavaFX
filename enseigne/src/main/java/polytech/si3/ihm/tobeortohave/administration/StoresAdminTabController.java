@@ -77,7 +77,7 @@ public class StoresAdminTabController {
                 new ChangeListener<Store>() {
                     @Override
                     public void changed(ObservableValue<?extends Store> observable, Store formerClickedStore, Store clickedStore) {
-                        System.out.println("Click on " + clickedStore.getAddress());
+
                     }
                 }
         );
@@ -90,7 +90,8 @@ public class StoresAdminTabController {
     }
 
     public void removeStoreAction(){
-        System.out.println("Remove d'un produit");
-        stores.remove(listViewStores.getSelectionModel().getSelectedItem());
+        if (!stores.isEmpty()) {
+            stores.remove(listViewStores.getSelectionModel().getSelectedItem());
+        }
     }
 }
