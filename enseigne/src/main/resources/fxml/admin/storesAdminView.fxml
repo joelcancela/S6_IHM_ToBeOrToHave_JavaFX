@@ -13,7 +13,7 @@
    <children>
       <VBox layoutX="14.0" layoutY="14.0" prefHeight="566.0" prefWidth="1245.0">
          <children>
-            <ListView prefHeight="532.0" prefWidth="1210.0" />
+            <ListView fx:id="listViewStores" prefHeight="532.0" prefWidth="1210.0" />
             <GridPane>
                <columnConstraints>
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -23,8 +23,8 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="220.0" text="Ajouter un magasin" />
-                  <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="220.0" text="Supprimer" GridPane.columnIndex="1" />
+                  <Button fx:id="addStoreButton" mnemonicParsing="false" onAction="#addStoreAction" prefHeight="105.0" prefWidth="220.0" text="Ajouter un magasin" />
+                  <Button fx:id="removeStoreButton" mnemonicParsing="false" onAction="#removeStoreAction" prefHeight="105.0" prefWidth="220.0" text="Supprimer" GridPane.columnIndex="1" />
                </children>
                <VBox.margin>
                   <Insets top="5.0" />

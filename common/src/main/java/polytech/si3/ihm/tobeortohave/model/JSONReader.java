@@ -194,6 +194,10 @@ public class JSONReader {
         return products;
     }
 
+    public List<Store> getRealStores() {
+        return stores.stream().filter(s -> s.getBrand().getName().equals("ToBeOrToHave")).collect(Collectors.toList());
+    }
+
     public List<Product> getRealProducts() {
         return products.stream().filter(p -> p.getId() < 14).collect(Collectors.toList());
     }
