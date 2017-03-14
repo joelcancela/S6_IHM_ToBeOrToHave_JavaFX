@@ -2,13 +2,22 @@ package polytech.si3.ihm.tobeortohave;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.util.Callback;
 import polytech.si3.ihm.tobeortohave.model.JSONReader;
 import polytech.si3.ihm.tobeortohave.model.Product;
@@ -79,6 +88,27 @@ public class HomeTabExtensionViewController {
                     }
                 }
         );
+
+        productsListView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                String fxmlFile = "/fxml/productDetails.fxml";
+                FXMLLoader loader = new FXMLLoader();
+                try {
+                    Scene scene = productsListView.getScene();
+                    BorderPane firstPane = (BorderPane) scene.getRoot();
+                    Tab currentTab = ((TabPane)firstPane.getChildren().get(0)).getTabs().get(0);
+                    Node saveContent = currentTab.getContent();
+                    Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
+                    ((ProductsDetailsController)loader.getController()).initialize((Product)productsListView.getSelectionModel().getSelectedItem(),currentTab, saveContent);
+                    currentTab.setContent(rootNode);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
     }
 
 
