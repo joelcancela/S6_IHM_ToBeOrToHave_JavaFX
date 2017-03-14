@@ -35,8 +35,10 @@ public class ProductsTabController {
     public GridPane productGrid;
     private JSONReader jsonReader;
     public GridPane bestSellerGrid;
+
     @FXML
     public ListView listViewPromotion;
+
     @FXML
     public ListView listViewStarred;
 
