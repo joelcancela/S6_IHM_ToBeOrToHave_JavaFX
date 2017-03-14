@@ -73,20 +73,17 @@ public class ShopListController {
                 new Callback<ListView<Store>, ListCell<Store>>() {
                     @Override
                     public ListCell<Store> call(ListView<Store> listView) {
-                        // Cette cellule personalisée pourrait (devrait) être placée dans une classe à part
                         return new ListCell<Store>() {
                             @Override
                             protected void updateItem(Store item, boolean empty) {
                                 super.updateItem(item, empty);
 
                                 if (item != null) {
-                                    // Load fxml file for this internship
                                     try {
                                         String fxmlFile = "/fxml/shop.fxml";
                                         FXMLLoader loader = new FXMLLoader();
                                         Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
                                         ((ShopController) loader.getController()).initShopController(item);
-                                        // Display content of the fxml file
                                         this.setGraphic(listElement);
                                     } catch (IOException e) {
                                         e.printStackTrace();
