@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.3494983277591973" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../styles/styles.css">
+<SplitPane dividerPositions="0.3494983277591973" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.ProductsDetailsController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="254.0">
          <children>
@@ -21,12 +21,12 @@
                </font>
             </Label>
             <TextArea fx:id="productDescription" layoutX="5.0" layoutY="188.0" prefHeight="206.0" prefWidth="378.0" />
-            <Label id="oldPrice" layoutX="33.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="#000000">
+            <Label fx:id="oldPrice" layoutX="33.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="#000000">
                <font>
                   <Font name="Lucida Sans Regular" size="23.0" />
                </font>
             </Label>
-            <Label id="discountedPrice" layoutX="216.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="RED">
+            <Label fx:id="discountedPrice" layoutX="216.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="RED">
                <font>
                   <Font name="Lucida Sans Regular" size="23.0" />
                </font>

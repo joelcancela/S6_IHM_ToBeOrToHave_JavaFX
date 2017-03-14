@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
@@ -30,7 +31,9 @@ public class ProductsTabController {
     public GridPane productGrid;
     private JSONReader jsonReader;
     public GridPane bestSellerGrid;
+    @FXML
     public ListView listViewPromotion;
+    @FXML
     public ListView listViewStarred;
 
     private ObservableList<Product> starredProducts;
@@ -51,6 +54,18 @@ public class ProductsTabController {
                     @Override
                     public void changed(ObservableValue<?extends Product> observable, Product formerClickedProduct, Product clickedProduct) {
                         System.out.println("Click on " + clickedProduct.getName());
+                        String fxmlFile = "/fxml/productDetails.fxml";
+                        FXMLLoader loader = new FXMLLoader();
+                        try {
+                            Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
+                            ((ProductsDetailsController)loader.getController()).initialize(clickedProduct);
+                            Scene scene = listViewPromotion.getScene();
+                            scene.setRoot(rootNode);
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
                     }
                 }
         );
