@@ -22,22 +22,22 @@
       </AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="366.0">
          <children>
-            <Label fx:id="productTitle" layoutX="118.0" layoutY="14.0" text="Lorem Ipsum">
+            <Label fx:id="productTitle" layoutX="129.0" layoutY="14.0" text="Lorem Ipsum">
                <font>
                   <Font name="Lucida Sans Regular" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="oldPrice" layoutX="66.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="#000000">
+            <Label fx:id="oldPrice" layoutX="129.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="#000000">
                <font>
                   <Font name="Arial" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="discountedPrice" layoutX="216.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="RED">
+            <Label fx:id="discountedPrice" layoutX="403.0" layoutY="97.0" prefHeight="52.0" prefWidth="104.0" text="Label" textFill="RED">
                <font>
                   <Font name="Arial" size="23.0" />
                </font>
             </Label>
-             <TextArea fx:id="productDescription" layoutX="5.0" layoutY="188.0" prefHeight="206.0" prefWidth="378.0" />
+             <TextArea fx:id="productDescription" layoutX="129.0" layoutY="190.0" prefHeight="206.0" prefWidth="378.0" />
          </children></AnchorPane>
   </items>
 </SplitPane>
