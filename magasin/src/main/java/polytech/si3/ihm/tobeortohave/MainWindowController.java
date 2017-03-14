@@ -5,14 +5,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Tab;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class MainWindowController {
+
+    // Logger
     private static final Logger log = LoggerFactory.getLogger(MainWindowController.class);
+
+    // i18n
+    private Locale i18n = new Locale("fr", "FR");
 
     @FXML
     public Tab tab0;
@@ -23,46 +30,77 @@ public class MainWindowController {
     @FXML
     public Tab tab3;
 
+    @FXML
+    public ToggleButton localeBtn;
 
     @FXML
     public void initialize() {
-        initializeTab("accueil", this.tab0);
-        initializeTab("produits", this.tab1);
-        initializeTab("carte", this.tab2);
-        initializeTab("statistiques", this.tab3);
+
+        loadTab("accueil",      this.tab0);
+        loadTab("produits",     this.tab1);
+        loadTab("carte",        this.tab2);
+        loadTab("statistiques", this.tab3);
+
+        localeBtn.setText(i18n.getDisplayLanguage());
     }
 
-    private void initializeTab(String fxmlName, Tab tab) {
+    private void loadTab(String fxmlFileName, Tab tab) {
         try {
-            String fxmlFile = "/fxml/" + fxmlName + ".fxml";
-            FXMLLoader loader2 = new FXMLLoader();
-            Node node = loader2.load(getClass().getResourceAsStream(fxmlFile));
+
+            // FXML Path
+            String fxmlFile = "/fxml/" + fxmlFileName + ".fxml";
+
+            FXMLLoader fxmlLoader = new FXMLLoader();
+
+            // i18n
+            fxmlLoader.setResources(ResourceBundle.getBundle("i18n.Bundle", i18n));
+
+            // FXML
+            Node node = fxmlLoader.load(getClass().getResourceAsStream(fxmlFile));
+
+            // Fix position
             AnchorPane.setTopAnchor(node,0.0);
             AnchorPane.setLeftAnchor(node,0.0);
             AnchorPane.setBottomAnchor(node,0.0);
             AnchorPane.setRightAnchor(node,0.0);
+
+            // Update contents
             tab.setContent(node);
-        } catch (IOException ie) {
-            ie.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    public void statistiquesTabSelected(Event event) {
-        System.out.println("Statistiques selected");
-    }
+    // Change locale on click
+    public void onI18nClick(Event event) {
 
-    public void homeTabSelected(Event event) {
-        System.out.println("Home selected");
-    }
+        System.out.print("Changing locale : ");
 
-    public void productTabSelected(Event event) {
-        System.out.println("Product selected");
-    }
+        if (i18n.equals(new Locale("fr", "FR"))) {
 
-    public void mapTabSelected(Event event) {
-        System.out.println("Map selected");
-    }
+            i18n = new Locale("en", "EN");
 
-	public void storeTabSelected(Event event) {
-	}
+            this.tab0.setText("Home");
+            this.tab1.setText("Products");
+            this.tab2.setText("Find us");
+            this.tab3.setText("Statistics");
+        } else {
+
+            i18n = new Locale("fr", "FR");
+
+            this.tab0.setText("Accueil");
+            this.tab1.setText("Produits");
+            this.tab2.setText("Nous trouver");
+            this.tab3.setText("Statistiques");
+        }
+
+        System.out.println(i18n.getDisplayLanguage());
+        localeBtn.setText(i18n.getDisplayLanguage());
+
+        // notify views
+        loadTab("accueil",      this.tab0);
+        loadTab("produits",     this.tab1);
+        loadTab("carte",        this.tab2);
+        loadTab("statistiques", this.tab3);
+    }
 }

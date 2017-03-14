@@ -12,7 +12,7 @@
         <items>
             <BorderPane>
                <top>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A propos de nous" textAlignment="CENTER" wrappingWidth="361.6708984375" BorderPane.alignment="TOP_LEFT">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%key.about_us" textAlignment="CENTER" wrappingWidth="361.6708984375" BorderPane.alignment="TOP_LEFT">
                      <font>
                         <Font name="Lucida Sans Regular" size="35.0" />
                      </font>
