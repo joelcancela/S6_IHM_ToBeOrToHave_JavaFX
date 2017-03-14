@@ -1,6 +1,7 @@
 package polytech.si3.ihm.tobeortohave.model;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * Class x
@@ -18,6 +19,7 @@ public class Store {
     private String phoneNumber;
     private String webAddress;
     private List<Double> CA;
+    private boolean isHighlighted;
     private int id;
 
     public Store(Brand brand, String description, String address, Double latitude, Double longitude, List<Product> stock, String phoneNumber, String webAddress, List<Double> CA, int id) {
@@ -27,6 +29,7 @@ public class Store {
         this.latitude = latitude;
         this.longitude = longitude;
         this.stock = stock;
+        this.isHighlighted = new Random().nextBoolean();
         this.phoneNumber = phoneNumber;
         this.webAddress = webAddress;
         this.CA = CA;
@@ -66,6 +69,10 @@ public class Store {
 
     public Double getLongitude() {
         return longitude;
+    }
+
+    public boolean isHighlighted() {
+        return isHighlighted;
     }
 
     public List<Product> getStock() {

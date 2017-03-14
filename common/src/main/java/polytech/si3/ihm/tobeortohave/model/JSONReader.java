@@ -194,6 +194,8 @@ public class JSONReader {
         return products;
     }
 
+    public List<Field> getBrandCategory(int id){ return brands.get(id).getFieldList();}
+
     public List<Product> getRealProducts() {
         return products.stream().filter(p -> p.getId() < 14).collect(Collectors.toList());
     }

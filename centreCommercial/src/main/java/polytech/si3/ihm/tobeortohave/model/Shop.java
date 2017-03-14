@@ -12,30 +12,28 @@ public class Shop {
     private List<String> highlightedProductsPath;
     private String smallDescription;
     private String description;
-    private int idShop;
     private String name;
     private List<String> productsType;
+    private List<Category> category;
     private Point positionMap;
 
-    public Shop(String logoPath, String smallDescription, String description, int idShop, String name, List<String> productsType) {
+    public Shop(String logoPath, String smallDescription, String description, String name, List<String> productsType) {
         highlightedProductsPath = new ArrayList<String>();
         positionMap = new Point();
         this.logoPath = logoPath;
         this.smallDescription = smallDescription;
         this.description = description;
-        this.idShop = idShop;
         this.name = name;
         this.productsType = productsType;
     }
 
-    public Shop(String logoPath, String smallDescription, String description, int idShop, String name) {
+    public Shop(String logoPath, String smallDescription, String description, String name) {
         positionMap = new Point();
         productsType = new ArrayList<String>();
         highlightedProductsPath = new ArrayList<String>();
         this.logoPath = logoPath;
         this.smallDescription = smallDescription;
         this.description = description;
-        this.idShop = idShop;
         this.name = name;
     }
 
@@ -69,10 +67,6 @@ public class Shop {
 
     public String getDescription() {
         return description;
-    }
-
-    public int getIdShop() {
-        return idShop;
     }
 
     public String getName() {

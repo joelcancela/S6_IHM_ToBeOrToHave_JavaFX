@@ -72,5 +72,19 @@
       "percentage": 10,
       "label": "60 et +"
     }
+  ],
+  "actualEvents":[
+    {
+      "id": 1,
+      "path": "/images/Evenements.png"
+    },
+    {
+      "id": 2,
+      "path": "/images/Evenements2.png"
+    },
+    {
+      "id": 3,
+      "path": "/images/Evenements3.png"
+    }
   ]
 }

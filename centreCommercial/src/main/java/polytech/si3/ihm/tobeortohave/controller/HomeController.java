@@ -34,13 +34,13 @@ public class HomeController {
     public void initialize() {
         initGridPane(Arrays.asList(
                 new Shop("/images/logoShop.png","I'm a small description", "I'm a long description",
-                        0, "Name of the shop"),
+                        "Name of the shop"),
                 new Shop("/images/logoShop.png","I'm a smallest description", "I'm a longest description",
-                        1, "Name of the shop"),
+                        "Name of the shop"),
                 new Shop("/images/logoShop.png","I'm a small description", "I'm a long description",
-                        2, "Name of the shop"),
+                         "Name of the shop"),
                 new Shop("/images/logoShop.png","I'm a small description", "I'm a long description",
-                        3, "Name of the shop")
+                        "Name of the shop")
         ));
     }
 

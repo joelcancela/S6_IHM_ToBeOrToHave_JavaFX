@@ -8,6 +8,8 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -20,11 +22,13 @@ public class CommercialCenterParser {
     Map<String, Double> visitorsPerYear;
     Map<String, Integer> visitorsProfile;
     Map<String, Integer> visitorsAge;
+    Map<String, Integer> pathEvent;
 
     public CommercialCenterParser() {
         visitorsPerYear = new TreeMap<>();
         visitorsProfile = new TreeMap<>();
         visitorsAge = new TreeMap<>();
+        pathEvent = new TreeMap<>();
         parse();
     }
 
@@ -45,6 +49,18 @@ public class CommercialCenterParser {
         parseVisitorsPerYear();
         parseVisitorsProfile();
         parseVisitorsAge();
+        parsePathEvent();
+    }
+
+    private void parsePathEvent() {
+        JSONArray jsonArray = jsonObject.getJSONArray("actualEvents");
+
+        for (int i = 0; i < jsonArray.length(); i++) {
+            JSONObject visitorsProfiles = jsonArray.getJSONObject(i);
+            String year = visitorsProfiles.getString("path");
+            Integer visitors = visitorsProfiles.getInt("id");
+            this.pathEvent.put(year, visitors);
+        }
     }
 
     private void parseVisitorsPerYear(){
@@ -96,6 +112,8 @@ public class CommercialCenterParser {
     public Map<String, Integer> getVisitorsAge() {
         return visitorsAge;
     }
+
+    public List<String> getPathEvent() { return new ArrayList<>(pathEvent.keySet()); }
 }
 
 

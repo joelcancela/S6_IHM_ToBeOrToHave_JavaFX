@@ -8,29 +8,19 @@ import java.util.List;
  */
 public class CommercialCenter {
     private String name;
-    private String description;
-    private String mapPath;
-    private List<Shop> shopList;
-    private List<Shop> highlightedshopList;
+    private List<Store> shopList;
     private List<String> events;
 
-    public CommercialCenter(String name, String description, String mapPath) {
-        shopList = new ArrayList<Shop>();
-        highlightedshopList = new ArrayList<Shop>();
-        events = new ArrayList<String>();
+    public CommercialCenter(String name) {
+        shopList = new ArrayList<>();
+        events = new ArrayList<>();
         this.name = name;
-        this.description = description;
-        this.mapPath = mapPath;
     }
     public void addEvents(String event){
         events.add(event);
     }
-
-    public void addHighlightedShop(Shop shop){
-        highlightedshopList.add(shop);
-    }
-
-    public void addShop(Shop shop){
+    
+    public void addShop(Store shop){
         shopList.add(shop);
     }
 
@@ -38,23 +28,19 @@ public class CommercialCenter {
         return name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public String getMapPath() {
-        return mapPath;
-    }
-
-    public List<Shop> getShopList() {
+    public List<Store> getShopList() {
         return shopList;
-    }
-
-    public List<Shop> getHighlightedshopList() {
-        return highlightedshopList;
     }
 
     public List<String> getEvents() {
         return events;
+    }
+
+    public void setShopList(List<Store> shopList) {
+        this.shopList = shopList;
+    }
+
+    public void setEvents(List<String> events) {
+        this.events = events;
     }
 }

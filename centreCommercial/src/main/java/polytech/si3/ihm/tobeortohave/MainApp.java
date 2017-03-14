@@ -11,6 +11,11 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import polytech.si3.ihm.tobeortohave.controller.CommonController;
+import polytech.si3.ihm.tobeortohave.model.*;
+import polytech.si3.ihm.tobeortohave.parser.CommercialCenterParser;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainApp extends Application {
 
@@ -32,11 +37,23 @@ public class MainApp extends Application {
         log.debug("Showing JFX scene");
         Scene scene = new Scene(rootNode);
         scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
-
+        CommercialCenter commercialCenter = createModel();
 
         stage.setTitle("Centre commercial");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
     }
+
+    private CommercialCenter createModel(){
+        JSONReader jsonReader = new JSONReader();
+        CommercialCenterParser commercialCenterParser = new CommercialCenterParser();
+        jsonReader.parse();
+        CommercialCenter commercialCenter = new CommercialCenter("Cap Sophia");
+        commercialCenter.setShopList(jsonReader.getStores());
+        commercialCenter.setEvents(commercialCenterParser.getPathEvent());
+
+        return commercialCenter;
+    }
+
 }

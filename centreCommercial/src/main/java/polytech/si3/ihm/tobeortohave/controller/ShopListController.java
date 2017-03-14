@@ -50,12 +50,12 @@ public class ShopListController {
         Shop shop;
         for(Store m : stores){
             if(category.equals(Category.ALL) && m.getAddress().equals("NICE")){
-                shop = new Shop(m.getBrand().getLogo(), m.getDescription(), m.getDescription(),0, m.getBrand().getName());
+                shop = new Shop(m.getBrand().getLogo(), m.getDescription(), m.getDescription(), m.getBrand().getName());
                 magasinsToDisplay.add(shop);
                 continue;
             }
             if(categoryMatch(m, category)&& m.getAddress().equals("NICE")){
-                shop = new Shop(m.getBrand().getLogo(), m.getDescription(), m.getDescription(),0, m.getBrand().getName());
+                shop = new Shop(m.getBrand().getLogo(), m.getDescription(), m.getDescription(), m.getBrand().getName());
                 magasinsToDisplay.add(shop);
             }
         }
