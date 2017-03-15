@@ -13,8 +13,11 @@ public class MainApp extends Application {
     private static final Logger log = LoggerFactory.getLogger(MainApp.class);
 
     private Stage primaryStage;
+
+    // FLAGS
     private static boolean bsTheme = false;
     private static boolean darkTheme = false;
+    public static boolean isAdmin = false;
 
     public static void main(String[] args) throws Exception {
 
@@ -25,6 +28,9 @@ public class MainApp extends Application {
             }
             if (args[i].equals("bs")) {
                 bsTheme = true;
+            }
+            if (args[i].equals("admin")) {
+                isAdmin = true;
             }
         }
 

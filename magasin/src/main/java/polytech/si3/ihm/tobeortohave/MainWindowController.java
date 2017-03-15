@@ -36,12 +36,22 @@ public class MainWindowController {
     @FXML
     public void initialize() {
 
+        localeBtn.setText(new Locale("en", "EN").getDisplayLanguage());
+
+        if (MainApp.isAdmin) {
+
+            loadTab("admin_home",      this.tab0); // load at slot 0 admin interface
+            tab1.setDisable(true);
+            tab2.setDisable(true);
+            tab3.setDisable(true);
+
+            return;
+        }
+
         loadTab("accueil",      this.tab0);
         loadTab("produits",     this.tab1);
         loadTab("carte",        this.tab2);
         loadTab("statistiques", this.tab3);
-
-        localeBtn.setText(new Locale("en", "EN").getDisplayLanguage());
     }
 
     private void loadTab(String fxmlFileName, Tab tab) {
@@ -92,6 +102,11 @@ public class MainWindowController {
             this.tab1.setText("Produits");
             this.tab2.setText("Nous trouver");
             this.tab3.setText("Statistiques");
+        }
+
+        if (MainApp.isAdmin) {
+            loadTab("admin_home",      this.tab0);
+            return;
         }
 
         // notify views
