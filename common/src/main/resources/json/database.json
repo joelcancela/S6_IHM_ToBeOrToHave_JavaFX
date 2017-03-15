@@ -363,7 +363,7 @@
       "id": 3,
       "name": "ToBeOrToHave",
       "logo": "images/brandLogo/tobeortohave.png",
-      "description": "ToBeOrToHave le célèbre magasin de livres et de high-tech d'où son slogan : \"C'est pas parce qu'on est high-tech qu'on sait plus lire de bon vieux livre à l'ancienne mamène\"",
+      "description": "ToBeOrToHave le célèbre magasin de livres et d'objets high-tech",
       "phone": "01 21 58 41 98",
       "webAddress": "tobeortohave.fr",
       "fields": [
@@ -386,7 +386,7 @@
       "id": 5,
       "name": "ASOS",
       "logo": "images/brandLogo/asos.png",
-      "description": "Susa est une entreprise taïwanaise qui produit des cartes mères, des cartes graphiques, des lecteurs optiques, des PDA, des ordinateurs portables, des périphériques",
+      "description": "Asos est une entreprise taïwanaise qui produit des cartes mères, des cartes graphiques, des lecteurs optiques, des PDA, des ordinateurs portables, des périphériques",
       "phone": "01 65 68 48 36",
       "webAddress": "asos.com",
       "fields": [

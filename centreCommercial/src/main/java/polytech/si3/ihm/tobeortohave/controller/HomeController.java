@@ -8,13 +8,9 @@ import javafx.scene.layout.Pane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import polytech.si3.ihm.tobeortohave.model.CommercialCenter;
-import polytech.si3.ihm.tobeortohave.model.Shop;
 import polytech.si3.ihm.tobeortohave.model.Store;
 
-import java.awt.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

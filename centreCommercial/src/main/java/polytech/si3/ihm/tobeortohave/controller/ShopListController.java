@@ -26,9 +26,6 @@ public class ShopListController {
     private Category category = Category.ALL;
 
     @FXML
-    public Button refreshButton;
-
-    @FXML
     public Button returnButton;
 
     @FXML
@@ -37,11 +34,7 @@ public class ShopListController {
     @FXML
     public void initialize(){
         returnButton.setOnAction(e -> commonController.initTab1());
-        refreshButton.setOnAction(e -> initList(category));
     }
-
-    private JSONReader jsonReader = new JSONReader();
-
 
     public void initCommonController(CommonController commonController){
         this.commonController = commonController;
@@ -55,7 +48,7 @@ public class ShopListController {
 
     public void initList(Category category){
         this.category = category;
-        List<Store> stores = commercialCenter.getShopList();
+        List<Store> stores = commercialCenter.getStoreList();
         List<Store> magasinsToDisplay = new ArrayList<>();
         for(Store m : stores){
             if(category.equals(Category.ALL) && m.getAddress().equals("NICE")){
@@ -73,20 +66,17 @@ public class ShopListController {
                 new Callback<ListView<Store>, ListCell<Store>>() {
                     @Override
                     public ListCell<Store> call(ListView<Store> listView) {
-                        // Cette cellule personalisée pourrait (devrait) être placée dans une classe à part
                         return new ListCell<Store>() {
                             @Override
                             protected void updateItem(Store item, boolean empty) {
                                 super.updateItem(item, empty);
 
                                 if (item != null) {
-                                    // Load fxml file for this internship
                                     try {
                                         String fxmlFile = "/fxml/shop.fxml";
                                         FXMLLoader loader = new FXMLLoader();
                                         Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
                                         ((ShopController) loader.getController()).initShopController(item);
-                                        // Display content of the fxml file
                                         this.setGraphic(listElement);
                                     } catch (IOException e) {
                                         e.printStackTrace();
@@ -100,8 +90,13 @@ public class ShopListController {
 
     public boolean categoryMatch(Store m, Category category){
         List<String> field = new ArrayList<>();
-        for(Field f : m.getBrand().getFieldList()){
-            field.add(f.getName());
+        if(m.getBrand() != null) {
+            for (Field f : m.getBrand().getFieldList()) {
+                field.add(f.getName());
+            }
+        }
+        else{
+            field.add(m.getCategory().getDisplay());
         }
         return field.contains(category.getDisplay());
     }

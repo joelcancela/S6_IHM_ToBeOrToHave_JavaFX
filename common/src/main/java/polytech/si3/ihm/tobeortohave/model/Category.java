@@ -1,7 +1,7 @@
 package polytech.si3.ihm.tobeortohave.model;
 
 /**
- * Created by Marc on 08/03/2017.
+ * Use for new store created by Commercial Center
  */
 public enum Category {
     ALL("Tous les magasins"),
@@ -16,13 +16,6 @@ public enum Category {
 
     Category(String display) {
         this.display = display;
-    }
-
-    public static Category getCategory(String category){
-        for(Category category1 : Category.values()){
-            if(category1.getDisplay().equals(category)) return category1;
-        }
-        return null;
     }
 
     public String getDisplay() {

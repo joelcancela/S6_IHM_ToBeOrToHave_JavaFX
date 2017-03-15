@@ -20,7 +20,8 @@
             </Tab>
             <Tab fx:id="tab2" text="Infos et localisation">
             </Tab>
-
+            <Tab fx:id="tab3" text="Administration">
+            </Tab>
         </tabs>
       </TabPane>
    </center>
