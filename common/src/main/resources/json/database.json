@@ -420,7 +420,7 @@
     {
       "id": 0,
       "brand": 5,
-      "description": "Magasin Asos de Nice",
+      "description": "Nouvel arrivage de PC dernière génération ! Ne ratez pas ça !",
       "address": "NICE",
       "phone": "01 21 45 78 98",
       "webAddress": "asos.com/shops/fr/nice",
@@ -520,7 +520,7 @@
     {
       "id": 6,
       "brand": 0,
-      "description": "Magasin K&N de Nice",
+      "description": "Période de solde, de 40 à 60% !",
       "address": "NICE",
       "phone": "01 21 45 78 98",
       "webAddress": "kn.com/nice",
@@ -536,7 +536,7 @@
     {
       "id": 7,
       "brand": 6,
-      "description": "Magasin Pear de Nice",
+      "description": "Réduction sur le modèle Upad x8 !",
       "address": "NICE",
       "phone": "01 21 45 78 98",
       "webAddress": "pear.com/nice",
@@ -575,7 +575,7 @@
     {
       "id": 9,
       "brand": 4,
-      "description": "Magasin Yottathlon de Nice",
+      "description": "Yottathlon le numéro un pour vos achats sportifs !",
       "address": "NICE",
       "phone": "01 54 86 95 85",
       "webAddress": "yotta.fr/nice",
@@ -593,7 +593,7 @@
     {
       "id": 10,
       "brand": 7,
-      "description": "Magasin Polykéa de Nice",
+      "description": "Magasin Polykéa de Nice, votez pour nous !",
       "address": "NICE",
       "phone": "01 54 86 95 85",
       "webAddress": "polykea.fr/nice",
