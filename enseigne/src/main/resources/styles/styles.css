@@ -114,12 +114,3 @@
     -fx-font-family: "Arial" ;
     -fx-font-size: 23;
 }
-
-.list-cell:empty {
-    visibility:hidden;
-}
-
-.text-field.error {
-    -fx-text-box-border: red ;
-    -fx-focus-color: red ;
-}

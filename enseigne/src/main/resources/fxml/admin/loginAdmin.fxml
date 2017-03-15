@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.administration.LoginAdminViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.administration.LoginAdminViewController">
    <children>
       <GridPane alignment="BOTTOM_CENTER" layoutX="37.0" layoutY="76.0" prefHeight="136.0" prefWidth="327.0">
          <columnConstraints>
@@ -45,6 +45,6 @@
             <Image url="@/images/AdminBanner.png" />
          </image>
       </ImageView>
-      <Label fx:id="wrongCredentialsLabel" layoutX="103.0" layoutY="204.0" text="WRONG USERNAME OR PASSWORD" textFill="RED" visible="false" />
+      <Label fx:id="wrongCredentialsLabel" layoutX="103.0" layoutY="204.0" text="WRONG USERNAME OR PASSWORD" visible="false" />
    </children>
 </AnchorPane>

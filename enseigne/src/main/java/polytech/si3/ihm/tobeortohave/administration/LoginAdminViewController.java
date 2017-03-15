@@ -45,9 +45,9 @@ public class LoginAdminViewController {
     private boolean checkTextField(TextField txtF) {
         boolean notEmpty = false;
         if (txtF.getText() == null | txtF.getText().trim().isEmpty()) {
-            setTextFieldValidity(txtF, false);
+            //setTextFieldValidity(txtF, false);
         } else {
-            setTextFieldValidity(txtF, true);
+            //setTextFieldValidity(txtF, true);
             notEmpty = true;
         }
         return notEmpty;
