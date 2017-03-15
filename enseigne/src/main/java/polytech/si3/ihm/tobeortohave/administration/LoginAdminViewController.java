@@ -40,6 +40,10 @@ public class LoginAdminViewController {
 
     public void setStage(Stage stg) {
         this.mainStage = stg;
+        this.loginButton.getStyleClass().clear();
+        this.loginButton.getStyleClass().add("green-button");
+        this.cancelButton.getStyleClass().clear();
+        this.cancelButton.getStyleClass().add("red-button");
     }
 
     private boolean checkTextField(TextField txtF) {

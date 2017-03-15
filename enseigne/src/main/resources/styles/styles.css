@@ -108,6 +108,18 @@
     -fx-font-size: 23;
 }
 
+.green-button{
+    -fx-background-color: GREEN;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #f0f3bd;
+}
+
+.red-button{
+    -fx-background-color: RED;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #f0f3bd;
+}
+
 
 #discountedPrice .text{
     -fx-font-weight: bold;

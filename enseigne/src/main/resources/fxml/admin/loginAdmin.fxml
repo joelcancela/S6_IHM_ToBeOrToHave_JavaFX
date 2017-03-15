@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.administration.LoginAdminViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="polytech.si3.ihm.tobeortohave.administration.LoginAdminViewController">
    <children>
       <GridPane alignment="BOTTOM_CENTER" layoutX="37.0" layoutY="76.0" prefHeight="136.0" prefWidth="327.0">
          <columnConstraints>
@@ -39,7 +39,7 @@
          </children>
       </GridPane>
       <Button fx:id="loginButton" layoutX="68.0" layoutY="235.0" mnemonicParsing="false" onAction="#connectionAction" prefHeight="50.0" prefWidth="106.0" text="Log in" />
-      <Button fx:id="cancelButton" layoutX="242.0" layoutY="236.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="50.0" prefWidth="106.0" text="Cancel" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="242.0" layoutY="236.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="50.0" prefWidth="106.0" text="Cancel" />
       <ImageView fitHeight="80.0" fitWidth="400.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@/images/AdminBanner.png" />
