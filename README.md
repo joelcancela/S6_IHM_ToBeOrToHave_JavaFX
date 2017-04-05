@@ -1,3 +1,7 @@
 # ToBeOrToHave
 
-Polytech'Nice SI3_S6 IHM Project with JavaFX
+IHM JavaFX project (Polytech'Nice SI3G2 2016-2017)
+
+- Enseigne
+- Centre commercial
+- Magasin
